@@ -12,4 +12,12 @@ services:
     environment:
       - NODE_ENV=development
 
+  backend:
+      build: ./backend
+      ports:
+        - "8000:8000"
+      volumes:
+        - ./backend:/app
+      environment:
+        - PYTHON_ENV=development
 
