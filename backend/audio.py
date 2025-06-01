@@ -11,7 +11,7 @@ app = FastAPI()
 UPLOAD_DIR = Path("uploads")
 UPLOAD_DIR.mkdir(exist_ok=True)
 
-app.mount("/files", StaticFiles(directory=UPLOAD_DIR), name="uploads")
+app.mount("/files", StaticFiles(directory="static"), name="static")
 
 app.add_middleware(
     CORSMiddleware,
