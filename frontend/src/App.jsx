@@ -1,56 +1,80 @@
 import { useState, useEffect } from 'react'
+import { useRef } from 'react';
+//import subtitlesParser from "subtitles-parser-vtt";
+import subtitlesParser from "https://cdn.skypack.dev/subtitles-parser-vtt";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 
 function App() {
-  const [files, setFiles] = useState([]);
+  const audioRef = useRef(null);
+  const [cues, setCues] = useState([]);
 
-  const fetchFiles = () => {
-    fetch("http://127.0.0.1:8000/files")
-      .then(res => res.json())
-      .then(setFiles)
-      .catch(err => console.error("Error fetching files:", err));
-  };
-
-  const handleUpload = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const formData = new FormData();
-    formData.append("file", file);
-
-    fetch("http://127.0.0.1:8000/upload", {
-      method: "POST",
-      body: formData,
-    })
-      .then(res => res.json())
-      .then(() => fetchFiles())
-      .catch(err => console.error("Upload error:", err));
+  const timeStringToSeconds = (timeStr) => {
+    const [hh, mm, ss] = timeStr.split(":");
+    const [s, ms] = ss.split(".");
+    return parseInt(hh) * 3600 + parseInt(mm) * 60 + parseInt(s) + (parseInt(ms) || 0) / 1000;
   };
 
   useEffect(() => {
-    fetchFiles();
+    fetch("http://localhost:8000/files/transcript.vtt")
+      .then((res) => res.text())
+      .then((vttText) => {
+        const parsed = subtitlesParser.fromVtt(vttText);
+        const formatted = parsed.map((cue) => ({
+          ...cue,
+          startSeconds: timeStringToSeconds(cue.startTime),
+        }));
+        setCues(formatted);
+      })
+      .catch((err) => {
+        console.error("Failed to load transcript:", err);
+      });
   }, []);
 
+  const handlePlay = (seconds) => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = seconds;
+      audioRef.current.play();
+    }
+  };
+
   return (
-    <div style={{ padding: "1rem" }}>
-      <h1>Audio Replay App</h1>
-      <input type="file" accept="audio/*" onChange={handleUpload} />
-      <ul>
-        {files.map((file) => (
-          <li key={file}>
-            {file}
-            <br />
-            <audio controls src={`http://127.0.0.1:8000/uploads/${file}`} />
-          </li>
+    <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
+      <h2>🎧 Audio + Subtitle Sync</h2>
+      <audio
+        ref={audioRef}
+        controls
+        src="http://localhost:8000/files/audio.mp3"
+        style={{ width: "100%", marginBottom: "1rem" }}
+      />
+
+      {cues.length === 0 && <p>Loading subtitles...</p>}
+
+      <div>
+        {cues.map((cue) => (
+          <p
+            key={cue.id}
+            onClick={() => handlePlay(cue.startSeconds)}
+            style={{
+              cursor: "pointer",
+              color: "blue",
+              textDecoration: "underline",
+              margin: "0.5rem 0",
+            }}
+          >
+            {cue.text}
+          </p>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
 
+
+
+//////////////////////////
 
 function AppDatabase() {
   const [items, setItems] = useState([]);

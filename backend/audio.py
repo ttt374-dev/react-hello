@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
+from fastapi.staticfiles import StaticFiles
 import shutil
 import os
 
@@ -9,6 +10,8 @@ app = FastAPI()
 
 UPLOAD_DIR = Path("uploads")
 UPLOAD_DIR.mkdir(exist_ok=True)
+
+app.mount("/files", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
 app.add_middleware(
     CORSMiddleware,
