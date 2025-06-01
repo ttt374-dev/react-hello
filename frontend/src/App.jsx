@@ -5,11 +5,59 @@ import './App.css'
 
 
 function App() {
+  const [files, setFiles] = useState([]);
+
+  const fetchFiles = () => {
+    fetch("http://127.0.0.1:8000/files")
+      .then(res => res.json())
+      .then(setFiles)
+      .catch(err => console.error("Error fetching files:", err));
+  };
+
+  const handleUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    fetch("http://127.0.0.1:8000/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then(res => res.json())
+      .then(() => fetchFiles())
+      .catch(err => console.error("Upload error:", err));
+  };
+
+  useEffect(() => {
+    fetchFiles();
+  }, []);
+
+  return (
+    <div style={{ padding: "1rem" }}>
+      <h1>Audio Replay App</h1>
+      <input type="file" accept="audio/*" onChange={handleUpload} />
+      <ul>
+        {files.map((file) => (
+          <li key={file}>
+            {file}
+            <br />
+            <audio controls src={`http://127.0.0.1:8000/uploads/${file}`} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+
+function AppDatabase() {
   const [items, setItems] = useState([]);
 
   // Fetch all items
   const fetchItems = () => {
-    fetch("http://localhost:8000/items")
+    fetch("http://127.0.0.1:8000/items")
       .then(res => {
         if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
         return res.json();

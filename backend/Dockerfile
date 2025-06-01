@@ -9,5 +9,6 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["uvicorn", "database:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+#CMD ["uvicorn", "database:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "audio:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 
