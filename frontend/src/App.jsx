@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 
-function App() {
+export default function App() {
   const [sentences, setSentences] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
   const audioRef = useRef(null);
-  const sentenceRefs = useRef([]); // to store refs for each sentence
+  const sentenceRefs = useRef([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/files/sentences.json")
@@ -29,7 +29,6 @@ function App() {
     return () => audio.removeEventListener("timeupdate", handleTimeUpdate);
   }, [sentences]);
 
-  // Auto-scroll to active sentence
   useEffect(() => {
     if (
       activeIndex !== null &&
@@ -50,45 +49,109 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handleKeyDown = (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+
+      if (e.code === "Space") {
+        e.preventDefault();
+        if (audio.paused) audio.play();
+        else audio.pause();
+      } else if (e.code === "ArrowLeft") {
+        e.preventDefault();
+        if (activeIndex !== null && sentences[activeIndex]) {
+          playAt(sentences[activeIndex].start);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [sentences, activeIndex]);
+
   return (
-    <div style={{ padding: "2rem", maxHeight: "80vh", overflowY: "auto" }}>
-      <h1>🗣️ Transcript Player</h1>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        fontFamily: "sans-serif",
+      }}
+    >
+      {/* Top title */}
+      <div
+        style={{
+          padding: "1rem",
+          background: "#222",
+          color: "#fff",
+          fontSize: "1.25rem",
+          fontWeight: "bold",
+          flexShrink: 0,
+        }}
+      >
+        🎧 Audio: <span style={{ color: "#0ff" }}>audio.mp3</span>
+      </div>
 
-      <audio
-        ref={audioRef}
-        controls
-        src="http://localhost:8000/files/audio.mp3"
-        style={{ width: "100%", marginBottom: "1rem" }}
-      />
-
-      {sentences.length === 0 ? (
-        <p>Loading transcript...</p>
-      ) : (
-        <div style={{ lineHeight: "1.8" }}>
-          {sentences.map((s, idx) => (
+      {/* Scrollable transcription */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: "auto",
+          padding: "1rem",
+          background: "#f4f4f4",
+        }}
+      >
+        {sentences.length === 0 ? (
+          <p>Loading transcript...</p>
+        ) : (
+          sentences.map((s, idx) => (
             <div
               key={idx}
               ref={(el) => (sentenceRefs.current[idx] = el)}
               onClick={() => playAt(s.start)}
               style={{
-                cursor: "pointer",
-                padding: "0.5rem",
-                borderBottom: "1px solid #ddd",
-                background: idx === activeIndex ? "#e0f7fa" : "transparent",
+                marginBottom: "0.75rem",
+                padding: "0.75rem",
+                borderRadius: "6px",
+                background: idx === activeIndex ? "#d1f1ff" : "#fff",
                 fontWeight: idx === activeIndex ? "bold" : "normal",
-                transition: "background 0.2s",
+                cursor: "pointer",
+                transition: "background 0.3s",
+                boxShadow:
+                  idx === activeIndex
+                    ? "0 0 0 2px #00cfff inset"
+                    : "0 1px 2px rgba(0,0,0,0.1)",
               }}
             >
-              {s.sentence}{" "}
-              <span style={{ fontSize: "0.8rem", color: "#666" }}>
-                ({s.start.toFixed(2)}s)
-              </span>
+              {s.sentence}
+              <br />
+              <small style={{ fontSize: "0.8rem", color: "#666" }}>
+                {s.start.toFixed(2)}s - {s.end.toFixed(2)}s
+              </small>
             </div>
-          ))}
-        </div>
-      )}
+          ))
+        )}
+      </div>
+
+      {/* Audio controls fixed at bottom */}
+      <div
+        style={{
+          padding: "1rem",
+          borderTop: "1px solid #ccc",
+          background: "#fff",
+          flexShrink: 0,
+        }}
+      >
+        <audio
+          ref={audioRef}
+          controls
+          src="http://localhost:8000/files/audio.mp3"
+          style={{ width: "100%" }}
+        />
+      </div>
     </div>
   );
 }
-
-export default App;
