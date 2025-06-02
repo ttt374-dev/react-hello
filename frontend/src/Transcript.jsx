@@ -275,10 +275,7 @@ export default function Transcript({ title }) {
                   </span>
                 );
               })}
-              <br />
-              <small style={{ fontSize: "0.8rem", color: "#666" }}>
-                {s.start.toFixed(2)}s - {s.end.toFixed(2)}s
-              </small>
+              
             </div>
           ))
         )}
