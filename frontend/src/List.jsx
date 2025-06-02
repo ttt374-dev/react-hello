@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Upload from './Upload'
 
 export default function List({ onSelect, selected }) {
   const [titles, setTitles] = useState([]);
@@ -35,6 +36,7 @@ export default function List({ onSelect, selected }) {
         background: "#fafafa",
       }}
     >
+        <Upload />
       <h2 style={{ padding: "1rem", margin: 0, borderBottom: "1px solid #ddd" }}>
         Available Transcripts
       </h2>
