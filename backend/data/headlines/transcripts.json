@@ -1,0 +1,7126 @@
+[
+  {
+    "sentence": "where he signed bills securing abortion rights, paid family leave, gun control, and the legalization of marijuana.",
+    "start": 0.0,
+    "end": 7.26,
+    "words": [
+      {
+        "word": "where",
+        "start": 0.0,
+        "end": 0.5
+      },
+      {
+        "word": "he",
+        "start": 0.5,
+        "end": 0.7
+      },
+      {
+        "word": "signed",
+        "start": 0.7,
+        "end": 1.04
+      },
+      {
+        "word": "bills",
+        "start": 1.04,
+        "end": 1.46
+      },
+      {
+        "word": "securing",
+        "start": 1.46,
+        "end": 2.06
+      },
+      {
+        "word": "abortion",
+        "start": 2.06,
+        "end": 2.56
+      },
+      {
+        "word": "rights,",
+        "start": 2.56,
+        "end": 3.06
+      },
+      {
+        "word": "paid",
+        "start": 3.38,
+        "end": 3.48
+      },
+      {
+        "word": "family",
+        "start": 3.48,
+        "end": 3.88
+      },
+      {
+        "word": "leave,",
+        "start": 3.88,
+        "end": 4.28
+      },
+      {
+        "word": "gun",
+        "start": 4.66,
+        "end": 4.9
+      },
+      {
+        "word": "control,",
+        "start": 4.9,
+        "end": 5.38
+      },
+      {
+        "word": "and",
+        "start": 5.7,
+        "end": 5.8
+      },
+      {
+        "word": "the",
+        "start": 5.8,
+        "end": 6.0
+      },
+      {
+        "word": "legalization",
+        "start": 6.0,
+        "end": 6.54
+      },
+      {
+        "word": "of",
+        "start": 6.54,
+        "end": 6.82
+      },
+      {
+        "word": "marijuana.",
+        "start": 6.82,
+        "end": 7.26
+      }
+    ]
+  },
+  {
+    "sentence": "He doesn't represent a crucial battleground state like some of the other VP contenders that were floated, but his plain -spoken style and Midwestern roots could appeal to moderate voters, while his progressive record has made him popular with liberals.",
+    "start": 8.08,
+    "end": 21.06,
+    "words": [
+      {
+        "word": "He",
+        "start": 8.08,
+        "end": 8.2
+      },
+      {
+        "word": "doesn't",
+        "start": 8.2,
+        "end": 8.46
+      },
+      {
+        "word": "represent",
+        "start": 8.46,
+        "end": 8.9
+      },
+      {
+        "word": "a",
+        "start": 8.9,
+        "end": 9.14
+      },
+      {
+        "word": "crucial",
+        "start": 9.14,
+        "end": 9.52
+      },
+      {
+        "word": "battleground",
+        "start": 9.52,
+        "end": 10.1
+      },
+      {
+        "word": "state",
+        "start": 10.1,
+        "end": 10.34
+      },
+      {
+        "word": "like",
+        "start": 10.34,
+        "end": 10.58
+      },
+      {
+        "word": "some",
+        "start": 10.58,
+        "end": 10.78
+      },
+      {
+        "word": "of",
+        "start": 10.78,
+        "end": 10.94
+      },
+      {
+        "word": "the",
+        "start": 10.94,
+        "end": 11.08
+      },
+      {
+        "word": "other",
+        "start": 11.08,
+        "end": 11.3
+      },
+      {
+        "word": "VP",
+        "start": 11.3,
+        "end": 11.6
+      },
+      {
+        "word": "contenders",
+        "start": 11.6,
+        "end": 12.14
+      },
+      {
+        "word": "that",
+        "start": 12.14,
+        "end": 12.3
+      },
+      {
+        "word": "were",
+        "start": 12.3,
+        "end": 12.54
+      },
+      {
+        "word": "floated,",
+        "start": 12.54,
+        "end": 12.94
+      },
+      {
+        "word": "but",
+        "start": 13.08,
+        "end": 13.2
+      },
+      {
+        "word": "his",
+        "start": 13.2,
+        "end": 13.54
+      },
+      {
+        "word": "plain",
+        "start": 13.54,
+        "end": 13.8
+      },
+      {
+        "word": "-spoken",
+        "start": 13.8,
+        "end": 14.24
+      },
+      {
+        "word": "style",
+        "start": 14.24,
+        "end": 14.64
+      },
+      {
+        "word": "and",
+        "start": 14.64,
+        "end": 14.96
+      },
+      {
+        "word": "Midwestern",
+        "start": 14.96,
+        "end": 15.56
+      },
+      {
+        "word": "roots",
+        "start": 15.56,
+        "end": 15.86
+      },
+      {
+        "word": "could",
+        "start": 15.86,
+        "end": 16.14
+      },
+      {
+        "word": "appeal",
+        "start": 16.14,
+        "end": 16.46
+      },
+      {
+        "word": "to",
+        "start": 16.46,
+        "end": 16.68
+      },
+      {
+        "word": "moderate",
+        "start": 16.68,
+        "end": 17.06
+      },
+      {
+        "word": "voters,",
+        "start": 17.06,
+        "end": 17.56
+      },
+      {
+        "word": "while",
+        "start": 18.2,
+        "end": 18.36
+      },
+      {
+        "word": "his",
+        "start": 18.36,
+        "end": 18.62
+      },
+      {
+        "word": "progressive",
+        "start": 18.62,
+        "end": 19.06
+      },
+      {
+        "word": "record",
+        "start": 19.06,
+        "end": 19.52
+      },
+      {
+        "word": "has",
+        "start": 19.52,
+        "end": 19.72
+      },
+      {
+        "word": "made",
+        "start": 19.72,
+        "end": 19.84
+      },
+      {
+        "word": "him",
+        "start": 19.84,
+        "end": 20.08
+      },
+      {
+        "word": "popular",
+        "start": 20.08,
+        "end": 20.4
+      },
+      {
+        "word": "with",
+        "start": 20.4,
+        "end": 20.64
+      },
+      {
+        "word": "liberals.",
+        "start": 20.64,
+        "end": 21.06
+      }
+    ]
+  },
+  {
+    "sentence": "Walls will be in Philadelphia tonight with Harris for a rally.",
+    "start": 22.04,
+    "end": 24.94,
+    "words": [
+      {
+        "word": "Walls",
+        "start": 22.04,
+        "end": 22.3
+      },
+      {
+        "word": "will",
+        "start": 22.3,
+        "end": 22.42
+      },
+      {
+        "word": "be",
+        "start": 22.42,
+        "end": 22.56
+      },
+      {
+        "word": "in",
+        "start": 22.56,
+        "end": 22.72
+      },
+      {
+        "word": "Philadelphia",
+        "start": 22.72,
+        "end": 23.14
+      },
+      {
+        "word": "tonight",
+        "start": 23.14,
+        "end": 23.5
+      },
+      {
+        "word": "with",
+        "start": 23.5,
+        "end": 23.68
+      },
+      {
+        "word": "Harris",
+        "start": 23.68,
+        "end": 24.0
+      },
+      {
+        "word": "for",
+        "start": 24.0,
+        "end": 24.34
+      },
+      {
+        "word": "a",
+        "start": 24.34,
+        "end": 24.56
+      },
+      {
+        "word": "rally.",
+        "start": 24.56,
+        "end": 24.94
+      }
+    ]
+  },
+  {
+    "sentence": "From the moment the financial markets opened in Asia yesterday to the closing bell in the United States, stock prices plummeted.",
+    "start": 29.42,
+    "end": 37.4,
+    "words": [
+      {
+        "word": "From",
+        "start": 29.42,
+        "end": 29.94
+      },
+      {
+        "word": "the",
+        "start": 29.94,
+        "end": 30.18
+      },
+      {
+        "word": "moment",
+        "start": 30.18,
+        "end": 30.52
+      },
+      {
+        "word": "the",
+        "start": 30.52,
+        "end": 30.78
+      },
+      {
+        "word": "financial",
+        "start": 30.78,
+        "end": 31.22
+      },
+      {
+        "word": "markets",
+        "start": 31.22,
+        "end": 31.58
+      },
+      {
+        "word": "opened",
+        "start": 31.58,
+        "end": 32.0
+      },
+      {
+        "word": "in",
+        "start": 32.0,
+        "end": 32.22
+      },
+      {
+        "word": "Asia",
+        "start": 32.22,
+        "end": 32.52
+      },
+      {
+        "word": "yesterday",
+        "start": 32.52,
+        "end": 33.06
+      },
+      {
+        "word": "to",
+        "start": 33.06,
+        "end": 33.32
+      },
+      {
+        "word": "the",
+        "start": 33.32,
+        "end": 33.58
+      },
+      {
+        "word": "closing",
+        "start": 33.58,
+        "end": 33.84
+      },
+      {
+        "word": "bell",
+        "start": 33.84,
+        "end": 34.14
+      },
+      {
+        "word": "in",
+        "start": 34.14,
+        "end": 34.32
+      },
+      {
+        "word": "the",
+        "start": 34.32,
+        "end": 34.44
+      },
+      {
+        "word": "United",
+        "start": 34.44,
+        "end": 34.78
+      },
+      {
+        "word": "States,",
+        "start": 34.78,
+        "end": 35.28
+      },
+      {
+        "word": "stock",
+        "start": 35.78,
+        "end": 35.88
+      },
+      {
+        "word": "prices",
+        "start": 35.88,
+        "end": 36.32
+      },
+      {
+        "word": "plummeted.",
+        "start": 36.32,
+        "end": 37.4
+      }
+    ]
+  },
+  {
+    "sentence": "On Wall Street, the S &P 500 had its biggest drop in two years.",
+    "start": 37.6,
+    "end": 41.32,
+    "words": [
+      {
+        "word": "On",
+        "start": 37.6,
+        "end": 37.78
+      },
+      {
+        "word": "Wall",
+        "start": 37.78,
+        "end": 38.06
+      },
+      {
+        "word": "Street,",
+        "start": 38.06,
+        "end": 38.26
+      },
+      {
+        "word": "the",
+        "start": 38.38,
+        "end": 38.5
+      },
+      {
+        "word": "S",
+        "start": 38.5,
+        "end": 38.62
+      },
+      {
+        "word": "&P",
+        "start": 38.62,
+        "end": 38.88
+      },
+      {
+        "word": "500",
+        "start": 38.88,
+        "end": 39.24
+      },
+      {
+        "word": "had",
+        "start": 39.24,
+        "end": 39.48
+      },
+      {
+        "word": "its",
+        "start": 39.48,
+        "end": 39.76
+      },
+      {
+        "word": "biggest",
+        "start": 39.76,
+        "end": 40.02
+      },
+      {
+        "word": "drop",
+        "start": 40.02,
+        "end": 40.28
+      },
+      {
+        "word": "in",
+        "start": 40.28,
+        "end": 40.44
+      },
+      {
+        "word": "two",
+        "start": 40.44,
+        "end": 40.78
+      },
+      {
+        "word": "years.",
+        "start": 40.78,
+        "end": 41.32
+      }
+    ]
+  },
+  {
+    "sentence": "Driving the dip was widespread panic that the United States economy could be slowing down, which could shake the global economy.",
+    "start": 42.06,
+    "end": 49.04,
+    "words": [
+      {
+        "word": "Driving",
+        "start": 42.06,
+        "end": 42.34
+      },
+      {
+        "word": "the",
+        "start": 42.34,
+        "end": 42.56
+      },
+      {
+        "word": "dip",
+        "start": 42.56,
+        "end": 42.72
+      },
+      {
+        "word": "was",
+        "start": 42.72,
+        "end": 43.12
+      },
+      {
+        "word": "widespread",
+        "start": 43.12,
+        "end": 43.64
+      },
+      {
+        "word": "panic",
+        "start": 43.64,
+        "end": 44.14
+      },
+      {
+        "word": "that",
+        "start": 44.14,
+        "end": 44.36
+      },
+      {
+        "word": "the",
+        "start": 44.36,
+        "end": 44.54
+      },
+      {
+        "word": "United",
+        "start": 44.54,
+        "end": 44.84
+      },
+      {
+        "word": "States",
+        "start": 44.84,
+        "end": 45.08
+      },
+      {
+        "word": "economy",
+        "start": 45.08,
+        "end": 45.54
+      },
+      {
+        "word": "could",
+        "start": 45.54,
+        "end": 45.78
+      },
+      {
+        "word": "be",
+        "start": 45.78,
+        "end": 46.02
+      },
+      {
+        "word": "slowing",
+        "start": 46.02,
+        "end": 46.24
+      },
+      {
+        "word": "down,",
+        "start": 46.24,
+        "end": 46.96
+      },
+      {
+        "word": "which",
+        "start": 47.18,
+        "end": 47.46
+      },
+      {
+        "word": "could",
+        "start": 47.46,
+        "end": 47.68
+      },
+      {
+        "word": "shake",
+        "start": 47.68,
+        "end": 47.92
+      },
+      {
+        "word": "the",
+        "start": 47.92,
+        "end": 48.22
+      },
+      {
+        "word": "global",
+        "start": 48.22,
+        "end": 48.5
+      },
+      {
+        "word": "economy.",
+        "start": 48.5,
+        "end": 49.04
+      }
+    ]
+  },
+  {
+    "sentence": "But as of this morning, some measure of calm has returned, with the markets in Asia on the rebound from their sudden drops.",
+    "start": 49.82,
+    "end": 56.36,
+    "words": [
+      {
+        "word": "But",
+        "start": 49.82,
+        "end": 50.08
+      },
+      {
+        "word": "as",
+        "start": 50.08,
+        "end": 50.38
+      },
+      {
+        "word": "of",
+        "start": 50.38,
+        "end": 50.54
+      },
+      {
+        "word": "this",
+        "start": 50.54,
+        "end": 50.76
+      },
+      {
+        "word": "morning,",
+        "start": 50.76,
+        "end": 51.0
+      },
+      {
+        "word": "some",
+        "start": 51.28,
+        "end": 51.46
+      },
+      {
+        "word": "measure",
+        "start": 51.46,
+        "end": 51.78
+      },
+      {
+        "word": "of",
+        "start": 51.78,
+        "end": 52.04
+      },
+      {
+        "word": "calm",
+        "start": 52.04,
+        "end": 52.24
+      },
+      {
+        "word": "has",
+        "start": 52.24,
+        "end": 52.5
+      },
+      {
+        "word": "returned,",
+        "start": 52.5,
+        "end": 52.98
+      },
+      {
+        "word": "with",
+        "start": 53.44,
+        "end": 53.56
+      },
+      {
+        "word": "the",
+        "start": 53.56,
+        "end": 53.76
+      },
+      {
+        "word": "markets",
+        "start": 53.76,
+        "end": 53.94
+      },
+      {
+        "word": "in",
+        "start": 53.94,
+        "end": 54.18
+      },
+      {
+        "word": "Asia",
+        "start": 54.18,
+        "end": 54.42
+      },
+      {
+        "word": "on",
+        "start": 54.42,
+        "end": 54.6
+      },
+      {
+        "word": "the",
+        "start": 54.6,
+        "end": 55.06
+      },
+      {
+        "word": "rebound",
+        "start": 55.06,
+        "end": 55.08
+      },
+      {
+        "word": "from",
+        "start": 55.08,
+        "end": 55.4
+      },
+      {
+        "word": "their",
+        "start": 55.4,
+        "end": 55.62
+      },
+      {
+        "word": "sudden",
+        "start": 55.62,
+        "end": 55.86
+      },
+      {
+        "word": "drops.",
+        "start": 55.86,
+        "end": 56.36
+      }
+    ]
+  },
+  {
+    "sentence": "So Monday's market freakout was really dramatic, but it doesn't necessarily reflect what's really going on in the economy.",
+    "start": 56.98,
+    "end": 63.44,
+    "words": [
+      {
+        "word": "So",
+        "start": 56.98,
+        "end": 56.98
+      },
+      {
+        "word": "Monday's",
+        "start": 56.98,
+        "end": 57.54
+      },
+      {
+        "word": "market",
+        "start": 57.54,
+        "end": 57.84
+      },
+      {
+        "word": "freakout",
+        "start": 57.84,
+        "end": 58.54
+      },
+      {
+        "word": "was",
+        "start": 58.54,
+        "end": 58.78
+      },
+      {
+        "word": "really",
+        "start": 58.78,
+        "end": 59.28
+      },
+      {
+        "word": "dramatic,",
+        "start": 59.28,
+        "end": 59.8
+      },
+      {
+        "word": "but",
+        "start": 59.8,
+        "end": 60.18
+      },
+      {
+        "word": "it",
+        "start": 60.18,
+        "end": 60.4
+      },
+      {
+        "word": "doesn't",
+        "start": 60.4,
+        "end": 60.62
+      },
+      {
+        "word": "necessarily",
+        "start": 60.62,
+        "end": 61.08
+      },
+      {
+        "word": "reflect",
+        "start": 61.08,
+        "end": 61.46
+      },
+      {
+        "word": "what's",
+        "start": 61.46,
+        "end": 61.72
+      },
+      {
+        "word": "really",
+        "start": 61.72,
+        "end": 62.06
+      },
+      {
+        "word": "going",
+        "start": 62.06,
+        "end": 62.26
+      },
+      {
+        "word": "on",
+        "start": 62.26,
+        "end": 62.64
+      },
+      {
+        "word": "in",
+        "start": 62.64,
+        "end": 62.9
+      },
+      {
+        "word": "the",
+        "start": 62.9,
+        "end": 63.06
+      },
+      {
+        "word": "economy.",
+        "start": 63.06,
+        "end": 63.44
+      }
+    ]
+  },
+  {
+    "sentence": "Lydia DePillis is an economics reporter for the Times.",
+    "start": 64.34,
+    "end": 66.92,
+    "words": [
+      {
+        "word": "Lydia",
+        "start": 64.34,
+        "end": 64.54
+      },
+      {
+        "word": "DePillis",
+        "start": 64.54,
+        "end": 64.92
+      },
+      {
+        "word": "is",
+        "start": 64.92,
+        "end": 65.14
+      },
+      {
+        "word": "an",
+        "start": 65.14,
+        "end": 65.42
+      },
+      {
+        "word": "economics",
+        "start": 65.42,
+        "end": 65.84
+      },
+      {
+        "word": "reporter",
+        "start": 65.84,
+        "end": 66.16
+      },
+      {
+        "word": "for",
+        "start": 66.16,
+        "end": 66.36
+      },
+      {
+        "word": "the",
+        "start": 66.36,
+        "end": 66.56
+      },
+      {
+        "word": "Times.",
+        "start": 66.56,
+        "end": 66.92
+      }
+    ]
+  },
+  {
+    "sentence": "She says while recent data showed that hiring slowed in the U.S., that data is not the whole story.",
+    "start": 67.42,
+    "end": 73.68,
+    "words": [
+      {
+        "word": "She",
+        "start": 67.42,
+        "end": 67.6
+      },
+      {
+        "word": "says",
+        "start": 67.6,
+        "end": 67.84
+      },
+      {
+        "word": "while",
+        "start": 67.84,
+        "end": 68.4
+      },
+      {
+        "word": "recent",
+        "start": 68.4,
+        "end": 68.82
+      },
+      {
+        "word": "data",
+        "start": 68.82,
+        "end": 69.16
+      },
+      {
+        "word": "showed",
+        "start": 69.16,
+        "end": 69.48
+      },
+      {
+        "word": "that",
+        "start": 69.48,
+        "end": 69.8
+      },
+      {
+        "word": "hiring",
+        "start": 69.8,
+        "end": 70.14
+      },
+      {
+        "word": "slowed",
+        "start": 70.14,
+        "end": 70.54
+      },
+      {
+        "word": "in",
+        "start": 70.54,
+        "end": 70.8
+      },
+      {
+        "word": "the",
+        "start": 70.8,
+        "end": 70.96
+      },
+      {
+        "word": "U",
+        "start": 70.96,
+        "end": 71.1
+      },
+      {
+        "word": ".S.,",
+        "start": 71.1,
+        "end": 71.82
+      },
+      {
+        "word": "that",
+        "start": 71.82,
+        "end": 72.1
+      },
+      {
+        "word": "data",
+        "start": 72.1,
+        "end": 72.4
+      },
+      {
+        "word": "is",
+        "start": 72.4,
+        "end": 72.7
+      },
+      {
+        "word": "not",
+        "start": 72.7,
+        "end": 72.84
+      },
+      {
+        "word": "the",
+        "start": 72.84,
+        "end": 73.06
+      },
+      {
+        "word": "whole",
+        "start": 73.06,
+        "end": 73.28
+      },
+      {
+        "word": "story.",
+        "start": 73.28,
+        "end": 73.68
+      }
+    ]
+  },
+  {
+    "sentence": "The jobs report on Friday really spurred fears that the Fed had miscalculated and slowed the economy down too quickly and that the trajectory was going to keep on going, resulting in layoffs and maybe even negative job growth.",
+    "start": 74.34,
+    "end": 88.58,
+    "words": [
+      {
+        "word": "The",
+        "start": 74.34,
+        "end": 74.5
+      },
+      {
+        "word": "jobs",
+        "start": 74.5,
+        "end": 74.78
+      },
+      {
+        "word": "report",
+        "start": 74.78,
+        "end": 75.24
+      },
+      {
+        "word": "on",
+        "start": 75.24,
+        "end": 75.64
+      },
+      {
+        "word": "Friday",
+        "start": 75.64,
+        "end": 76.14
+      },
+      {
+        "word": "really",
+        "start": 76.14,
+        "end": 76.96
+      },
+      {
+        "word": "spurred",
+        "start": 76.96,
+        "end": 77.38
+      },
+      {
+        "word": "fears",
+        "start": 77.38,
+        "end": 77.82
+      },
+      {
+        "word": "that",
+        "start": 77.82,
+        "end": 78.2
+      },
+      {
+        "word": "the",
+        "start": 78.2,
+        "end": 78.4
+      },
+      {
+        "word": "Fed",
+        "start": 78.4,
+        "end": 78.56
+      },
+      {
+        "word": "had",
+        "start": 78.56,
+        "end": 78.6
+      },
+      {
+        "word": "miscalculated",
+        "start": 78.6,
+        "end": 79.52
+      },
+      {
+        "word": "and",
+        "start": 79.52,
+        "end": 80.02
+      },
+      {
+        "word": "slowed",
+        "start": 80.02,
+        "end": 80.22
+      },
+      {
+        "word": "the",
+        "start": 80.22,
+        "end": 80.4
+      },
+      {
+        "word": "economy",
+        "start": 80.4,
+        "end": 80.76
+      },
+      {
+        "word": "down",
+        "start": 80.76,
+        "end": 81.58
+      },
+      {
+        "word": "too",
+        "start": 81.58,
+        "end": 82.06
+      },
+      {
+        "word": "quickly",
+        "start": 82.06,
+        "end": 82.68
+      },
+      {
+        "word": "and",
+        "start": 82.68,
+        "end": 83.12
+      },
+      {
+        "word": "that",
+        "start": 83.12,
+        "end": 83.24
+      },
+      {
+        "word": "the",
+        "start": 83.24,
+        "end": 83.52
+      },
+      {
+        "word": "trajectory",
+        "start": 83.52,
+        "end": 83.92
+      },
+      {
+        "word": "was",
+        "start": 83.92,
+        "end": 84.18
+      },
+      {
+        "word": "going",
+        "start": 84.18,
+        "end": 84.38
+      },
+      {
+        "word": "to",
+        "start": 84.38,
+        "end": 84.66
+      },
+      {
+        "word": "keep",
+        "start": 84.66,
+        "end": 84.84
+      },
+      {
+        "word": "on",
+        "start": 84.84,
+        "end": 85.06
+      },
+      {
+        "word": "going,",
+        "start": 85.06,
+        "end": 85.46
+      },
+      {
+        "word": "resulting",
+        "start": 85.92,
+        "end": 86.14
+      },
+      {
+        "word": "in",
+        "start": 86.14,
+        "end": 86.4
+      },
+      {
+        "word": "layoffs",
+        "start": 86.4,
+        "end": 86.78
+      },
+      {
+        "word": "and",
+        "start": 86.78,
+        "end": 87.04
+      },
+      {
+        "word": "maybe",
+        "start": 87.04,
+        "end": 87.26
+      },
+      {
+        "word": "even",
+        "start": 87.26,
+        "end": 87.56
+      },
+      {
+        "word": "negative",
+        "start": 87.56,
+        "end": 87.88
+      },
+      {
+        "word": "job",
+        "start": 87.88,
+        "end": 88.12
+      },
+      {
+        "word": "growth.",
+        "start": 88.12,
+        "end": 88.58
+      }
+    ]
+  },
+  {
+    "sentence": "But that is not at all an inevitability.",
+    "start": 89.54,
+    "end": 92.82,
+    "words": [
+      {
+        "word": "But",
+        "start": 89.54,
+        "end": 89.74
+      },
+      {
+        "word": "that",
+        "start": 89.74,
+        "end": 89.96
+      },
+      {
+        "word": "is",
+        "start": 89.96,
+        "end": 90.36
+      },
+      {
+        "word": "not",
+        "start": 90.36,
+        "end": 90.86
+      },
+      {
+        "word": "at",
+        "start": 90.86,
+        "end": 91.08
+      },
+      {
+        "word": "all",
+        "start": 91.08,
+        "end": 91.8
+      },
+      {
+        "word": "an",
+        "start": 91.8,
+        "end": 92.16
+      },
+      {
+        "word": "inevitability.",
+        "start": 92.16,
+        "end": 92.82
+      }
+    ]
+  },
+  {
+    "sentence": "Other economic data recently has been really healthy.",
+    "start": 93.52,
+    "end": 96.8,
+    "words": [
+      {
+        "word": "Other",
+        "start": 93.52,
+        "end": 93.78
+      },
+      {
+        "word": "economic",
+        "start": 93.78,
+        "end": 94.34
+      },
+      {
+        "word": "data",
+        "start": 94.34,
+        "end": 94.72
+      },
+      {
+        "word": "recently",
+        "start": 94.72,
+        "end": 95.2
+      },
+      {
+        "word": "has",
+        "start": 95.2,
+        "end": 95.5
+      },
+      {
+        "word": "been",
+        "start": 95.5,
+        "end": 96.08
+      },
+      {
+        "word": "really",
+        "start": 96.08,
+        "end": 96.5
+      },
+      {
+        "word": "healthy.",
+        "start": 96.5,
+        "end": 96.8
+      }
+    ]
+  },
+  {
+    "sentence": "We got a GDP report which showed an unexpectedly high degree of consumer spending and business investment. Perfectly healthy.",
+    "start": 97.0,
+    "end": 105.9,
+    "words": [
+      {
+        "word": "We",
+        "start": 97.0,
+        "end": 97.18
+      },
+      {
+        "word": "got",
+        "start": 97.18,
+        "end": 97.7
+      },
+      {
+        "word": "a",
+        "start": 97.7,
+        "end": 98.36
+      },
+      {
+        "word": "GDP",
+        "start": 98.36,
+        "end": 98.66
+      },
+      {
+        "word": "report",
+        "start": 98.66,
+        "end": 99.3
+      },
+      {
+        "word": "which",
+        "start": 99.3,
+        "end": 99.82
+      },
+      {
+        "word": "showed",
+        "start": 99.82,
+        "end": 100.12
+      },
+      {
+        "word": "an",
+        "start": 100.12,
+        "end": 100.58
+      },
+      {
+        "word": "unexpectedly",
+        "start": 100.58,
+        "end": 101.06
+      },
+      {
+        "word": "high",
+        "start": 101.06,
+        "end": 102.26
+      },
+      {
+        "word": "degree",
+        "start": 102.26,
+        "end": 102.68
+      },
+      {
+        "word": "of",
+        "start": 102.68,
+        "end": 102.94
+      },
+      {
+        "word": "consumer",
+        "start": 102.94,
+        "end": 103.2
+      },
+      {
+        "word": "spending",
+        "start": 103.2,
+        "end": 103.48
+      },
+      {
+        "word": "and",
+        "start": 103.48,
+        "end": 103.68
+      },
+      {
+        "word": "business",
+        "start": 103.68,
+        "end": 103.94
+      },
+      {
+        "word": "investment.",
+        "start": 103.94,
+        "end": 104.52
+      },
+      {
+        "word": "Perfectly",
+        "start": 105.0,
+        "end": 105.56
+      },
+      {
+        "word": "healthy.",
+        "start": 105.56,
+        "end": 105.9
+      }
+    ]
+  },
+  {
+    "sentence": "We've seen lending data that shows that loan demand is pretty robust.",
+    "start": 105.9,
+    "end": 111.84,
+    "words": [
+      {
+        "word": "We've",
+        "start": 105.9,
+        "end": 107.08
+      },
+      {
+        "word": "seen",
+        "start": 107.08,
+        "end": 107.78
+      },
+      {
+        "word": "lending",
+        "start": 107.78,
+        "end": 108.64
+      },
+      {
+        "word": "data",
+        "start": 108.64,
+        "end": 109.22
+      },
+      {
+        "word": "that",
+        "start": 109.22,
+        "end": 109.6
+      },
+      {
+        "word": "shows",
+        "start": 109.6,
+        "end": 109.84
+      },
+      {
+        "word": "that",
+        "start": 109.84,
+        "end": 110.2
+      },
+      {
+        "word": "loan",
+        "start": 110.2,
+        "end": 110.36
+      },
+      {
+        "word": "demand",
+        "start": 110.36,
+        "end": 110.68
+      },
+      {
+        "word": "is",
+        "start": 110.68,
+        "end": 111.02
+      },
+      {
+        "word": "pretty",
+        "start": 111.02,
+        "end": 111.3
+      },
+      {
+        "word": "robust.",
+        "start": 111.3,
+        "end": 111.84
+      }
+    ]
+  },
+  {
+    "sentence": "There's all kinds of indicators that nothing is fundamentally wrong.",
+    "start": 112.38,
+    "end": 115.58,
+    "words": [
+      {
+        "word": "There's",
+        "start": 112.38,
+        "end": 112.78
+      },
+      {
+        "word": "all",
+        "start": 112.78,
+        "end": 112.98
+      },
+      {
+        "word": "kinds",
+        "start": 112.98,
+        "end": 113.2
+      },
+      {
+        "word": "of",
+        "start": 113.2,
+        "end": 113.5
+      },
+      {
+        "word": "indicators",
+        "start": 113.5,
+        "end": 113.84
+      },
+      {
+        "word": "that",
+        "start": 113.84,
+        "end": 114.12
+      },
+      {
+        "word": "nothing",
+        "start": 114.12,
+        "end": 114.38
+      },
+      {
+        "word": "is",
+        "start": 114.38,
+        "end": 114.64
+      },
+      {
+        "word": "fundamentally",
+        "start": 114.64,
+        "end": 115.16
+      },
+      {
+        "word": "wrong.",
+        "start": 115.16,
+        "end": 115.58
+      }
+    ]
+  },
+  {
+    "sentence": "It's fair to say that we're probably entering a period of more pronounced volatility, but the people who watch this day in and day out generally think that the economy is in a good place and as long as that remains true,",
+    "start": 116.6,
+    "end": 131.74,
+    "words": [
+      {
+        "word": "It's",
+        "start": 116.6,
+        "end": 116.78
+      },
+      {
+        "word": "fair",
+        "start": 116.78,
+        "end": 116.9
+      },
+      {
+        "word": "to",
+        "start": 116.9,
+        "end": 117.12
+      },
+      {
+        "word": "say",
+        "start": 117.12,
+        "end": 117.34
+      },
+      {
+        "word": "that",
+        "start": 117.34,
+        "end": 117.58
+      },
+      {
+        "word": "we're",
+        "start": 117.58,
+        "end": 118.02
+      },
+      {
+        "word": "probably",
+        "start": 118.02,
+        "end": 118.42
+      },
+      {
+        "word": "entering",
+        "start": 118.42,
+        "end": 118.96
+      },
+      {
+        "word": "a",
+        "start": 118.96,
+        "end": 119.26
+      },
+      {
+        "word": "period",
+        "start": 119.26,
+        "end": 119.62
+      },
+      {
+        "word": "of",
+        "start": 119.62,
+        "end": 120.24
+      },
+      {
+        "word": "more",
+        "start": 120.24,
+        "end": 120.6
+      },
+      {
+        "word": "pronounced",
+        "start": 120.6,
+        "end": 121.12
+      },
+      {
+        "word": "volatility,",
+        "start": 121.12,
+        "end": 121.9
+      },
+      {
+        "word": "but",
+        "start": 121.9,
+        "end": 122.96
+      },
+      {
+        "word": "the",
+        "start": 122.96,
+        "end": 123.18
+      },
+      {
+        "word": "people",
+        "start": 123.18,
+        "end": 123.32
+      },
+      {
+        "word": "who",
+        "start": 123.32,
+        "end": 123.58
+      },
+      {
+        "word": "watch",
+        "start": 123.58,
+        "end": 123.94
+      },
+      {
+        "word": "this",
+        "start": 123.94,
+        "end": 124.68
+      },
+      {
+        "word": "day",
+        "start": 124.68,
+        "end": 124.9
+      },
+      {
+        "word": "in",
+        "start": 124.9,
+        "end": 125.02
+      },
+      {
+        "word": "and",
+        "start": 125.02,
+        "end": 125.14
+      },
+      {
+        "word": "day",
+        "start": 125.14,
+        "end": 125.3
+      },
+      {
+        "word": "out",
+        "start": 125.3,
+        "end": 125.78
+      },
+      {
+        "word": "generally",
+        "start": 125.78,
+        "end": 126.3
+      },
+      {
+        "word": "think",
+        "start": 126.3,
+        "end": 126.8
+      },
+      {
+        "word": "that",
+        "start": 126.8,
+        "end": 127.5
+      },
+      {
+        "word": "the",
+        "start": 127.5,
+        "end": 127.88
+      },
+      {
+        "word": "economy",
+        "start": 127.88,
+        "end": 128.14
+      },
+      {
+        "word": "is",
+        "start": 128.14,
+        "end": 128.3
+      },
+      {
+        "word": "in",
+        "start": 128.3,
+        "end": 128.4
+      },
+      {
+        "word": "a",
+        "start": 128.4,
+        "end": 128.54
+      },
+      {
+        "word": "good",
+        "start": 128.54,
+        "end": 128.72
+      },
+      {
+        "word": "place",
+        "start": 128.72,
+        "end": 129.24
+      },
+      {
+        "word": "and",
+        "start": 129.24,
+        "end": 130.06
+      },
+      {
+        "word": "as",
+        "start": 130.06,
+        "end": 130.6
+      },
+      {
+        "word": "long",
+        "start": 130.6,
+        "end": 130.78
+      },
+      {
+        "word": "as",
+        "start": 130.78,
+        "end": 130.88
+      },
+      {
+        "word": "that",
+        "start": 130.88,
+        "end": 131.04
+      },
+      {
+        "word": "remains",
+        "start": 131.04,
+        "end": 131.28
+      },
+      {
+        "word": "true,",
+        "start": 131.28,
+        "end": 131.74
+      }
+    ]
+  },
+  {
+    "sentence": "the stock market isn't going to totally fall off the cliff,",
+    "start": 132.28,
+    "end": 134.42,
+    "words": [
+      {
+        "word": "the",
+        "start": 132.28,
+        "end": 132.42
+      },
+      {
+        "word": "stock",
+        "start": 132.42,
+        "end": 132.56
+      },
+      {
+        "word": "market",
+        "start": 132.56,
+        "end": 132.78
+      },
+      {
+        "word": "isn't",
+        "start": 132.78,
+        "end": 132.94
+      },
+      {
+        "word": "going",
+        "start": 132.94,
+        "end": 133.04
+      },
+      {
+        "word": "to",
+        "start": 133.04,
+        "end": 133.14
+      },
+      {
+        "word": "totally",
+        "start": 133.14,
+        "end": 133.34
+      },
+      {
+        "word": "fall",
+        "start": 133.34,
+        "end": 133.76
+      },
+      {
+        "word": "off",
+        "start": 133.76,
+        "end": 133.94
+      },
+      {
+        "word": "the",
+        "start": 133.94,
+        "end": 134.42
+      },
+      {
+        "word": "cliff,",
+        "start": 134.42,
+        "end": 134.42
+      }
+    ]
+  },
+  {
+    "sentence": "it's just going through a bit of a rough patch.",
+    "start": 134.6,
+    "end": 136.56,
+    "words": [
+      {
+        "word": "it's",
+        "start": 134.6,
+        "end": 134.66
+      },
+      {
+        "word": "just",
+        "start": 134.66,
+        "end": 134.92
+      },
+      {
+        "word": "going",
+        "start": 134.92,
+        "end": 135.22
+      },
+      {
+        "word": "through",
+        "start": 135.22,
+        "end": 135.56
+      },
+      {
+        "word": "a",
+        "start": 135.56,
+        "end": 135.6
+      },
+      {
+        "word": "bit",
+        "start": 135.6,
+        "end": 135.74
+      },
+      {
+        "word": "of",
+        "start": 135.74,
+        "end": 135.9
+      },
+      {
+        "word": "a",
+        "start": 135.9,
+        "end": 135.96
+      },
+      {
+        "word": "rough",
+        "start": 135.96,
+        "end": 136.1
+      },
+      {
+        "word": "patch.",
+        "start": 136.1,
+        "end": 136.56
+      }
+    ]
+  },
+  {
+    "sentence": "In Washington yesterday, a federal judge issued a landmark antitrust ruling against Google, saying it acted illegally to maintain its monopoly on internet searches.",
+    "start": 142.08,
+    "end": 151.6,
+    "words": [
+      {
+        "word": "In",
+        "start": 142.08,
+        "end": 142.1
+      },
+      {
+        "word": "Washington",
+        "start": 142.1,
+        "end": 142.6
+      },
+      {
+        "word": "yesterday,",
+        "start": 142.6,
+        "end": 143.1
+      },
+      {
+        "word": "a",
+        "start": 143.26,
+        "end": 143.38
+      },
+      {
+        "word": "federal",
+        "start": 143.38,
+        "end": 143.74
+      },
+      {
+        "word": "judge",
+        "start": 143.74,
+        "end": 144.02
+      },
+      {
+        "word": "issued",
+        "start": 144.02,
+        "end": 144.34
+      },
+      {
+        "word": "a",
+        "start": 144.34,
+        "end": 144.66
+      },
+      {
+        "word": "landmark",
+        "start": 144.66,
+        "end": 145.18
+      },
+      {
+        "word": "antitrust",
+        "start": 145.18,
+        "end": 145.92
+      },
+      {
+        "word": "ruling",
+        "start": 145.92,
+        "end": 146.22
+      },
+      {
+        "word": "against",
+        "start": 146.22,
+        "end": 146.66
+      },
+      {
+        "word": "Google,",
+        "start": 146.66,
+        "end": 147.14
+      },
+      {
+        "word": "saying",
+        "start": 147.6,
+        "end": 147.82
+      },
+      {
+        "word": "it",
+        "start": 147.82,
+        "end": 148.02
+      },
+      {
+        "word": "acted",
+        "start": 148.02,
+        "end": 148.36
+      },
+      {
+        "word": "illegally",
+        "start": 148.36,
+        "end": 148.92
+      },
+      {
+        "word": "to",
+        "start": 148.92,
+        "end": 149.2
+      },
+      {
+        "word": "maintain",
+        "start": 149.2,
+        "end": 149.54
+      },
+      {
+        "word": "its",
+        "start": 149.54,
+        "end": 149.82
+      },
+      {
+        "word": "monopoly",
+        "start": 149.82,
+        "end": 150.32
+      },
+      {
+        "word": "on",
+        "start": 150.32,
+        "end": 150.72
+      },
+      {
+        "word": "internet",
+        "start": 150.72,
+        "end": 151.12
+      },
+      {
+        "word": "searches.",
+        "start": 151.12,
+        "end": 151.6
+      }
+    ]
+  },
+  {
+    "sentence": "Over the years, Google has become synonymous with looking something up. You Google it.",
+    "start": 152.62,
+    "end": 157.16,
+    "words": [
+      {
+        "word": "Over",
+        "start": 152.62,
+        "end": 152.8
+      },
+      {
+        "word": "the",
+        "start": 152.8,
+        "end": 153.0
+      },
+      {
+        "word": "years,",
+        "start": 153.0,
+        "end": 153.24
+      },
+      {
+        "word": "Google",
+        "start": 153.38,
+        "end": 153.66
+      },
+      {
+        "word": "has",
+        "start": 153.66,
+        "end": 153.96
+      },
+      {
+        "word": "become",
+        "start": 153.96,
+        "end": 154.26
+      },
+      {
+        "word": "synonymous",
+        "start": 154.26,
+        "end": 154.94
+      },
+      {
+        "word": "with",
+        "start": 154.94,
+        "end": 155.24
+      },
+      {
+        "word": "looking",
+        "start": 155.24,
+        "end": 155.5
+      },
+      {
+        "word": "something",
+        "start": 155.5,
+        "end": 155.82
+      },
+      {
+        "word": "up.",
+        "start": 155.82,
+        "end": 156.2
+      },
+      {
+        "word": "You",
+        "start": 156.48,
+        "end": 156.56
+      },
+      {
+        "word": "Google",
+        "start": 156.56,
+        "end": 156.82
+      },
+      {
+        "word": "it.",
+        "start": 156.82,
+        "end": 157.16
+      }
+    ]
+  },
+  {
+    "sentence": "But the Justice Department claimed the company was keeping that dominance by paying other companies to have its search engine front and center.",
+    "start": 157.64,
+    "end": 164.72,
+    "words": [
+      {
+        "word": "But",
+        "start": 157.64,
+        "end": 157.82
+      },
+      {
+        "word": "the",
+        "start": 157.82,
+        "end": 157.98
+      },
+      {
+        "word": "Justice",
+        "start": 157.98,
+        "end": 158.32
+      },
+      {
+        "word": "Department",
+        "start": 158.32,
+        "end": 158.74
+      },
+      {
+        "word": "claimed",
+        "start": 158.74,
+        "end": 159.0
+      },
+      {
+        "word": "the",
+        "start": 159.0,
+        "end": 159.18
+      },
+      {
+        "word": "company",
+        "start": 159.18,
+        "end": 159.48
+      },
+      {
+        "word": "was",
+        "start": 159.48,
+        "end": 159.8
+      },
+      {
+        "word": "keeping",
+        "start": 159.8,
+        "end": 160.16
+      },
+      {
+        "word": "that",
+        "start": 160.16,
+        "end": 160.52
+      },
+      {
+        "word": "dominance",
+        "start": 160.52,
+        "end": 161.06
+      },
+      {
+        "word": "by",
+        "start": 161.06,
+        "end": 161.58
+      },
+      {
+        "word": "paying",
+        "start": 161.58,
+        "end": 161.88
+      },
+      {
+        "word": "other",
+        "start": 161.88,
+        "end": 162.22
+      },
+      {
+        "word": "companies",
+        "start": 162.22,
+        "end": 162.58
+      },
+      {
+        "word": "to",
+        "start": 162.58,
+        "end": 162.78
+      },
+      {
+        "word": "have",
+        "start": 162.78,
+        "end": 162.92
+      },
+      {
+        "word": "its",
+        "start": 162.92,
+        "end": 163.22
+      },
+      {
+        "word": "search",
+        "start": 163.22,
+        "end": 163.44
+      },
+      {
+        "word": "engine",
+        "start": 163.44,
+        "end": 163.8
+      },
+      {
+        "word": "front",
+        "start": 163.8,
+        "end": 164.14
+      },
+      {
+        "word": "and",
+        "start": 164.14,
+        "end": 164.4
+      },
+      {
+        "word": "center.",
+        "start": 164.4,
+        "end": 164.72
+      }
+    ]
+  },
+  {
+    "sentence": "It spent billions of dollars a year to have Google be the default on Samsung phones, Apple products and other web browsers.",
+    "start": 165.34,
+    "end": 172.18,
+    "words": [
+      {
+        "word": "It",
+        "start": 165.34,
+        "end": 165.52
+      },
+      {
+        "word": "spent",
+        "start": 165.52,
+        "end": 165.8
+      },
+      {
+        "word": "billions",
+        "start": 165.8,
+        "end": 166.36
+      },
+      {
+        "word": "of",
+        "start": 166.36,
+        "end": 166.6
+      },
+      {
+        "word": "dollars",
+        "start": 166.6,
+        "end": 166.88
+      },
+      {
+        "word": "a",
+        "start": 166.88,
+        "end": 167.08
+      },
+      {
+        "word": "year",
+        "start": 167.08,
+        "end": 167.2
+      },
+      {
+        "word": "to",
+        "start": 167.2,
+        "end": 167.38
+      },
+      {
+        "word": "have",
+        "start": 167.38,
+        "end": 167.56
+      },
+      {
+        "word": "Google",
+        "start": 167.56,
+        "end": 167.86
+      },
+      {
+        "word": "be",
+        "start": 167.86,
+        "end": 168.06
+      },
+      {
+        "word": "the",
+        "start": 168.06,
+        "end": 168.26
+      },
+      {
+        "word": "default",
+        "start": 168.26,
+        "end": 168.64
+      },
+      {
+        "word": "on",
+        "start": 168.64,
+        "end": 168.96
+      },
+      {
+        "word": "Samsung",
+        "start": 168.96,
+        "end": 169.44
+      },
+      {
+        "word": "phones,",
+        "start": 169.44,
+        "end": 169.96
+      },
+      {
+        "word": "Apple",
+        "start": 170.32,
+        "end": 170.52
+      },
+      {
+        "word": "products",
+        "start": 170.52,
+        "end": 171.0
+      },
+      {
+        "word": "and",
+        "start": 171.0,
+        "end": 171.3
+      },
+      {
+        "word": "other",
+        "start": 171.3,
+        "end": 171.5
+      },
+      {
+        "word": "web",
+        "start": 171.5,
+        "end": 171.74
+      },
+      {
+        "word": "browsers.",
+        "start": 171.74,
+        "end": 172.18
+      }
+    ]
+  },
+  {
+    "sentence": "The judge ultimately sided with the government, saying those payments hurt competition by blocking out smaller tech companies.",
+    "start": 173.1,
+    "end": 179.84,
+    "words": [
+      {
+        "word": "The",
+        "start": 173.1,
+        "end": 173.28
+      },
+      {
+        "word": "judge",
+        "start": 173.28,
+        "end": 173.54
+      },
+      {
+        "word": "ultimately",
+        "start": 173.54,
+        "end": 174.16
+      },
+      {
+        "word": "sided",
+        "start": 174.16,
+        "end": 174.48
+      },
+      {
+        "word": "with",
+        "start": 174.48,
+        "end": 174.72
+      },
+      {
+        "word": "the",
+        "start": 174.72,
+        "end": 174.86
+      },
+      {
+        "word": "government,",
+        "start": 174.86,
+        "end": 175.28
+      },
+      {
+        "word": "saying",
+        "start": 175.76,
+        "end": 175.82
+      },
+      {
+        "word": "those",
+        "start": 175.82,
+        "end": 176.14
+      },
+      {
+        "word": "payments",
+        "start": 176.14,
+        "end": 176.52
+      },
+      {
+        "word": "hurt",
+        "start": 176.52,
+        "end": 176.92
+      },
+      {
+        "word": "competition",
+        "start": 176.92,
+        "end": 177.6
+      },
+      {
+        "word": "by",
+        "start": 177.6,
+        "end": 177.94
+      },
+      {
+        "word": "blocking",
+        "start": 177.94,
+        "end": 178.26
+      },
+      {
+        "word": "out",
+        "start": 178.26,
+        "end": 178.72
+      },
+      {
+        "word": "smaller",
+        "start": 178.72,
+        "end": 179.02
+      },
+      {
+        "word": "tech",
+        "start": 179.02,
+        "end": 179.28
+      },
+      {
+        "word": "companies.",
+        "start": 179.28,
+        "end": 179.84
+      }
+    ]
+  },
+  {
+    "sentence": "This is a really big deal.",
+    "start": 180.38,
+    "end": 181.32,
+    "words": [
+      {
+        "word": "This",
+        "start": 180.38,
+        "end": 180.38
+      },
+      {
+        "word": "is",
+        "start": 180.38,
+        "end": 180.62
+      },
+      {
+        "word": "a",
+        "start": 180.62,
+        "end": 180.76
+      },
+      {
+        "word": "really",
+        "start": 180.76,
+        "end": 181.0
+      },
+      {
+        "word": "big",
+        "start": 181.0,
+        "end": 181.16
+      },
+      {
+        "word": "deal.",
+        "start": 181.16,
+        "end": 181.32
+      }
+    ]
+  },
+  {
+    "sentence": "It's the first time in the modern internet era that there's been an antitrust ruling like this against a tech giant.",
+    "start": 181.46,
+    "end": 186.78,
+    "words": [
+      {
+        "word": "It's",
+        "start": 181.46,
+        "end": 181.54
+      },
+      {
+        "word": "the",
+        "start": 181.54,
+        "end": 181.7
+      },
+      {
+        "word": "first",
+        "start": 181.7,
+        "end": 181.88
+      },
+      {
+        "word": "time",
+        "start": 181.88,
+        "end": 182.12
+      },
+      {
+        "word": "in",
+        "start": 182.12,
+        "end": 182.24
+      },
+      {
+        "word": "the",
+        "start": 182.24,
+        "end": 182.4
+      },
+      {
+        "word": "modern",
+        "start": 182.4,
+        "end": 182.74
+      },
+      {
+        "word": "internet",
+        "start": 182.74,
+        "end": 183.08
+      },
+      {
+        "word": "era",
+        "start": 183.08,
+        "end": 183.38
+      },
+      {
+        "word": "that",
+        "start": 183.38,
+        "end": 183.54
+      },
+      {
+        "word": "there's",
+        "start": 183.54,
+        "end": 183.8
+      },
+      {
+        "word": "been",
+        "start": 183.8,
+        "end": 184.02
+      },
+      {
+        "word": "an",
+        "start": 184.02,
+        "end": 184.26
+      },
+      {
+        "word": "antitrust",
+        "start": 184.26,
+        "end": 184.68
+      },
+      {
+        "word": "ruling",
+        "start": 184.68,
+        "end": 185.1
+      },
+      {
+        "word": "like",
+        "start": 185.1,
+        "end": 185.46
+      },
+      {
+        "word": "this",
+        "start": 185.46,
+        "end": 185.76
+      },
+      {
+        "word": "against",
+        "start": 185.76,
+        "end": 186.06
+      },
+      {
+        "word": "a",
+        "start": 186.06,
+        "end": 186.28
+      },
+      {
+        "word": "tech",
+        "start": 186.28,
+        "end": 186.44
+      },
+      {
+        "word": "giant.",
+        "start": 186.44,
+        "end": 186.78
+      }
+    ]
+  },
+  {
+    "sentence": "David McCabe covers tech policy for the Times.",
+    "start": 187.32,
+    "end": 189.66,
+    "words": [
+      {
+        "word": "David",
+        "start": 187.32,
+        "end": 187.46
+      },
+      {
+        "word": "McCabe",
+        "start": 187.46,
+        "end": 187.92
+      },
+      {
+        "word": "covers",
+        "start": 187.92,
+        "end": 188.28
+      },
+      {
+        "word": "tech",
+        "start": 188.28,
+        "end": 188.56
+      },
+      {
+        "word": "policy",
+        "start": 188.56,
+        "end": 188.92
+      },
+      {
+        "word": "for",
+        "start": 188.92,
+        "end": 189.12
+      },
+      {
+        "word": "the",
+        "start": 189.12,
+        "end": 189.28
+      },
+      {
+        "word": "Times.",
+        "start": 189.28,
+        "end": 189.66
+      }
+    ]
+  },
+  {
+    "sentence": "So exactly what happens to Google still remains to be seen.",
+    "start": 189.66,
+    "end": 193.48,
+    "words": [
+      {
+        "word": "So",
+        "start": 189.66,
+        "end": 190.3
+      },
+      {
+        "word": "exactly",
+        "start": 190.3,
+        "end": 191.16
+      },
+      {
+        "word": "what",
+        "start": 191.16,
+        "end": 191.36
+      },
+      {
+        "word": "happens",
+        "start": 191.36,
+        "end": 191.62
+      },
+      {
+        "word": "to",
+        "start": 191.62,
+        "end": 191.78
+      },
+      {
+        "word": "Google",
+        "start": 191.78,
+        "end": 192.06
+      },
+      {
+        "word": "still",
+        "start": 192.06,
+        "end": 192.46
+      },
+      {
+        "word": "remains",
+        "start": 192.46,
+        "end": 192.82
+      },
+      {
+        "word": "to",
+        "start": 192.82,
+        "end": 193.04
+      },
+      {
+        "word": "be",
+        "start": 193.04,
+        "end": 193.24
+      },
+      {
+        "word": "seen.",
+        "start": 193.24,
+        "end": 193.48
+      }
+    ]
+  },
+  {
+    "sentence": "The judge decided he would make a ruling first on whether or not the company broke the law and then have a second phase of the trial in which he determines how to fix any problems he found.",
+    "start": 193.76,
+    "end": 203.4,
+    "words": [
+      {
+        "word": "The",
+        "start": 193.76,
+        "end": 193.84
+      },
+      {
+        "word": "judge",
+        "start": 193.84,
+        "end": 194.08
+      },
+      {
+        "word": "decided",
+        "start": 194.08,
+        "end": 194.58
+      },
+      {
+        "word": "he",
+        "start": 194.58,
+        "end": 194.88
+      },
+      {
+        "word": "would",
+        "start": 194.88,
+        "end": 195.28
+      },
+      {
+        "word": "make",
+        "start": 195.28,
+        "end": 195.56
+      },
+      {
+        "word": "a",
+        "start": 195.56,
+        "end": 195.72
+      },
+      {
+        "word": "ruling",
+        "start": 195.72,
+        "end": 195.9
+      },
+      {
+        "word": "first",
+        "start": 195.9,
+        "end": 196.26
+      },
+      {
+        "word": "on",
+        "start": 196.26,
+        "end": 196.4
+      },
+      {
+        "word": "whether",
+        "start": 196.4,
+        "end": 196.6
+      },
+      {
+        "word": "or",
+        "start": 196.6,
+        "end": 196.72
+      },
+      {
+        "word": "not",
+        "start": 196.72,
+        "end": 196.86
+      },
+      {
+        "word": "the",
+        "start": 196.86,
+        "end": 197.06
+      },
+      {
+        "word": "company",
+        "start": 197.06,
+        "end": 197.3
+      },
+      {
+        "word": "broke",
+        "start": 197.3,
+        "end": 197.58
+      },
+      {
+        "word": "the",
+        "start": 197.58,
+        "end": 197.8
+      },
+      {
+        "word": "law",
+        "start": 197.8,
+        "end": 198.1
+      },
+      {
+        "word": "and",
+        "start": 198.1,
+        "end": 198.52
+      },
+      {
+        "word": "then",
+        "start": 198.52,
+        "end": 198.72
+      },
+      {
+        "word": "have",
+        "start": 198.72,
+        "end": 198.88
+      },
+      {
+        "word": "a",
+        "start": 198.88,
+        "end": 199.14
+      },
+      {
+        "word": "second",
+        "start": 199.14,
+        "end": 199.52
+      },
+      {
+        "word": "phase",
+        "start": 199.52,
+        "end": 199.86
+      },
+      {
+        "word": "of",
+        "start": 199.86,
+        "end": 200.06
+      },
+      {
+        "word": "the",
+        "start": 200.06,
+        "end": 200.26
+      },
+      {
+        "word": "trial",
+        "start": 200.26,
+        "end": 200.56
+      },
+      {
+        "word": "in",
+        "start": 200.56,
+        "end": 201.0
+      },
+      {
+        "word": "which",
+        "start": 201.0,
+        "end": 201.22
+      },
+      {
+        "word": "he",
+        "start": 201.22,
+        "end": 201.4
+      },
+      {
+        "word": "determines",
+        "start": 201.4,
+        "end": 201.76
+      },
+      {
+        "word": "how",
+        "start": 201.76,
+        "end": 201.94
+      },
+      {
+        "word": "to",
+        "start": 201.94,
+        "end": 202.08
+      },
+      {
+        "word": "fix",
+        "start": 202.08,
+        "end": 202.28
+      },
+      {
+        "word": "any",
+        "start": 202.28,
+        "end": 202.58
+      },
+      {
+        "word": "problems",
+        "start": 202.58,
+        "end": 202.86
+      },
+      {
+        "word": "he",
+        "start": 202.86,
+        "end": 203.16
+      },
+      {
+        "word": "found.",
+        "start": 203.16,
+        "end": 203.4
+      }
+    ]
+  },
+  {
+    "sentence": "So that process is still ongoing.",
+    "start": 203.46,
+    "end": 205.76,
+    "words": [
+      {
+        "word": "So",
+        "start": 203.46,
+        "end": 203.62
+      },
+      {
+        "word": "that",
+        "start": 203.62,
+        "end": 204.36
+      },
+      {
+        "word": "process",
+        "start": 204.36,
+        "end": 204.78
+      },
+      {
+        "word": "is",
+        "start": 204.78,
+        "end": 205.04
+      },
+      {
+        "word": "still",
+        "start": 205.04,
+        "end": 205.26
+      },
+      {
+        "word": "ongoing.",
+        "start": 205.26,
+        "end": 205.76
+      }
+    ]
+  },
+  {
+    "sentence": "Generally speaking, the options available to a judge include both structural changes to a company like spinning off or breaking off part of a company and changes to their behavior, right?",
+    "start": 206.24,
+    "end": 215.1,
+    "words": [
+      {
+        "word": "Generally",
+        "start": 206.24,
+        "end": 206.6
+      },
+      {
+        "word": "speaking,",
+        "start": 206.6,
+        "end": 206.96
+      },
+      {
+        "word": "the",
+        "start": 207.12,
+        "end": 207.2
+      },
+      {
+        "word": "options",
+        "start": 207.2,
+        "end": 207.58
+      },
+      {
+        "word": "available",
+        "start": 207.58,
+        "end": 208.04
+      },
+      {
+        "word": "to",
+        "start": 208.04,
+        "end": 208.24
+      },
+      {
+        "word": "a",
+        "start": 208.24,
+        "end": 208.38
+      },
+      {
+        "word": "judge",
+        "start": 208.38,
+        "end": 208.56
+      },
+      {
+        "word": "include",
+        "start": 208.56,
+        "end": 209.14
+      },
+      {
+        "word": "both",
+        "start": 209.14,
+        "end": 209.54
+      },
+      {
+        "word": "structural",
+        "start": 209.54,
+        "end": 209.88
+      },
+      {
+        "word": "changes",
+        "start": 209.88,
+        "end": 210.32
+      },
+      {
+        "word": "to",
+        "start": 210.32,
+        "end": 210.56
+      },
+      {
+        "word": "a",
+        "start": 210.56,
+        "end": 210.74
+      },
+      {
+        "word": "company",
+        "start": 210.74,
+        "end": 211.02
+      },
+      {
+        "word": "like",
+        "start": 211.02,
+        "end": 211.44
+      },
+      {
+        "word": "spinning",
+        "start": 211.44,
+        "end": 211.68
+      },
+      {
+        "word": "off",
+        "start": 211.68,
+        "end": 211.96
+      },
+      {
+        "word": "or",
+        "start": 211.96,
+        "end": 212.08
+      },
+      {
+        "word": "breaking",
+        "start": 212.08,
+        "end": 212.32
+      },
+      {
+        "word": "off",
+        "start": 212.32,
+        "end": 212.58
+      },
+      {
+        "word": "part",
+        "start": 212.58,
+        "end": 212.74
+      },
+      {
+        "word": "of",
+        "start": 212.74,
+        "end": 212.9
+      },
+      {
+        "word": "a",
+        "start": 212.9,
+        "end": 213.06
+      },
+      {
+        "word": "company",
+        "start": 213.06,
+        "end": 213.34
+      },
+      {
+        "word": "and",
+        "start": 213.34,
+        "end": 213.7
+      },
+      {
+        "word": "changes",
+        "start": 213.7,
+        "end": 214.02
+      },
+      {
+        "word": "to",
+        "start": 214.02,
+        "end": 214.22
+      },
+      {
+        "word": "their",
+        "start": 214.22,
+        "end": 214.36
+      },
+      {
+        "word": "behavior,",
+        "start": 214.36,
+        "end": 214.78
+      },
+      {
+        "word": "right?",
+        "start": 214.9,
+        "end": 215.1
+      }
+    ]
+  },
+  {
+    "sentence": "Demanding that they no longer engage in certain practices.",
+    "start": 215.1,
+    "end": 218.24,
+    "words": [
+      {
+        "word": "Demanding",
+        "start": 215.1,
+        "end": 215.38
+      },
+      {
+        "word": "that",
+        "start": 215.38,
+        "end": 215.56
+      },
+      {
+        "word": "they",
+        "start": 215.56,
+        "end": 215.7
+      },
+      {
+        "word": "no",
+        "start": 215.7,
+        "end": 215.96
+      },
+      {
+        "word": "longer",
+        "start": 215.96,
+        "end": 216.18
+      },
+      {
+        "word": "engage",
+        "start": 216.18,
+        "end": 216.72
+      },
+      {
+        "word": "in",
+        "start": 216.72,
+        "end": 217.38
+      },
+      {
+        "word": "certain",
+        "start": 217.38,
+        "end": 217.72
+      },
+      {
+        "word": "practices.",
+        "start": 217.72,
+        "end": 218.24
+      }
+    ]
+  },
+  {
+    "sentence": "The other important question here is how does this law that is in some cases more than a century old really apply to the dominant tech platforms of today?",
+    "start": 218.58,
+    "end": 227.7,
+    "words": [
+      {
+        "word": "The",
+        "start": 218.58,
+        "end": 218.86
+      },
+      {
+        "word": "other",
+        "start": 218.86,
+        "end": 219.14
+      },
+      {
+        "word": "important",
+        "start": 219.14,
+        "end": 219.54
+      },
+      {
+        "word": "question",
+        "start": 219.54,
+        "end": 219.92
+      },
+      {
+        "word": "here",
+        "start": 219.92,
+        "end": 220.1
+      },
+      {
+        "word": "is",
+        "start": 220.1,
+        "end": 220.28
+      },
+      {
+        "word": "how",
+        "start": 220.28,
+        "end": 220.58
+      },
+      {
+        "word": "does",
+        "start": 220.58,
+        "end": 221.0
+      },
+      {
+        "word": "this",
+        "start": 221.0,
+        "end": 221.54
+      },
+      {
+        "word": "law",
+        "start": 221.54,
+        "end": 221.88
+      },
+      {
+        "word": "that",
+        "start": 221.88,
+        "end": 222.08
+      },
+      {
+        "word": "is",
+        "start": 222.08,
+        "end": 222.46
+      },
+      {
+        "word": "in",
+        "start": 222.46,
+        "end": 222.62
+      },
+      {
+        "word": "some",
+        "start": 222.62,
+        "end": 222.78
+      },
+      {
+        "word": "cases",
+        "start": 222.78,
+        "end": 223.06
+      },
+      {
+        "word": "more",
+        "start": 223.06,
+        "end": 223.32
+      },
+      {
+        "word": "than",
+        "start": 223.32,
+        "end": 223.46
+      },
+      {
+        "word": "a",
+        "start": 223.46,
+        "end": 223.68
+      },
+      {
+        "word": "century",
+        "start": 223.68,
+        "end": 224.02
+      },
+      {
+        "word": "old",
+        "start": 224.02,
+        "end": 224.44
+      },
+      {
+        "word": "really",
+        "start": 224.44,
+        "end": 224.98
+      },
+      {
+        "word": "apply",
+        "start": 224.98,
+        "end": 225.48
+      },
+      {
+        "word": "to",
+        "start": 225.48,
+        "end": 225.64
+      },
+      {
+        "word": "the",
+        "start": 225.64,
+        "end": 225.86
+      },
+      {
+        "word": "dominant",
+        "start": 225.86,
+        "end": 226.28
+      },
+      {
+        "word": "tech",
+        "start": 226.28,
+        "end": 226.62
+      },
+      {
+        "word": "platforms",
+        "start": 226.62,
+        "end": 227.14
+      },
+      {
+        "word": "of",
+        "start": 227.14,
+        "end": 227.46
+      },
+      {
+        "word": "today?",
+        "start": 227.46,
+        "end": 227.7
+      }
+    ]
+  },
+  {
+    "sentence": "And what the judge found in this case is that they can be applied and it's a big vote of confidence in these regulators who have brought cases against not only Google, but Amazon and Apple and Meta, the owner of Facebook as well.",
+    "start": 227.8,
+    "end": 239.86,
+    "words": [
+      {
+        "word": "And",
+        "start": 227.8,
+        "end": 227.88
+      },
+      {
+        "word": "what",
+        "start": 227.88,
+        "end": 228.06
+      },
+      {
+        "word": "the",
+        "start": 228.06,
+        "end": 228.24
+      },
+      {
+        "word": "judge",
+        "start": 228.24,
+        "end": 228.4
+      },
+      {
+        "word": "found",
+        "start": 228.4,
+        "end": 228.68
+      },
+      {
+        "word": "in",
+        "start": 228.68,
+        "end": 228.86
+      },
+      {
+        "word": "this",
+        "start": 228.86,
+        "end": 229.08
+      },
+      {
+        "word": "case",
+        "start": 229.08,
+        "end": 229.26
+      },
+      {
+        "word": "is",
+        "start": 229.26,
+        "end": 229.48
+      },
+      {
+        "word": "that",
+        "start": 229.48,
+        "end": 229.68
+      },
+      {
+        "word": "they",
+        "start": 229.68,
+        "end": 229.88
+      },
+      {
+        "word": "can",
+        "start": 229.88,
+        "end": 230.14
+      },
+      {
+        "word": "be",
+        "start": 230.14,
+        "end": 230.44
+      },
+      {
+        "word": "applied",
+        "start": 230.44,
+        "end": 230.76
+      },
+      {
+        "word": "and",
+        "start": 230.76,
+        "end": 231.38
+      },
+      {
+        "word": "it's",
+        "start": 231.38,
+        "end": 231.82
+      },
+      {
+        "word": "a",
+        "start": 231.82,
+        "end": 231.92
+      },
+      {
+        "word": "big",
+        "start": 231.92,
+        "end": 232.1
+      },
+      {
+        "word": "vote",
+        "start": 232.1,
+        "end": 232.24
+      },
+      {
+        "word": "of",
+        "start": 232.24,
+        "end": 232.54
+      },
+      {
+        "word": "confidence",
+        "start": 232.54,
+        "end": 232.98
+      },
+      {
+        "word": "in",
+        "start": 232.98,
+        "end": 233.58
+      },
+      {
+        "word": "these",
+        "start": 233.58,
+        "end": 233.88
+      },
+      {
+        "word": "regulators",
+        "start": 233.88,
+        "end": 234.24
+      },
+      {
+        "word": "who",
+        "start": 234.24,
+        "end": 234.44
+      },
+      {
+        "word": "have",
+        "start": 234.44,
+        "end": 234.6
+      },
+      {
+        "word": "brought",
+        "start": 234.6,
+        "end": 234.74
+      },
+      {
+        "word": "cases",
+        "start": 234.74,
+        "end": 235.06
+      },
+      {
+        "word": "against",
+        "start": 235.06,
+        "end": 235.36
+      },
+      {
+        "word": "not",
+        "start": 235.36,
+        "end": 235.58
+      },
+      {
+        "word": "only",
+        "start": 235.58,
+        "end": 235.78
+      },
+      {
+        "word": "Google,",
+        "start": 235.78,
+        "end": 236.18
+      },
+      {
+        "word": "but",
+        "start": 236.68,
+        "end": 236.98
+      },
+      {
+        "word": "Amazon",
+        "start": 236.98,
+        "end": 237.46
+      },
+      {
+        "word": "and",
+        "start": 237.46,
+        "end": 237.76
+      },
+      {
+        "word": "Apple",
+        "start": 237.76,
+        "end": 238.06
+      },
+      {
+        "word": "and",
+        "start": 238.06,
+        "end": 238.36
+      },
+      {
+        "word": "Meta,",
+        "start": 238.36,
+        "end": 238.64
+      },
+      {
+        "word": "the",
+        "start": 238.72,
+        "end": 238.76
+      },
+      {
+        "word": "owner",
+        "start": 238.76,
+        "end": 238.92
+      },
+      {
+        "word": "of",
+        "start": 238.92,
+        "end": 239.1
+      },
+      {
+        "word": "Facebook",
+        "start": 239.1,
+        "end": 239.38
+      },
+      {
+        "word": "as",
+        "start": 239.38,
+        "end": 239.66
+      },
+      {
+        "word": "well.",
+        "start": 239.66,
+        "end": 239.86
+      }
+    ]
+  },
+  {
+    "sentence": "And we'll be looking to see whether or not this ruling emboldens government regulators to continue to be aggressive against these tech giants.",
+    "start": 240.26,
+    "end": 248.62,
+    "words": [
+      {
+        "word": "And",
+        "start": 240.26,
+        "end": 240.44
+      },
+      {
+        "word": "we'll",
+        "start": 240.44,
+        "end": 240.54
+      },
+      {
+        "word": "be",
+        "start": 240.54,
+        "end": 240.68
+      },
+      {
+        "word": "looking",
+        "start": 240.68,
+        "end": 240.88
+      },
+      {
+        "word": "to",
+        "start": 240.88,
+        "end": 241.0
+      },
+      {
+        "word": "see",
+        "start": 241.0,
+        "end": 241.12
+      },
+      {
+        "word": "whether",
+        "start": 241.12,
+        "end": 241.4
+      },
+      {
+        "word": "or",
+        "start": 241.4,
+        "end": 241.5
+      },
+      {
+        "word": "not",
+        "start": 241.5,
+        "end": 241.82
+      },
+      {
+        "word": "this",
+        "start": 241.82,
+        "end": 242.32
+      },
+      {
+        "word": "ruling",
+        "start": 242.32,
+        "end": 242.74
+      },
+      {
+        "word": "emboldens",
+        "start": 242.74,
+        "end": 243.74
+      },
+      {
+        "word": "government",
+        "start": 243.74,
+        "end": 244.18
+      },
+      {
+        "word": "regulators",
+        "start": 244.18,
+        "end": 244.76
+      },
+      {
+        "word": "to",
+        "start": 244.76,
+        "end": 245.34
+      },
+      {
+        "word": "continue",
+        "start": 245.34,
+        "end": 245.92
+      },
+      {
+        "word": "to",
+        "start": 245.92,
+        "end": 246.06
+      },
+      {
+        "word": "be",
+        "start": 246.06,
+        "end": 246.22
+      },
+      {
+        "word": "aggressive",
+        "start": 246.22,
+        "end": 246.82
+      },
+      {
+        "word": "against",
+        "start": 246.82,
+        "end": 247.6
+      },
+      {
+        "word": "these",
+        "start": 247.6,
+        "end": 247.92
+      },
+      {
+        "word": "tech",
+        "start": 247.92,
+        "end": 248.12
+      },
+      {
+        "word": "giants.",
+        "start": 248.12,
+        "end": 248.62
+      }
+    ]
+  },
+  {
+    "sentence": "In Iraq, at least five people, including U.S.",
+    "start": 253.94,
+    "end": 257.38,
+    "words": [
+      {
+        "word": "In",
+        "start": 253.94,
+        "end": 254.54
+      },
+      {
+        "word": "Iraq,",
+        "start": 254.54,
+        "end": 255.0
+      },
+      {
+        "word": "at",
+        "start": 255.26,
+        "end": 255.36
+      },
+      {
+        "word": "least",
+        "start": 255.36,
+        "end": 255.68
+      },
+      {
+        "word": "five",
+        "start": 255.68,
+        "end": 256.1
+      },
+      {
+        "word": "people,",
+        "start": 256.1,
+        "end": 256.56
+      },
+      {
+        "word": "including",
+        "start": 256.68,
+        "end": 257.02
+      },
+      {
+        "word": "U",
+        "start": 257.02,
+        "end": 257.32
+      },
+      {
+        "word": ".S.",
+        "start": 257.32,
+        "end": 257.38
+      }
+    ]
+  },
+  {
+    "sentence": "troops and contractors, were injured after a rocket attack on an airbase last night.",
+    "start": 257.62,
+    "end": 261.92,
+    "words": [
+      {
+        "word": "troops",
+        "start": 257.62,
+        "end": 257.78
+      },
+      {
+        "word": "and",
+        "start": 257.78,
+        "end": 258.08
+      },
+      {
+        "word": "contractors,",
+        "start": 258.08,
+        "end": 258.64
+      },
+      {
+        "word": "were",
+        "start": 258.78,
+        "end": 259.0
+      },
+      {
+        "word": "injured",
+        "start": 259.0,
+        "end": 259.32
+      },
+      {
+        "word": "after",
+        "start": 259.32,
+        "end": 259.62
+      },
+      {
+        "word": "a",
+        "start": 259.62,
+        "end": 259.84
+      },
+      {
+        "word": "rocket",
+        "start": 259.84,
+        "end": 260.14
+      },
+      {
+        "word": "attack",
+        "start": 260.14,
+        "end": 260.5
+      },
+      {
+        "word": "on",
+        "start": 260.5,
+        "end": 260.7
+      },
+      {
+        "word": "an",
+        "start": 260.7,
+        "end": 260.88
+      },
+      {
+        "word": "airbase",
+        "start": 260.88,
+        "end": 261.28
+      },
+      {
+        "word": "last",
+        "start": 261.28,
+        "end": 261.64
+      },
+      {
+        "word": "night.",
+        "start": 261.64,
+        "end": 261.92
+      }
+    ]
+  },
+  {
+    "sentence": "The region has been on high alert for days after Iran said it would retaliate for last week's killings of a Hamas leader in Tehran and a Hezbollah leader in Beirut.",
+    "start": 262.54,
+    "end": 272.0,
+    "words": [
+      {
+        "word": "The",
+        "start": 262.54,
+        "end": 262.72
+      },
+      {
+        "word": "region",
+        "start": 262.72,
+        "end": 263.02
+      },
+      {
+        "word": "has",
+        "start": 263.02,
+        "end": 263.26
+      },
+      {
+        "word": "been",
+        "start": 263.26,
+        "end": 263.42
+      },
+      {
+        "word": "on",
+        "start": 263.42,
+        "end": 263.66
+      },
+      {
+        "word": "high",
+        "start": 263.66,
+        "end": 263.88
+      },
+      {
+        "word": "alert",
+        "start": 263.88,
+        "end": 264.14
+      },
+      {
+        "word": "for",
+        "start": 264.14,
+        "end": 264.38
+      },
+      {
+        "word": "days",
+        "start": 264.38,
+        "end": 264.82
+      },
+      {
+        "word": "after",
+        "start": 264.82,
+        "end": 265.38
+      },
+      {
+        "word": "Iran",
+        "start": 265.38,
+        "end": 265.84
+      },
+      {
+        "word": "said",
+        "start": 265.84,
+        "end": 266.14
+      },
+      {
+        "word": "it",
+        "start": 266.14,
+        "end": 266.26
+      },
+      {
+        "word": "would",
+        "start": 266.26,
+        "end": 266.5
+      },
+      {
+        "word": "retaliate",
+        "start": 266.5,
+        "end": 267.1
+      },
+      {
+        "word": "for",
+        "start": 267.1,
+        "end": 267.3
+      },
+      {
+        "word": "last",
+        "start": 267.3,
+        "end": 267.6
+      },
+      {
+        "word": "week's",
+        "start": 267.6,
+        "end": 267.96
+      },
+      {
+        "word": "killings",
+        "start": 267.96,
+        "end": 268.28
+      },
+      {
+        "word": "of",
+        "start": 268.28,
+        "end": 268.46
+      },
+      {
+        "word": "a",
+        "start": 268.46,
+        "end": 268.6
+      },
+      {
+        "word": "Hamas",
+        "start": 268.6,
+        "end": 269.0
+      },
+      {
+        "word": "leader",
+        "start": 269.0,
+        "end": 269.26
+      },
+      {
+        "word": "in",
+        "start": 269.26,
+        "end": 269.5
+      },
+      {
+        "word": "Tehran",
+        "start": 269.5,
+        "end": 270.02
+      },
+      {
+        "word": "and",
+        "start": 270.02,
+        "end": 270.48
+      },
+      {
+        "word": "a",
+        "start": 270.48,
+        "end": 270.6
+      },
+      {
+        "word": "Hezbollah",
+        "start": 270.6,
+        "end": 270.96
+      },
+      {
+        "word": "leader",
+        "start": 270.96,
+        "end": 271.3
+      },
+      {
+        "word": "in",
+        "start": 271.3,
+        "end": 271.52
+      },
+      {
+        "word": "Beirut.",
+        "start": 271.52,
+        "end": 272.0
+      }
+    ]
+  },
+  {
+    "sentence": "It's unclear if this attack on the base is part of that response.",
+    "start": 272.58,
+    "end": 276.04,
+    "words": [
+      {
+        "word": "It's",
+        "start": 272.58,
+        "end": 272.84
+      },
+      {
+        "word": "unclear",
+        "start": 272.84,
+        "end": 273.24
+      },
+      {
+        "word": "if",
+        "start": 273.24,
+        "end": 273.42
+      },
+      {
+        "word": "this",
+        "start": 273.42,
+        "end": 273.64
+      },
+      {
+        "word": "attack",
+        "start": 273.64,
+        "end": 274.0
+      },
+      {
+        "word": "on",
+        "start": 274.0,
+        "end": 274.22
+      },
+      {
+        "word": "the",
+        "start": 274.22,
+        "end": 274.4
+      },
+      {
+        "word": "base",
+        "start": 274.4,
+        "end": 274.6
+      },
+      {
+        "word": "is",
+        "start": 274.6,
+        "end": 274.84
+      },
+      {
+        "word": "part",
+        "start": 274.84,
+        "end": 275.06
+      },
+      {
+        "word": "of",
+        "start": 275.06,
+        "end": 275.2
+      },
+      {
+        "word": "that",
+        "start": 275.2,
+        "end": 275.34
+      },
+      {
+        "word": "response.",
+        "start": 275.34,
+        "end": 276.04
+      }
+    ]
+  },
+  {
+    "sentence": "Iran -backed groups have been targeting American forces in Iraq for months in an attempt to force them out of the country.",
+    "start": 276.88,
+    "end": 283.32,
+    "words": [
+      {
+        "word": "Iran",
+        "start": 276.88,
+        "end": 277.12
+      },
+      {
+        "word": "-backed",
+        "start": 277.12,
+        "end": 277.5
+      },
+      {
+        "word": "groups",
+        "start": 277.5,
+        "end": 277.86
+      },
+      {
+        "word": "have",
+        "start": 277.86,
+        "end": 278.04
+      },
+      {
+        "word": "been",
+        "start": 278.04,
+        "end": 278.24
+      },
+      {
+        "word": "targeting",
+        "start": 278.24,
+        "end": 278.64
+      },
+      {
+        "word": "American",
+        "start": 278.64,
+        "end": 279.22
+      },
+      {
+        "word": "forces",
+        "start": 279.22,
+        "end": 279.62
+      },
+      {
+        "word": "in",
+        "start": 279.62,
+        "end": 279.84
+      },
+      {
+        "word": "Iraq",
+        "start": 279.84,
+        "end": 280.08
+      },
+      {
+        "word": "for",
+        "start": 280.08,
+        "end": 280.36
+      },
+      {
+        "word": "months",
+        "start": 280.36,
+        "end": 280.84
+      },
+      {
+        "word": "in",
+        "start": 280.84,
+        "end": 281.4
+      },
+      {
+        "word": "an",
+        "start": 281.4,
+        "end": 281.68
+      },
+      {
+        "word": "attempt",
+        "start": 281.68,
+        "end": 281.84
+      },
+      {
+        "word": "to",
+        "start": 281.84,
+        "end": 282.1
+      },
+      {
+        "word": "force",
+        "start": 282.1,
+        "end": 282.32
+      },
+      {
+        "word": "them",
+        "start": 282.32,
+        "end": 282.5
+      },
+      {
+        "word": "out",
+        "start": 282.5,
+        "end": 282.62
+      },
+      {
+        "word": "of",
+        "start": 282.62,
+        "end": 282.7
+      },
+      {
+        "word": "the",
+        "start": 282.7,
+        "end": 282.88
+      },
+      {
+        "word": "country.",
+        "start": 282.88,
+        "end": 283.32
+      }
+    ]
+  },
+  {
+    "sentence": "As of this morning, no one has taken responsibility for the strike.",
+    "start": 284.0,
+    "end": 287.34,
+    "words": [
+      {
+        "word": "As",
+        "start": 284.0,
+        "end": 284.18
+      },
+      {
+        "word": "of",
+        "start": 284.18,
+        "end": 284.34
+      },
+      {
+        "word": "this",
+        "start": 284.34,
+        "end": 284.54
+      },
+      {
+        "word": "morning,",
+        "start": 284.54,
+        "end": 284.86
+      },
+      {
+        "word": "no",
+        "start": 285.1,
+        "end": 285.22
+      },
+      {
+        "word": "one",
+        "start": 285.22,
+        "end": 285.32
+      },
+      {
+        "word": "has",
+        "start": 285.32,
+        "end": 285.52
+      },
+      {
+        "word": "taken",
+        "start": 285.52,
+        "end": 285.68
+      },
+      {
+        "word": "responsibility",
+        "start": 285.68,
+        "end": 286.46
+      },
+      {
+        "word": "for",
+        "start": 286.46,
+        "end": 286.72
+      },
+      {
+        "word": "the",
+        "start": 286.72,
+        "end": 286.96
+      },
+      {
+        "word": "strike.",
+        "start": 286.96,
+        "end": 287.34
+      }
+    ]
+  },
+  {
+    "sentence": "And finally, in Paris, the women's boxing matches have erupted in controversy as people question the gender of two women in the competition, Iman Khalif of Algeria and Lin Yuting of Taiwan.",
+    "start": 294.8,
+    "end": 307.44,
+    "words": [
+      {
+        "word": "And",
+        "start": 294.8,
+        "end": 295.32
+      },
+      {
+        "word": "finally,",
+        "start": 295.32,
+        "end": 295.78
+      },
+      {
+        "word": "in",
+        "start": 296.28,
+        "end": 296.5
+      },
+      {
+        "word": "Paris,",
+        "start": 296.5,
+        "end": 296.8
+      },
+      {
+        "word": "the",
+        "start": 297.02,
+        "end": 297.12
+      },
+      {
+        "word": "women's",
+        "start": 297.12,
+        "end": 297.64
+      },
+      {
+        "word": "boxing",
+        "start": 297.64,
+        "end": 297.98
+      },
+      {
+        "word": "matches",
+        "start": 297.98,
+        "end": 298.34
+      },
+      {
+        "word": "have",
+        "start": 298.34,
+        "end": 298.64
+      },
+      {
+        "word": "erupted",
+        "start": 298.64,
+        "end": 299.14
+      },
+      {
+        "word": "in",
+        "start": 299.14,
+        "end": 299.5
+      },
+      {
+        "word": "controversy",
+        "start": 299.5,
+        "end": 300.08
+      },
+      {
+        "word": "as",
+        "start": 300.08,
+        "end": 300.64
+      },
+      {
+        "word": "people",
+        "start": 300.64,
+        "end": 301.02
+      },
+      {
+        "word": "question",
+        "start": 301.02,
+        "end": 301.42
+      },
+      {
+        "word": "the",
+        "start": 301.42,
+        "end": 301.62
+      },
+      {
+        "word": "gender",
+        "start": 301.62,
+        "end": 302.06
+      },
+      {
+        "word": "of",
+        "start": 302.06,
+        "end": 302.26
+      },
+      {
+        "word": "two",
+        "start": 302.26,
+        "end": 302.5
+      },
+      {
+        "word": "women",
+        "start": 302.5,
+        "end": 302.76
+      },
+      {
+        "word": "in",
+        "start": 302.76,
+        "end": 302.9
+      },
+      {
+        "word": "the",
+        "start": 302.9,
+        "end": 303.1
+      },
+      {
+        "word": "competition,",
+        "start": 303.1,
+        "end": 303.9
+      },
+      {
+        "word": "Iman",
+        "start": 304.26,
+        "end": 304.46
+      },
+      {
+        "word": "Khalif",
+        "start": 304.46,
+        "end": 304.8
+      },
+      {
+        "word": "of",
+        "start": 304.8,
+        "end": 304.98
+      },
+      {
+        "word": "Algeria",
+        "start": 304.98,
+        "end": 305.62
+      },
+      {
+        "word": "and",
+        "start": 305.62,
+        "end": 306.1
+      },
+      {
+        "word": "Lin",
+        "start": 306.1,
+        "end": 306.32
+      },
+      {
+        "word": "Yuting",
+        "start": 306.32,
+        "end": 306.62
+      },
+      {
+        "word": "of",
+        "start": 306.62,
+        "end": 306.88
+      },
+      {
+        "word": "Taiwan.",
+        "start": 306.88,
+        "end": 307.44
+      }
+    ]
+  },
+  {
+    "sentence": "In a murky and controversial decision, they were both disqualified from last year's Women's Boxing World Championships.",
+    "start": 308.26,
+    "end": 315.06,
+    "words": [
+      {
+        "word": "In",
+        "start": 308.26,
+        "end": 308.42
+      },
+      {
+        "word": "a",
+        "start": 308.42,
+        "end": 308.64
+      },
+      {
+        "word": "murky",
+        "start": 308.64,
+        "end": 308.96
+      },
+      {
+        "word": "and",
+        "start": 308.96,
+        "end": 309.38
+      },
+      {
+        "word": "controversial",
+        "start": 309.38,
+        "end": 309.92
+      },
+      {
+        "word": "decision,",
+        "start": 309.92,
+        "end": 310.48
+      },
+      {
+        "word": "they",
+        "start": 310.78,
+        "end": 310.88
+      },
+      {
+        "word": "were",
+        "start": 310.88,
+        "end": 311.16
+      },
+      {
+        "word": "both",
+        "start": 311.16,
+        "end": 311.44
+      },
+      {
+        "word": "disqualified",
+        "start": 311.44,
+        "end": 312.1
+      },
+      {
+        "word": "from",
+        "start": 312.1,
+        "end": 312.42
+      },
+      {
+        "word": "last",
+        "start": 312.42,
+        "end": 312.84
+      },
+      {
+        "word": "year's",
+        "start": 312.84,
+        "end": 313.28
+      },
+      {
+        "word": "Women's",
+        "start": 313.28,
+        "end": 313.66
+      },
+      {
+        "word": "Boxing",
+        "start": 313.66,
+        "end": 314.04
+      },
+      {
+        "word": "World",
+        "start": 314.04,
+        "end": 314.34
+      },
+      {
+        "word": "Championships.",
+        "start": 314.34,
+        "end": 315.06
+      }
+    ]
+  },
+  {
+    "sentence": "The International Boxing Agency claimed they failed an unspecified test and were found to have, quote, competitive advantages over female competitors.",
+    "start": 315.8,
+    "end": 324.56,
+    "words": [
+      {
+        "word": "The",
+        "start": 315.8,
+        "end": 315.94
+      },
+      {
+        "word": "International",
+        "start": 315.94,
+        "end": 316.44
+      },
+      {
+        "word": "Boxing",
+        "start": 316.44,
+        "end": 316.96
+      },
+      {
+        "word": "Agency",
+        "start": 316.96,
+        "end": 317.4
+      },
+      {
+        "word": "claimed",
+        "start": 317.4,
+        "end": 317.98
+      },
+      {
+        "word": "they",
+        "start": 317.98,
+        "end": 318.26
+      },
+      {
+        "word": "failed",
+        "start": 318.26,
+        "end": 318.52
+      },
+      {
+        "word": "an",
+        "start": 318.52,
+        "end": 318.82
+      },
+      {
+        "word": "unspecified",
+        "start": 318.82,
+        "end": 319.6
+      },
+      {
+        "word": "test",
+        "start": 319.6,
+        "end": 320.08
+      },
+      {
+        "word": "and",
+        "start": 320.08,
+        "end": 320.5
+      },
+      {
+        "word": "were",
+        "start": 320.5,
+        "end": 320.72
+      },
+      {
+        "word": "found",
+        "start": 320.72,
+        "end": 320.9
+      },
+      {
+        "word": "to",
+        "start": 320.9,
+        "end": 321.04
+      },
+      {
+        "word": "have,",
+        "start": 321.04,
+        "end": 321.22
+      },
+      {
+        "word": "quote,",
+        "start": 321.52,
+        "end": 321.52
+      },
+      {
+        "word": "competitive",
+        "start": 321.86,
+        "end": 322.38
+      },
+      {
+        "word": "advantages",
+        "start": 322.38,
+        "end": 322.94
+      },
+      {
+        "word": "over",
+        "start": 322.94,
+        "end": 323.42
+      },
+      {
+        "word": "female",
+        "start": 323.42,
+        "end": 323.88
+      },
+      {
+        "word": "competitors.",
+        "start": 323.88,
+        "end": 324.56
+      }
+    ]
+  },
+  {
+    "sentence": "The Olympic Committee, however, has objected to the boxing agency's process and no longer recognizes its authority.",
+    "start": 325.2,
+    "end": 331.8,
+    "words": [
+      {
+        "word": "The",
+        "start": 325.2,
+        "end": 325.36
+      },
+      {
+        "word": "Olympic",
+        "start": 325.36,
+        "end": 325.7
+      },
+      {
+        "word": "Committee,",
+        "start": 325.7,
+        "end": 326.06
+      },
+      {
+        "word": "however,",
+        "start": 326.2,
+        "end": 326.48
+      },
+      {
+        "word": "has",
+        "start": 326.68,
+        "end": 326.84
+      },
+      {
+        "word": "objected",
+        "start": 326.84,
+        "end": 327.42
+      },
+      {
+        "word": "to",
+        "start": 327.42,
+        "end": 327.56
+      },
+      {
+        "word": "the",
+        "start": 327.56,
+        "end": 327.78
+      },
+      {
+        "word": "boxing",
+        "start": 327.78,
+        "end": 328.12
+      },
+      {
+        "word": "agency's",
+        "start": 328.12,
+        "end": 328.78
+      },
+      {
+        "word": "process",
+        "start": 328.78,
+        "end": 329.26
+      },
+      {
+        "word": "and",
+        "start": 329.26,
+        "end": 329.78
+      },
+      {
+        "word": "no",
+        "start": 329.78,
+        "end": 330.0
+      },
+      {
+        "word": "longer",
+        "start": 330.0,
+        "end": 330.32
+      },
+      {
+        "word": "recognizes",
+        "start": 330.32,
+        "end": 330.88
+      },
+      {
+        "word": "its",
+        "start": 330.88,
+        "end": 331.26
+      },
+      {
+        "word": "authority.",
+        "start": 331.26,
+        "end": 331.8
+      }
+    ]
+  },
+  {
+    "sentence": "This year, amid a flurry of misinformation, Olympic officials have repeatedly said Khalif and Lin meet every benchmark to fight in the women's divisions, and an Olympic spokesman has emphasized that neither athlete is transgender.",
+    "start": 332.56,
+    "end": 345.78,
+    "words": [
+      {
+        "word": "This",
+        "start": 332.56,
+        "end": 332.76
+      },
+      {
+        "word": "year,",
+        "start": 332.76,
+        "end": 333.06
+      },
+      {
+        "word": "amid",
+        "start": 333.18,
+        "end": 333.26
+      },
+      {
+        "word": "a",
+        "start": 333.26,
+        "end": 333.56
+      },
+      {
+        "word": "flurry",
+        "start": 333.56,
+        "end": 333.8
+      },
+      {
+        "word": "of",
+        "start": 333.8,
+        "end": 334.06
+      },
+      {
+        "word": "misinformation,",
+        "start": 334.06,
+        "end": 334.62
+      },
+      {
+        "word": "Olympic",
+        "start": 335.26,
+        "end": 335.56
+      },
+      {
+        "word": "officials",
+        "start": 335.56,
+        "end": 336.0
+      },
+      {
+        "word": "have",
+        "start": 336.0,
+        "end": 336.26
+      },
+      {
+        "word": "repeatedly",
+        "start": 336.26,
+        "end": 336.94
+      },
+      {
+        "word": "said",
+        "start": 336.94,
+        "end": 337.32
+      },
+      {
+        "word": "Khalif",
+        "start": 337.32,
+        "end": 337.78
+      },
+      {
+        "word": "and",
+        "start": 337.78,
+        "end": 338.12
+      },
+      {
+        "word": "Lin",
+        "start": 338.12,
+        "end": 338.32
+      },
+      {
+        "word": "meet",
+        "start": 338.32,
+        "end": 338.66
+      },
+      {
+        "word": "every",
+        "start": 338.66,
+        "end": 339.12
+      },
+      {
+        "word": "benchmark",
+        "start": 339.12,
+        "end": 339.52
+      },
+      {
+        "word": "to",
+        "start": 339.52,
+        "end": 339.76
+      },
+      {
+        "word": "fight",
+        "start": 339.76,
+        "end": 340.02
+      },
+      {
+        "word": "in",
+        "start": 340.02,
+        "end": 340.18
+      },
+      {
+        "word": "the",
+        "start": 340.18,
+        "end": 340.32
+      },
+      {
+        "word": "women's",
+        "start": 340.32,
+        "end": 340.7
+      },
+      {
+        "word": "divisions,",
+        "start": 340.7,
+        "end": 341.14
+      },
+      {
+        "word": "and",
+        "start": 341.76,
+        "end": 341.92
+      },
+      {
+        "word": "an",
+        "start": 341.92,
+        "end": 342.04
+      },
+      {
+        "word": "Olympic",
+        "start": 342.04,
+        "end": 342.44
+      },
+      {
+        "word": "spokesman",
+        "start": 342.44,
+        "end": 343.02
+      },
+      {
+        "word": "has",
+        "start": 343.02,
+        "end": 343.3
+      },
+      {
+        "word": "emphasized",
+        "start": 343.3,
+        "end": 343.88
+      },
+      {
+        "word": "that",
+        "start": 343.88,
+        "end": 344.18
+      },
+      {
+        "word": "neither",
+        "start": 344.18,
+        "end": 344.44
+      },
+      {
+        "word": "athlete",
+        "start": 344.44,
+        "end": 344.88
+      },
+      {
+        "word": "is",
+        "start": 344.88,
+        "end": 345.28
+      },
+      {
+        "word": "transgender.",
+        "start": 345.28,
+        "end": 345.78
+      }
+    ]
+  },
+  {
+    "sentence": "The committee relies on passports and medical clearances to determine eligibility.",
+    "start": 346.62,
+    "end": 350.68,
+    "words": [
+      {
+        "word": "The",
+        "start": 346.62,
+        "end": 346.78
+      },
+      {
+        "word": "committee",
+        "start": 346.78,
+        "end": 347.0
+      },
+      {
+        "word": "relies",
+        "start": 347.0,
+        "end": 347.36
+      },
+      {
+        "word": "on",
+        "start": 347.36,
+        "end": 347.68
+      },
+      {
+        "word": "passports",
+        "start": 347.68,
+        "end": 348.24
+      },
+      {
+        "word": "and",
+        "start": 348.24,
+        "end": 348.52
+      },
+      {
+        "word": "medical",
+        "start": 348.52,
+        "end": 348.92
+      },
+      {
+        "word": "clearances",
+        "start": 348.92,
+        "end": 349.4
+      },
+      {
+        "word": "to",
+        "start": 349.4,
+        "end": 349.7
+      },
+      {
+        "word": "determine",
+        "start": 349.7,
+        "end": 350.06
+      },
+      {
+        "word": "eligibility.",
+        "start": 350.06,
+        "end": 350.68
+      }
+    ]
+  },
+  {
+    "sentence": "But the questions and accusations have continued. Ooh!",
+    "start": 351.72,
+    "end": 355.4,
+    "words": [
+      {
+        "word": "But",
+        "start": 351.72,
+        "end": 351.96
+      },
+      {
+        "word": "the",
+        "start": 351.96,
+        "end": 352.18
+      },
+      {
+        "word": "questions",
+        "start": 352.18,
+        "end": 352.62
+      },
+      {
+        "word": "and",
+        "start": 352.62,
+        "end": 352.92
+      },
+      {
+        "word": "accusations",
+        "start": 352.92,
+        "end": 353.46
+      },
+      {
+        "word": "have",
+        "start": 353.46,
+        "end": 353.86
+      },
+      {
+        "word": "continued.",
+        "start": 353.86,
+        "end": 354.34
+      },
+      {
+        "word": "Ooh!",
+        "start": 354.34,
+        "end": 355.4
+      }
+    ]
+  },
+  {
+    "sentence": "Solid straight right hand from Khalif there.",
+    "start": 356.4,
+    "end": 360.7,
+    "words": [
+      {
+        "word": "Solid",
+        "start": 356.4,
+        "end": 356.88
+      },
+      {
+        "word": "straight",
+        "start": 356.88,
+        "end": 357.64
+      },
+      {
+        "word": "right",
+        "start": 357.64,
+        "end": 358.0
+      },
+      {
+        "word": "hand",
+        "start": 358.0,
+        "end": 358.48
+      },
+      {
+        "word": "from",
+        "start": 358.48,
+        "end": 359.92
+      },
+      {
+        "word": "Khalif",
+        "start": 359.92,
+        "end": 360.36
+      },
+      {
+        "word": "there.",
+        "start": 360.36,
+        "end": 360.7
+      }
+    ]
+  },
+  {
+    "sentence": "One of Khalif's opponents, Angela Carini of Italy, abandoned an Olympic match last week after taking a hard punch from Khalif, and Italy's prime minister called it a match that did not seem on equal footing.",
+    "start": 361.36,
+    "end": 373.68,
+    "words": [
+      {
+        "word": "One",
+        "start": 361.36,
+        "end": 361.46
+      },
+      {
+        "word": "of",
+        "start": 361.46,
+        "end": 361.62
+      },
+      {
+        "word": "Khalif's",
+        "start": 361.62,
+        "end": 362.06
+      },
+      {
+        "word": "opponents,",
+        "start": 362.06,
+        "end": 362.56
+      },
+      {
+        "word": "Angela",
+        "start": 362.82,
+        "end": 363.08
+      },
+      {
+        "word": "Carini",
+        "start": 363.08,
+        "end": 363.4
+      },
+      {
+        "word": "of",
+        "start": 363.4,
+        "end": 363.62
+      },
+      {
+        "word": "Italy,",
+        "start": 363.62,
+        "end": 364.0
+      },
+      {
+        "word": "abandoned",
+        "start": 364.5,
+        "end": 364.88
+      },
+      {
+        "word": "an",
+        "start": 364.88,
+        "end": 365.08
+      },
+      {
+        "word": "Olympic",
+        "start": 365.08,
+        "end": 365.38
+      },
+      {
+        "word": "match",
+        "start": 365.38,
+        "end": 365.76
+      },
+      {
+        "word": "last",
+        "start": 365.76,
+        "end": 366.08
+      },
+      {
+        "word": "week",
+        "start": 366.08,
+        "end": 366.34
+      },
+      {
+        "word": "after",
+        "start": 366.34,
+        "end": 366.6
+      },
+      {
+        "word": "taking",
+        "start": 366.6,
+        "end": 366.9
+      },
+      {
+        "word": "a",
+        "start": 366.9,
+        "end": 367.1
+      },
+      {
+        "word": "hard",
+        "start": 367.1,
+        "end": 367.3
+      },
+      {
+        "word": "punch",
+        "start": 367.3,
+        "end": 367.58
+      },
+      {
+        "word": "from",
+        "start": 367.58,
+        "end": 367.78
+      },
+      {
+        "word": "Khalif,",
+        "start": 367.78,
+        "end": 368.32
+      },
+      {
+        "word": "and",
+        "start": 368.86,
+        "end": 369.04
+      },
+      {
+        "word": "Italy's",
+        "start": 369.04,
+        "end": 369.54
+      },
+      {
+        "word": "prime",
+        "start": 369.54,
+        "end": 369.74
+      },
+      {
+        "word": "minister",
+        "start": 369.74,
+        "end": 370.38
+      },
+      {
+        "word": "called",
+        "start": 370.38,
+        "end": 370.92
+      },
+      {
+        "word": "it",
+        "start": 370.92,
+        "end": 371.18
+      },
+      {
+        "word": "a",
+        "start": 371.18,
+        "end": 371.34
+      },
+      {
+        "word": "match",
+        "start": 371.34,
+        "end": 371.7
+      },
+      {
+        "word": "that",
+        "start": 371.7,
+        "end": 371.86
+      },
+      {
+        "word": "did",
+        "start": 371.86,
+        "end": 372.08
+      },
+      {
+        "word": "not",
+        "start": 372.08,
+        "end": 372.38
+      },
+      {
+        "word": "seem",
+        "start": 372.38,
+        "end": 372.62
+      },
+      {
+        "word": "on",
+        "start": 372.62,
+        "end": 373.04
+      },
+      {
+        "word": "equal",
+        "start": 373.04,
+        "end": 373.28
+      },
+      {
+        "word": "footing.",
+        "start": 373.28,
+        "end": 373.68
+      }
+    ]
+  },
+  {
+    "sentence": "Carini herself, meanwhile, said she doesn't object to Khalif fighting and even said she hopes she wins gold.",
+    "start": 374.76,
+    "end": 380.64,
+    "words": [
+      {
+        "word": "Carini",
+        "start": 374.76,
+        "end": 375.08
+      },
+      {
+        "word": "herself,",
+        "start": 375.08,
+        "end": 375.54
+      },
+      {
+        "word": "meanwhile,",
+        "start": 375.54,
+        "end": 376.0
+      },
+      {
+        "word": "said",
+        "start": 376.22,
+        "end": 376.32
+      },
+      {
+        "word": "she",
+        "start": 376.32,
+        "end": 376.58
+      },
+      {
+        "word": "doesn't",
+        "start": 376.58,
+        "end": 376.88
+      },
+      {
+        "word": "object",
+        "start": 376.88,
+        "end": 377.36
+      },
+      {
+        "word": "to",
+        "start": 377.36,
+        "end": 377.56
+      },
+      {
+        "word": "Khalif",
+        "start": 377.56,
+        "end": 377.82
+      },
+      {
+        "word": "fighting",
+        "start": 377.82,
+        "end": 378.24
+      },
+      {
+        "word": "and",
+        "start": 378.24,
+        "end": 378.8
+      },
+      {
+        "word": "even",
+        "start": 378.8,
+        "end": 379.12
+      },
+      {
+        "word": "said",
+        "start": 379.12,
+        "end": 379.3
+      },
+      {
+        "word": "she",
+        "start": 379.3,
+        "end": 379.5
+      },
+      {
+        "word": "hopes",
+        "start": 379.5,
+        "end": 379.74
+      },
+      {
+        "word": "she",
+        "start": 379.74,
+        "end": 379.96
+      },
+      {
+        "word": "wins",
+        "start": 379.96,
+        "end": 380.18
+      },
+      {
+        "word": "gold.",
+        "start": 380.18,
+        "end": 380.64
+      }
+    ]
+  },
+  {
+    "sentence": "Khalif will fight again today in the semifinals.",
+    "start": 381.36,
+    "end": 384.14,
+    "words": [
+      {
+        "word": "Khalif",
+        "start": 381.36,
+        "end": 381.78
+      },
+      {
+        "word": "will",
+        "start": 381.78,
+        "end": 382.02
+      },
+      {
+        "word": "fight",
+        "start": 382.02,
+        "end": 382.22
+      },
+      {
+        "word": "again",
+        "start": 382.22,
+        "end": 382.56
+      },
+      {
+        "word": "today",
+        "start": 382.56,
+        "end": 382.94
+      },
+      {
+        "word": "in",
+        "start": 382.94,
+        "end": 383.16
+      },
+      {
+        "word": "the",
+        "start": 383.16,
+        "end": 383.32
+      },
+      {
+        "word": "semifinals.",
+        "start": 383.32,
+        "end": 384.14
+      }
+    ]
+  },
+  {
+    "sentence": "The chief spokesman for the Olympic Committee acknowledged there's a lack of consensus about how to resolve eligibility issues across women's sports, calling the topic, quote, a minefield. Those are the headlines.",
+    "start": 384.98,
+    "end": 400.9,
+    "words": [
+      {
+        "word": "The",
+        "start": 384.98,
+        "end": 385.12
+      },
+      {
+        "word": "chief",
+        "start": 385.12,
+        "end": 385.44
+      },
+      {
+        "word": "spokesman",
+        "start": 385.44,
+        "end": 385.9
+      },
+      {
+        "word": "for",
+        "start": 385.9,
+        "end": 386.08
+      },
+      {
+        "word": "the",
+        "start": 386.08,
+        "end": 386.22
+      },
+      {
+        "word": "Olympic",
+        "start": 386.22,
+        "end": 386.5
+      },
+      {
+        "word": "Committee",
+        "start": 386.5,
+        "end": 387.12
+      },
+      {
+        "word": "acknowledged",
+        "start": 387.12,
+        "end": 387.9
+      },
+      {
+        "word": "there's",
+        "start": 387.9,
+        "end": 388.3
+      },
+      {
+        "word": "a",
+        "start": 388.3,
+        "end": 388.4
+      },
+      {
+        "word": "lack",
+        "start": 388.4,
+        "end": 388.62
+      },
+      {
+        "word": "of",
+        "start": 388.62,
+        "end": 388.88
+      },
+      {
+        "word": "consensus",
+        "start": 388.88,
+        "end": 389.38
+      },
+      {
+        "word": "about",
+        "start": 389.38,
+        "end": 389.68
+      },
+      {
+        "word": "how",
+        "start": 389.68,
+        "end": 389.9
+      },
+      {
+        "word": "to",
+        "start": 389.9,
+        "end": 390.12
+      },
+      {
+        "word": "resolve",
+        "start": 390.12,
+        "end": 390.46
+      },
+      {
+        "word": "eligibility",
+        "start": 390.46,
+        "end": 391.14
+      },
+      {
+        "word": "issues",
+        "start": 391.14,
+        "end": 391.72
+      },
+      {
+        "word": "across",
+        "start": 391.72,
+        "end": 392.4
+      },
+      {
+        "word": "women's",
+        "start": 392.4,
+        "end": 392.94
+      },
+      {
+        "word": "sports,",
+        "start": 392.94,
+        "end": 393.4
+      },
+      {
+        "word": "calling",
+        "start": 393.78,
+        "end": 394.1
+      },
+      {
+        "word": "the",
+        "start": 394.1,
+        "end": 394.36
+      },
+      {
+        "word": "topic,",
+        "start": 394.36,
+        "end": 394.76
+      },
+      {
+        "word": "quote,",
+        "start": 394.94,
+        "end": 395.24
+      },
+      {
+        "word": "a",
+        "start": 395.56,
+        "end": 395.76
+      },
+      {
+        "word": "minefield.",
+        "start": 395.76,
+        "end": 396.34
+      },
+      {
+        "word": "Those",
+        "start": 399.98,
+        "end": 400.12
+      },
+      {
+        "word": "are",
+        "start": 400.12,
+        "end": 400.3
+      },
+      {
+        "word": "the",
+        "start": 400.3,
+        "end": 400.46
+      },
+      {
+        "word": "headlines.",
+        "start": 400.46,
+        "end": 400.9
+      }
+    ]
+  },
+  {
+    "sentence": "Today on The Daily, more about what the market panic could mean for the U.S. economy going forward.",
+    "start": 401.5,
+    "end": 407.28,
+    "words": [
+      {
+        "word": "Today",
+        "start": 401.5,
+        "end": 401.76
+      },
+      {
+        "word": "on",
+        "start": 401.76,
+        "end": 401.9
+      },
+      {
+        "word": "The",
+        "start": 401.9,
+        "end": 402.1
+      },
+      {
+        "word": "Daily,",
+        "start": 402.1,
+        "end": 402.42
+      },
+      {
+        "word": "more",
+        "start": 402.88,
+        "end": 403.16
+      },
+      {
+        "word": "about",
+        "start": 403.16,
+        "end": 403.48
+      },
+      {
+        "word": "what",
+        "start": 403.48,
+        "end": 403.68
+      },
+      {
+        "word": "the",
+        "start": 403.68,
+        "end": 403.94
+      },
+      {
+        "word": "market",
+        "start": 403.94,
+        "end": 404.2
+      },
+      {
+        "word": "panic",
+        "start": 404.2,
+        "end": 404.58
+      },
+      {
+        "word": "could",
+        "start": 404.58,
+        "end": 404.92
+      },
+      {
+        "word": "mean",
+        "start": 404.92,
+        "end": 405.2
+      },
+      {
+        "word": "for",
+        "start": 405.2,
+        "end": 405.42
+      },
+      {
+        "word": "the",
+        "start": 405.42,
+        "end": 405.6
+      },
+      {
+        "word": "U",
+        "start": 405.6,
+        "end": 405.72
+      },
+      {
+        "word": ".S.",
+        "start": 405.72,
+        "end": 405.82
+      },
+      {
+        "word": "economy",
+        "start": 405.82,
+        "end": 406.36
+      },
+      {
+        "word": "going",
+        "start": 406.36,
+        "end": 406.76
+      },
+      {
+        "word": "forward.",
+        "start": 406.76,
+        "end": 407.28
+      }
+    ]
+  },
+  {
+    "sentence": "You can listen on the Times audio app or wherever you get your podcasts. I'm Tracy Mumford. We'll be back tomorrow.",
+    "start": 407.28,
+    "end": 414.48,
+    "words": [
+      {
+        "word": "You",
+        "start": 407.28,
+        "end": 407.76
+      },
+      {
+        "word": "can",
+        "start": 407.76,
+        "end": 408.14
+      },
+      {
+        "word": "listen",
+        "start": 408.14,
+        "end": 408.44
+      },
+      {
+        "word": "on",
+        "start": 408.44,
+        "end": 408.64
+      },
+      {
+        "word": "the",
+        "start": 408.64,
+        "end": 408.82
+      },
+      {
+        "word": "Times",
+        "start": 408.82,
+        "end": 409.04
+      },
+      {
+        "word": "audio",
+        "start": 409.04,
+        "end": 409.44
+      },
+      {
+        "word": "app",
+        "start": 409.44,
+        "end": 409.76
+      },
+      {
+        "word": "or",
+        "start": 409.76,
+        "end": 410.16
+      },
+      {
+        "word": "wherever",
+        "start": 410.16,
+        "end": 410.36
+      },
+      {
+        "word": "you",
+        "start": 410.36,
+        "end": 410.52
+      },
+      {
+        "word": "get",
+        "start": 410.52,
+        "end": 410.66
+      },
+      {
+        "word": "your",
+        "start": 410.66,
+        "end": 410.9
+      },
+      {
+        "word": "podcasts.",
+        "start": 410.9,
+        "end": 411.52
+      },
+      {
+        "word": "I'm",
+        "start": 412.26,
+        "end": 412.44
+      },
+      {
+        "word": "Tracy",
+        "start": 412.44,
+        "end": 412.68
+      },
+      {
+        "word": "Mumford.",
+        "start": 412.68,
+        "end": 413.08
+      },
+      {
+        "word": "We'll",
+        "start": 413.42,
+        "end": 413.54
+      },
+      {
+        "word": "be",
+        "start": 413.54,
+        "end": 413.72
+      },
+      {
+        "word": "back",
+        "start": 413.72,
+        "end": 413.88
+      },
+      {
+        "word": "tomorrow.",
+        "start": 413.88,
+        "end": 414.48
+      }
+    ]
+  },
+  {
+    "sentence": "Hi, this is Lori Ljubovic, editor of Well at The New York Times.",
+    "start": 420.38,
+    "end": 424.08,
+    "words": [
+      {
+        "word": "Hi,",
+        "start": 420.38,
+        "end": 420.98
+      },
+      {
+        "word": "this",
+        "start": 421.1,
+        "end": 421.32
+      },
+      {
+        "word": "is",
+        "start": 421.32,
+        "end": 421.48
+      },
+      {
+        "word": "Lori",
+        "start": 421.48,
+        "end": 421.72
+      },
+      {
+        "word": "Ljubovic,",
+        "start": 421.72,
+        "end": 422.22
+      },
+      {
+        "word": "editor",
+        "start": 422.44,
+        "end": 422.7
+      },
+      {
+        "word": "of",
+        "start": 422.7,
+        "end": 423.08
+      },
+      {
+        "word": "Well",
+        "start": 423.08,
+        "end": 423.08
+      },
+      {
+        "word": "at",
+        "start": 423.08,
+        "end": 423.24
+      },
+      {
+        "word": "The",
+        "start": 423.24,
+        "end": 423.34
+      },
+      {
+        "word": "New",
+        "start": 423.34,
+        "end": 423.48
+      },
+      {
+        "word": "York",
+        "start": 423.48,
+        "end": 423.66
+      },
+      {
+        "word": "Times.",
+        "start": 423.66,
+        "end": 424.08
+      }
+    ]
+  },
+  {
+    "sentence": "Everything that our readers get when they dig into a Well article has been vetted.",
+    "start": 424.88,
+    "end": 429.48,
+    "words": [
+      {
+        "word": "Everything",
+        "start": 424.88,
+        "end": 425.38
+      },
+      {
+        "word": "that",
+        "start": 425.38,
+        "end": 425.74
+      },
+      {
+        "word": "our",
+        "start": 425.74,
+        "end": 425.88
+      },
+      {
+        "word": "readers",
+        "start": 425.88,
+        "end": 426.16
+      },
+      {
+        "word": "get",
+        "start": 426.16,
+        "end": 426.48
+      },
+      {
+        "word": "when",
+        "start": 426.48,
+        "end": 426.7
+      },
+      {
+        "word": "they",
+        "start": 426.7,
+        "end": 427.0
+      },
+      {
+        "word": "dig",
+        "start": 427.0,
+        "end": 427.22
+      },
+      {
+        "word": "into",
+        "start": 427.22,
+        "end": 427.52
+      },
+      {
+        "word": "a",
+        "start": 427.52,
+        "end": 427.72
+      },
+      {
+        "word": "Well",
+        "start": 427.72,
+        "end": 427.88
+      },
+      {
+        "word": "article",
+        "start": 427.88,
+        "end": 428.44
+      },
+      {
+        "word": "has",
+        "start": 428.44,
+        "end": 428.8
+      },
+      {
+        "word": "been",
+        "start": 428.8,
+        "end": 429.1
+      },
+      {
+        "word": "vetted.",
+        "start": 429.1,
+        "end": 429.48
+      }
+    ]
+  },
+  {
+    "sentence": "Our reporters are consulting experts doing the research so that you can make great decisions about your physical health and your mental health.",
+    "start": 429.84,
+    "end": 438.08,
+    "words": [
+      {
+        "word": "Our",
+        "start": 429.84,
+        "end": 430.16
+      },
+      {
+        "word": "reporters",
+        "start": 430.16,
+        "end": 430.58
+      },
+      {
+        "word": "are",
+        "start": 430.58,
+        "end": 430.9
+      },
+      {
+        "word": "consulting",
+        "start": 430.9,
+        "end": 431.38
+      },
+      {
+        "word": "experts",
+        "start": 431.38,
+        "end": 432.04
+      },
+      {
+        "word": "doing",
+        "start": 432.04,
+        "end": 432.6
+      },
+      {
+        "word": "the",
+        "start": 432.6,
+        "end": 432.9
+      },
+      {
+        "word": "research",
+        "start": 432.9,
+        "end": 433.32
+      },
+      {
+        "word": "so",
+        "start": 433.32,
+        "end": 433.74
+      },
+      {
+        "word": "that",
+        "start": 433.74,
+        "end": 433.94
+      },
+      {
+        "word": "you",
+        "start": 433.94,
+        "end": 434.28
+      },
+      {
+        "word": "can",
+        "start": 434.28,
+        "end": 434.48
+      },
+      {
+        "word": "make",
+        "start": 434.48,
+        "end": 434.72
+      },
+      {
+        "word": "great",
+        "start": 434.72,
+        "end": 435.02
+      },
+      {
+        "word": "decisions",
+        "start": 435.02,
+        "end": 435.6
+      },
+      {
+        "word": "about",
+        "start": 435.6,
+        "end": 435.94
+      },
+      {
+        "word": "your",
+        "start": 435.94,
+        "end": 436.3
+      },
+      {
+        "word": "physical",
+        "start": 436.3,
+        "end": 436.76
+      },
+      {
+        "word": "health",
+        "start": 436.76,
+        "end": 437.16
+      },
+      {
+        "word": "and",
+        "start": 437.16,
+        "end": 437.4
+      },
+      {
+        "word": "your",
+        "start": 437.4,
+        "end": 437.54
+      },
+      {
+        "word": "mental",
+        "start": 437.54,
+        "end": 437.8
+      },
+      {
+        "word": "health.",
+        "start": 437.8,
+        "end": 438.08
+      }
+    ]
+  },
+  {
+    "sentence": "We take our reporting extra seriously because we know New York Times subscribers are counting on us.",
+    "start": 438.42,
+    "end": 444.6,
+    "words": [
+      {
+        "word": "We",
+        "start": 438.42,
+        "end": 438.52
+      },
+      {
+        "word": "take",
+        "start": 438.52,
+        "end": 438.9
+      },
+      {
+        "word": "our",
+        "start": 438.9,
+        "end": 439.3
+      },
+      {
+        "word": "reporting",
+        "start": 439.3,
+        "end": 439.72
+      },
+      {
+        "word": "extra",
+        "start": 439.72,
+        "end": 440.32
+      },
+      {
+        "word": "seriously",
+        "start": 440.32,
+        "end": 441.0
+      },
+      {
+        "word": "because",
+        "start": 441.0,
+        "end": 441.44
+      },
+      {
+        "word": "we",
+        "start": 441.44,
+        "end": 441.64
+      },
+      {
+        "word": "know",
+        "start": 441.64,
+        "end": 442.16
+      },
+      {
+        "word": "New",
+        "start": 442.16,
+        "end": 442.4
+      },
+      {
+        "word": "York",
+        "start": 442.4,
+        "end": 442.6
+      },
+      {
+        "word": "Times",
+        "start": 442.6,
+        "end": 442.8
+      },
+      {
+        "word": "subscribers",
+        "start": 442.8,
+        "end": 443.42
+      },
+      {
+        "word": "are",
+        "start": 443.42,
+        "end": 443.78
+      },
+      {
+        "word": "counting",
+        "start": 443.78,
+        "end": 444.02
+      },
+      {
+        "word": "on",
+        "start": 444.02,
+        "end": 444.26
+      },
+      {
+        "word": "us.",
+        "start": 444.26,
+        "end": 444.6
+      }
+    ]
+  },
+  {
+    "sentence": "If you already subscribe, thank you.",
+    "start": 444.88,
+    "end": 446.68,
+    "words": [
+      {
+        "word": "If",
+        "start": 444.88,
+        "end": 444.94
+      },
+      {
+        "word": "you",
+        "start": 444.94,
+        "end": 445.14
+      },
+      {
+        "word": "already",
+        "start": 445.14,
+        "end": 445.42
+      },
+      {
+        "word": "subscribe,",
+        "start": 445.42,
+        "end": 445.98
+      },
+      {
+        "word": "thank",
+        "start": 446.06,
+        "end": 446.38
+      },
+      {
+        "word": "you.",
+        "start": 446.38,
+        "end": 446.68
+      }
+    ]
+  },
+  {
+    "sentence": "If you'd like to subscribe, go to nytimes.com slash subscribe.",
+    "start": 446.86,
+    "end": 451.02,
+    "words": [
+      {
+        "word": "If",
+        "start": 446.86,
+        "end": 446.94
+      },
+      {
+        "word": "you'd",
+        "start": 446.94,
+        "end": 447.18
+      },
+      {
+        "word": "like",
+        "start": 447.18,
+        "end": 447.34
+      },
+      {
+        "word": "to",
+        "start": 447.34,
+        "end": 447.56
+      },
+      {
+        "word": "subscribe,",
+        "start": 447.56,
+        "end": 448.0
+      },
+      {
+        "word": "go",
+        "start": 448.22,
+        "end": 448.32
+      },
+      {
+        "word": "to",
+        "start": 448.32,
+        "end": 448.5
+      },
+      {
+        "word": "nytimes",
+        "start": 448.5,
+        "end": 449.06
+      },
+      {
+        "word": ".com",
+        "start": 449.06,
+        "end": 449.82
+      },
+      {
+        "word": "slash",
+        "start": 449.82,
+        "end": 450.2
+      },
+      {
+        "word": "subscribe.",
+        "start": 450.2,
+        "end": 451.02
+      }
+    ]
+  },
+  {
+    "sentence": "From the New York Times, it's the headlines. I'm Tracy Mumford. Today's Wednesday, August 7th. Here's what we're covering.",
+    "start": 453.84,
+    "end": 459.72,
+    "words": [
+      {
+        "word": "From",
+        "start": 453.84,
+        "end": 453.86
+      },
+      {
+        "word": "the",
+        "start": 453.86,
+        "end": 454.02
+      },
+      {
+        "word": "New",
+        "start": 454.02,
+        "end": 454.12
+      },
+      {
+        "word": "York",
+        "start": 454.12,
+        "end": 454.34
+      },
+      {
+        "word": "Times,",
+        "start": 454.34,
+        "end": 454.66
+      },
+      {
+        "word": "it's",
+        "start": 454.74,
+        "end": 454.94
+      },
+      {
+        "word": "the",
+        "start": 454.94,
+        "end": 455.08
+      },
+      {
+        "word": "headlines.",
+        "start": 455.08,
+        "end": 455.48
+      },
+      {
+        "word": "I'm",
+        "start": 455.72,
+        "end": 455.86
+      },
+      {
+        "word": "Tracy",
+        "start": 455.86,
+        "end": 456.1
+      },
+      {
+        "word": "Mumford.",
+        "start": 456.1,
+        "end": 456.5
+      },
+      {
+        "word": "Today's",
+        "start": 457.08,
+        "end": 457.38
+      },
+      {
+        "word": "Wednesday,",
+        "start": 457.38,
+        "end": 457.76
+      },
+      {
+        "word": "August",
+        "start": 457.84,
+        "end": 458.18
+      },
+      {
+        "word": "7th.",
+        "start": 458.18,
+        "end": 458.74
+      },
+      {
+        "word": "Here's",
+        "start": 458.86,
+        "end": 459.06
+      },
+      {
+        "word": "what",
+        "start": 459.06,
+        "end": 459.2
+      },
+      {
+        "word": "we're",
+        "start": 459.2,
+        "end": 459.38
+      },
+      {
+        "word": "covering.",
+        "start": 459.38,
+        "end": 459.72
+      }
+    ]
+  },
+  {
+    "sentence": "And now, welcome the next vice president of the United States, Tim Walz.",
+    "start": 466.02,
+    "end": 472.44,
+    "words": [
+      {
+        "word": "And",
+        "start": 466.02,
+        "end": 466.58
+      },
+      {
+        "word": "now,",
+        "start": 466.58,
+        "end": 467.14
+      },
+      {
+        "word": "welcome",
+        "start": 467.6,
+        "end": 468.16
+      },
+      {
+        "word": "the",
+        "start": 468.16,
+        "end": 468.5
+      },
+      {
+        "word": "next",
+        "start": 468.5,
+        "end": 468.86
+      },
+      {
+        "word": "vice",
+        "start": 468.86,
+        "end": 469.3
+      },
+      {
+        "word": "president",
+        "start": 469.3,
+        "end": 469.76
+      },
+      {
+        "word": "of",
+        "start": 469.76,
+        "end": 470.02
+      },
+      {
+        "word": "the",
+        "start": 470.02,
+        "end": 470.18
+      },
+      {
+        "word": "United",
+        "start": 470.18,
+        "end": 470.78
+      },
+      {
+        "word": "States,",
+        "start": 470.78,
+        "end": 471.24
+      },
+      {
+        "word": "Tim",
+        "start": 471.48,
+        "end": 471.74
+      },
+      {
+        "word": "Walz.",
+        "start": 471.74,
+        "end": 472.44
+      }
+    ]
+  },
+  {
+    "sentence": "Kamala Harris took the stage at a rally last night in Philadelphia to introduce her running mate, Minnesota Governor Tim Walz, a name that a day ago didn't mean a lot to people outside of his state.",
+    "start": 475.44,
+    "end": 486.66,
+    "words": [
+      {
+        "word": "Kamala",
+        "start": 475.44,
+        "end": 475.84
+      },
+      {
+        "word": "Harris",
+        "start": 475.84,
+        "end": 476.12
+      },
+      {
+        "word": "took",
+        "start": 476.12,
+        "end": 476.36
+      },
+      {
+        "word": "the",
+        "start": 476.36,
+        "end": 476.6
+      },
+      {
+        "word": "stage",
+        "start": 476.6,
+        "end": 476.78
+      },
+      {
+        "word": "at",
+        "start": 476.78,
+        "end": 476.98
+      },
+      {
+        "word": "a",
+        "start": 476.98,
+        "end": 477.14
+      },
+      {
+        "word": "rally",
+        "start": 477.14,
+        "end": 477.34
+      },
+      {
+        "word": "last",
+        "start": 477.34,
+        "end": 477.66
+      },
+      {
+        "word": "night",
+        "start": 477.66,
+        "end": 477.82
+      },
+      {
+        "word": "in",
+        "start": 477.82,
+        "end": 478.06
+      },
+      {
+        "word": "Philadelphia",
+        "start": 478.06,
+        "end": 478.6
+      },
+      {
+        "word": "to",
+        "start": 478.6,
+        "end": 479.04
+      },
+      {
+        "word": "introduce",
+        "start": 479.04,
+        "end": 479.42
+      },
+      {
+        "word": "her",
+        "start": 479.42,
+        "end": 479.7
+      },
+      {
+        "word": "running",
+        "start": 479.7,
+        "end": 479.9
+      },
+      {
+        "word": "mate,",
+        "start": 479.9,
+        "end": 480.18
+      },
+      {
+        "word": "Minnesota",
+        "start": 480.84,
+        "end": 481.02
+      },
+      {
+        "word": "Governor",
+        "start": 481.02,
+        "end": 481.5
+      },
+      {
+        "word": "Tim",
+        "start": 481.5,
+        "end": 481.94
+      },
+      {
+        "word": "Walz,",
+        "start": 481.94,
+        "end": 482.54
+      },
+      {
+        "word": "a",
+        "start": 483.04,
+        "end": 483.18
+      },
+      {
+        "word": "name",
+        "start": 483.18,
+        "end": 483.42
+      },
+      {
+        "word": "that",
+        "start": 483.42,
+        "end": 483.74
+      },
+      {
+        "word": "a",
+        "start": 483.74,
+        "end": 483.88
+      },
+      {
+        "word": "day",
+        "start": 483.88,
+        "end": 484.02
+      },
+      {
+        "word": "ago",
+        "start": 484.02,
+        "end": 484.36
+      },
+      {
+        "word": "didn't",
+        "start": 484.36,
+        "end": 484.72
+      },
+      {
+        "word": "mean",
+        "start": 484.72,
+        "end": 484.98
+      },
+      {
+        "word": "a",
+        "start": 484.98,
+        "end": 485.14
+      },
+      {
+        "word": "lot",
+        "start": 485.14,
+        "end": 485.26
+      },
+      {
+        "word": "to",
+        "start": 485.26,
+        "end": 485.42
+      },
+      {
+        "word": "people",
+        "start": 485.42,
+        "end": 485.72
+      },
+      {
+        "word": "outside",
+        "start": 485.72,
+        "end": 486.14
+      },
+      {
+        "word": "of",
+        "start": 486.14,
+        "end": 486.3
+      },
+      {
+        "word": "his",
+        "start": 486.3,
+        "end": 486.5
+      },
+      {
+        "word": "state.",
+        "start": 486.5,
+        "end": 486.66
+      }
+    ]
+  },
+  {
+    "sentence": "Thank you, Madam Vice President, for the trust you put in me, but maybe more so thank you for bringing back the joy.",
+    "start": 487.14,
+    "end": 494.62,
+    "words": [
+      {
+        "word": "Thank",
+        "start": 487.14,
+        "end": 487.26
+      },
+      {
+        "word": "you,",
+        "start": 487.26,
+        "end": 487.5
+      },
+      {
+        "word": "Madam",
+        "start": 487.58,
+        "end": 487.72
+      },
+      {
+        "word": "Vice",
+        "start": 487.72,
+        "end": 488.14
+      },
+      {
+        "word": "President,",
+        "start": 488.14,
+        "end": 488.46
+      },
+      {
+        "word": "for",
+        "start": 488.5,
+        "end": 488.68
+      },
+      {
+        "word": "the",
+        "start": 488.68,
+        "end": 488.94
+      },
+      {
+        "word": "trust",
+        "start": 488.94,
+        "end": 489.12
+      },
+      {
+        "word": "you",
+        "start": 489.12,
+        "end": 489.36
+      },
+      {
+        "word": "put",
+        "start": 489.36,
+        "end": 489.46
+      },
+      {
+        "word": "in",
+        "start": 489.46,
+        "end": 489.62
+      },
+      {
+        "word": "me,",
+        "start": 489.62,
+        "end": 489.86
+      },
+      {
+        "word": "but",
+        "start": 489.9,
+        "end": 490.4
+      },
+      {
+        "word": "maybe",
+        "start": 490.4,
+        "end": 490.8
+      },
+      {
+        "word": "more",
+        "start": 490.8,
+        "end": 491.12
+      },
+      {
+        "word": "so",
+        "start": 491.12,
+        "end": 491.64
+      },
+      {
+        "word": "thank",
+        "start": 491.64,
+        "end": 492.66
+      },
+      {
+        "word": "you",
+        "start": 492.66,
+        "end": 492.9
+      },
+      {
+        "word": "for",
+        "start": 492.9,
+        "end": 493.12
+      },
+      {
+        "word": "bringing",
+        "start": 493.12,
+        "end": 493.4
+      },
+      {
+        "word": "back",
+        "start": 493.4,
+        "end": 493.9
+      },
+      {
+        "word": "the",
+        "start": 493.9,
+        "end": 494.24
+      },
+      {
+        "word": "joy.",
+        "start": 494.24,
+        "end": 494.62
+      }
+    ]
+  },
+  {
+    "sentence": "Harris and Walz himself touted his background as a high school teacher, a football coach and a member of the Army National Guard.",
+    "start": 496.46,
+    "end": 503.36,
+    "words": [
+      {
+        "word": "Harris",
+        "start": 496.46,
+        "end": 497.06
+      },
+      {
+        "word": "and",
+        "start": 497.06,
+        "end": 497.32
+      },
+      {
+        "word": "Walz",
+        "start": 497.32,
+        "end": 497.6
+      },
+      {
+        "word": "himself",
+        "start": 497.6,
+        "end": 498.14
+      },
+      {
+        "word": "touted",
+        "start": 498.14,
+        "end": 498.56
+      },
+      {
+        "word": "his",
+        "start": 498.56,
+        "end": 498.7
+      },
+      {
+        "word": "background",
+        "start": 498.7,
+        "end": 499.12
+      },
+      {
+        "word": "as",
+        "start": 499.12,
+        "end": 499.34
+      },
+      {
+        "word": "a",
+        "start": 499.34,
+        "end": 499.4
+      },
+      {
+        "word": "high",
+        "start": 499.4,
+        "end": 499.6
+      },
+      {
+        "word": "school",
+        "start": 499.6,
+        "end": 499.8
+      },
+      {
+        "word": "teacher,",
+        "start": 499.8,
+        "end": 500.22
+      },
+      {
+        "word": "a",
+        "start": 500.62,
+        "end": 500.78
+      },
+      {
+        "word": "football",
+        "start": 500.78,
+        "end": 501.04
+      },
+      {
+        "word": "coach",
+        "start": 501.04,
+        "end": 501.42
+      },
+      {
+        "word": "and",
+        "start": 501.42,
+        "end": 501.78
+      },
+      {
+        "word": "a",
+        "start": 501.78,
+        "end": 501.92
+      },
+      {
+        "word": "member",
+        "start": 501.92,
+        "end": 502.12
+      },
+      {
+        "word": "of",
+        "start": 502.12,
+        "end": 502.32
+      },
+      {
+        "word": "the",
+        "start": 502.32,
+        "end": 502.42
+      },
+      {
+        "word": "Army",
+        "start": 502.42,
+        "end": 502.62
+      },
+      {
+        "word": "National",
+        "start": 502.62,
+        "end": 503.02
+      },
+      {
+        "word": "Guard.",
+        "start": 503.02,
+        "end": 503.36
+      }
+    ]
+  },
+  {
+    "sentence": "But it was his willingness to go on the offensive against the Republican ticket that energized the crowd.",
+    "start": 503.88,
+    "end": 509.44,
+    "words": [
+      {
+        "word": "But",
+        "start": 503.88,
+        "end": 504.48
+      },
+      {
+        "word": "it",
+        "start": 504.48,
+        "end": 504.6
+      },
+      {
+        "word": "was",
+        "start": 504.6,
+        "end": 504.72
+      },
+      {
+        "word": "his",
+        "start": 504.72,
+        "end": 504.9
+      },
+      {
+        "word": "willingness",
+        "start": 504.9,
+        "end": 505.26
+      },
+      {
+        "word": "to",
+        "start": 505.26,
+        "end": 505.56
+      },
+      {
+        "word": "go",
+        "start": 505.56,
+        "end": 505.78
+      },
+      {
+        "word": "on",
+        "start": 505.78,
+        "end": 505.94
+      },
+      {
+        "word": "the",
+        "start": 505.94,
+        "end": 506.18
+      },
+      {
+        "word": "offensive",
+        "start": 506.18,
+        "end": 506.56
+      },
+      {
+        "word": "against",
+        "start": 506.56,
+        "end": 506.88
+      },
+      {
+        "word": "the",
+        "start": 506.88,
+        "end": 507.12
+      },
+      {
+        "word": "Republican",
+        "start": 507.12,
+        "end": 507.58
+      },
+      {
+        "word": "ticket",
+        "start": 507.58,
+        "end": 507.94
+      },
+      {
+        "word": "that",
+        "start": 507.94,
+        "end": 508.42
+      },
+      {
+        "word": "energized",
+        "start": 508.42,
+        "end": 508.76
+      },
+      {
+        "word": "the",
+        "start": 508.76,
+        "end": 509.02
+      },
+      {
+        "word": "crowd.",
+        "start": 509.02,
+        "end": 509.44
+      }
+    ]
+  },
+  {
+    "sentence": "Make no mistake, violent crime was up under Donald Trump.",
+    "start": 510.12,
+    "end": 514.74,
+    "words": [
+      {
+        "word": "Make",
+        "start": 510.12,
+        "end": 510.14
+      },
+      {
+        "word": "no",
+        "start": 510.14,
+        "end": 510.44
+      },
+      {
+        "word": "mistake,",
+        "start": 510.44,
+        "end": 511.24
+      },
+      {
+        "word": "violent",
+        "start": 511.98,
+        "end": 512.2
+      },
+      {
+        "word": "crime",
+        "start": 512.2,
+        "end": 512.68
+      },
+      {
+        "word": "was",
+        "start": 512.68,
+        "end": 513.18
+      },
+      {
+        "word": "up",
+        "start": 513.18,
+        "end": 513.6
+      },
+      {
+        "word": "under",
+        "start": 513.6,
+        "end": 513.92
+      },
+      {
+        "word": "Donald",
+        "start": 513.92,
+        "end": 514.28
+      },
+      {
+        "word": "Trump.",
+        "start": 514.28,
+        "end": 514.74
+      }
+    ]
+  },
+  {
+    "sentence": "That's not even counting the crimes he committed.",
+    "start": 518.48,
+    "end": 520.8,
+    "words": [
+      {
+        "word": "That's",
+        "start": 518.48,
+        "end": 518.86
+      },
+      {
+        "word": "not",
+        "start": 518.86,
+        "end": 518.98
+      },
+      {
+        "word": "even",
+        "start": 518.98,
+        "end": 519.24
+      },
+      {
+        "word": "counting",
+        "start": 519.24,
+        "end": 519.46
+      },
+      {
+        "word": "the",
+        "start": 519.46,
+        "end": 519.76
+      },
+      {
+        "word": "crimes",
+        "start": 519.76,
+        "end": 519.9
+      },
+      {
+        "word": "he",
+        "start": 519.9,
+        "end": 520.16
+      },
+      {
+        "word": "committed.",
+        "start": 520.16,
+        "end": 520.8
+      }
+    ]
+  },
+  {
+    "sentence": "It was a raucous audience.",
+    "start": 521.86,
+    "end": 524.12,
+    "words": [
+      {
+        "word": "It",
+        "start": 521.86,
+        "end": 522.54
+      },
+      {
+        "word": "was",
+        "start": 522.54,
+        "end": 523.02
+      },
+      {
+        "word": "a",
+        "start": 523.02,
+        "end": 523.24
+      },
+      {
+        "word": "raucous",
+        "start": 523.24,
+        "end": 523.78
+      },
+      {
+        "word": "audience.",
+        "start": 523.78,
+        "end": 524.12
+      }
+    ]
+  },
+  {
+    "sentence": "It was very loud throughout the evening, all the way through Harris and Walz.",
+    "start": 524.4,
+    "end": 528.84,
+    "words": [
+      {
+        "word": "It",
+        "start": 524.4,
+        "end": 524.52
+      },
+      {
+        "word": "was",
+        "start": 524.52,
+        "end": 524.78
+      },
+      {
+        "word": "very",
+        "start": 524.78,
+        "end": 525.16
+      },
+      {
+        "word": "loud",
+        "start": 525.16,
+        "end": 525.5
+      },
+      {
+        "word": "throughout",
+        "start": 525.5,
+        "end": 525.88
+      },
+      {
+        "word": "the",
+        "start": 525.88,
+        "end": 526.12
+      },
+      {
+        "word": "evening,",
+        "start": 526.12,
+        "end": 526.48
+      },
+      {
+        "word": "all",
+        "start": 526.92,
+        "end": 527.08
+      },
+      {
+        "word": "the",
+        "start": 527.08,
+        "end": 527.14
+      },
+      {
+        "word": "way",
+        "start": 527.14,
+        "end": 527.32
+      },
+      {
+        "word": "through",
+        "start": 527.32,
+        "end": 527.88
+      },
+      {
+        "word": "Harris",
+        "start": 527.88,
+        "end": 528.22
+      },
+      {
+        "word": "and",
+        "start": 528.22,
+        "end": 528.5
+      },
+      {
+        "word": "Walz.",
+        "start": 528.5,
+        "end": 528.84
+      }
+    ]
+  },
+  {
+    "sentence": "Time's political reporter Reid Eppel...",
+    "start": 529.6,
+    "end": 530.86,
+    "words": [
+      {
+        "word": "Time's",
+        "start": 529.6,
+        "end": 529.94
+      },
+      {
+        "word": "political",
+        "start": 529.94,
+        "end": 530.28
+      },
+      {
+        "word": "reporter",
+        "start": 530.28,
+        "end": 530.58
+      },
+      {
+        "word": "Reid",
+        "start": 530.58,
+        "end": 530.76
+      },
+      {
+        "word": "Eppel...",
+        "start": 530.76,
+        "end": 530.86
+      }
+    ]
+  }
+]

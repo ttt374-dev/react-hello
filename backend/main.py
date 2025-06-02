@@ -2,20 +2,30 @@ from fastapi import FastAPI, HTTPException, File, UploadFile, BackgroundTasks, W
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
+from rq import Queue
+from rq.job import Job
+from jobs import say_hello
+from transcribe import transcribe_title
 import os, re, json, subprocess
-
-app = FastAPI()
+import redis
 
 DATA_DIR = Path("data")
-
+app = FastAPI()
 # Allow CORS for frontend during development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # adjust in prod
+    allow_origins=["*"],  # adjust in prod    
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+#redis_conn = redis.from_url("redis://127.0.0.1:6379")
+#redis_conn = redis.from_url("redis://host.docker.internal:6379")
+redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
+redis_conn = redis.from_url(redis_url)
+q = Queue(connection=redis_conn, default_timeout=1800)
+
 
 # Helper: validate title param to avoid path traversal
 def valid_title(title: str) -> bool:
@@ -65,6 +75,18 @@ async def upload_audio(title: str = Form(...), audio: UploadFile = File(...), bg
         f.write(await audio.read())
 
     # Launch subprocess for transcription
-    subprocess.Popen(["python", "transcribe.py", str(title)])
+    #subprocess.Popen(["python", "transcribe.py", str(title)])
+    job = q.enqueue(transcribe_title, title)    
+    return JSONResponse({"message": "Upload success. Transcription started.", "job_id": job.id})
 
-    return JSONResponse({"message": "Upload accepted, transcription started."})
+@app.get("/api/job_status/{job_id}")
+def get_job_status(job_id):
+    try:
+        job = Job.fetch(job_id, connection=redis_conn)
+        return {
+            "status": job.get_status(),
+            "result": job.result,
+            "error": str(job.exc_info) if job.is_failed else None,
+        }
+    except Exception as e:
+        return {"error": str(e)}

@@ -14,7 +14,7 @@ export default function Upload({ onUploaded }) {
     formData.append("audio", file);
     formData.append("title", title);
 
-    fetch("http://localhost:8000/api/upload", {
+    fetch("http://127.0.0.1:8000/api/upload", {
       method: "POST",
       body: formData,
     })
@@ -25,7 +25,7 @@ export default function Upload({ onUploaded }) {
         return res.json();
       })
       .then((data) => {
-        alert("Upload started. Transcription is processing.");
+        alert("Upload started. Transcription is processing.")
         if (onUploaded) onUploaded(title);
       })
       .catch((err) => {

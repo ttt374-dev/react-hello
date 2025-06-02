@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   redis:
     image: redis:7
@@ -36,4 +34,7 @@ services:
         - ./backend:/app
       environment:
         - PYTHON_ENV=development
+        - REDIS_URL=redis://redis:6379  # <-- use service name 'redis'
+      depends_on:
+        - redis
 
