@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function App() {
   const [sentences, setSentences] = useState([]);
@@ -20,25 +20,21 @@ export default function App() {
 
     const handleTimeUpdate = () => {
       const current = audio.currentTime;
-      let sIdx = -1, wIdx = -1;
+      const sentenceIndex = sentences.findIndex(
+        (s) => current >= s.start && current <= s.end
+      );
 
-      for (let i = 0; i < sentences.length; i++) {
-        const s = sentences[i];
-        if (current >= s.start && current <= s.end) {
-          sIdx = i;
-          for (let j = 0; j < s.words.length; j++) {
-            const w = s.words[j];
-            if (current >= w.start && current <= w.end) {
-              wIdx = j;
-              break;
-            }
-          }
-          break;
-        }
+      setActiveSentenceIndex(sentenceIndex);
+
+      if (sentenceIndex !== -1) {
+        const words = sentences[sentenceIndex].words;
+        const wordIndex = words.findIndex(
+          (w) => current >= w.start && current <= w.end
+        );
+        setActiveWordIndex(wordIndex);
+      } else {
+        setActiveWordIndex(null);
       }
-
-      setActiveSentenceIndex(sIdx);
-      setActiveWordIndex(wIdx);
     };
 
     audio.addEventListener("timeupdate", handleTimeUpdate);
@@ -69,21 +65,29 @@ export default function App() {
     if (!audio) return;
 
     const handleKeyDown = (e) => {
-      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")
+        return;
 
       if (e.code === "Space") {
         e.preventDefault();
-        if (audio.paused) audio.play();
-        else audio.pause();
+        audio.paused ? audio.play() : audio.pause();
       } else if (e.code === "ArrowLeft") {
         e.preventDefault();
         if (
           activeSentenceIndex !== null &&
-          sentences[activeSentenceIndex] &&
-          sentences[activeSentenceIndex].words.length > 0
+          sentences[activeSentenceIndex]?.words?.[0]
         ) {
-          const firstWord = sentences[activeSentenceIndex].words[0];
-          playAt(firstWord.start);
+          playAt(sentences[activeSentenceIndex].words[0].start);
+        }
+      } else if (e.code === "ArrowUp") {
+        e.preventDefault();
+        if (activeSentenceIndex > 0) {
+          playAt(sentences[activeSentenceIndex - 1].start);
+        }
+      } else if (e.code === "ArrowDown") {
+        e.preventDefault();
+        if (activeSentenceIndex < sentences.length - 1) {
+          playAt(sentences[activeSentenceIndex + 1].start);
         }
       }
     };
@@ -93,14 +97,37 @@ export default function App() {
   }, [sentences, activeSentenceIndex]);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh", fontFamily: "sans-serif" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        fontFamily: "sans-serif",
+      }}
+    >
       {/* Title */}
-      <div style={{ padding: "1rem", background: "#222", color: "#fff", fontSize: "1.25rem", fontWeight: "bold" }}>
+      <div
+        style={{
+          padding: "1rem",
+          background: "#222",
+          color: "#fff",
+          fontSize: "1.25rem",
+          fontWeight: "bold",
+          flexShrink: 0,
+        }}
+      >
         🎧 Audio: <span style={{ color: "#0ff" }}>audio.mp3</span>
       </div>
 
-      {/* Scrollable transcript */}
-      <div style={{ flex: 1, overflowY: "auto", padding: "1rem", background: "#f4f4f4" }}>
+      {/* Transcript */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: "auto",
+          padding: "1rem",
+          background: "#f4f4f4",
+        }}
+      >
         {sentences.length === 0 ? (
           <p>Loading transcript...</p>
         ) : (
@@ -113,53 +140,41 @@ export default function App() {
                 marginBottom: "0.75rem",
                 padding: "0.75rem",
                 borderRadius: "6px",
-                background: idx === activeSentenceIndex ? "#d1f1ff" : "#fff",
-                fontWeight: idx === activeSentenceIndex ? "bold" : "normal",
+                background:
+                  idx === activeSentenceIndex ? "#d1f1ff" : "#fff",
+                fontWeight:
+                  idx === activeSentenceIndex ? "bold" : "normal",
                 cursor: "pointer",
                 transition: "background 0.3s",
                 boxShadow:
                   idx === activeSentenceIndex
                     ? "0 0 0 2px #00cfff inset"
-                    : "0 1px 2px rgba(0,0,0,0.1)"
+                    : "0 1px 2px rgba(0,0,0,0.1)",
               }}
             >
-              <div style={{ lineHeight: "1.7", whiteSpace: "normal" }}>
-                {s.words
-                  .map((w, widx) => (
-                    <span
-                      key={widx}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        playAt(w.start);
-                      }}
-                      style={{
-                        background:
-                          idx === activeSentenceIndex && widx === activeWordIndex
-                            ? "#00cfff"
-                            : "transparent",
-                        color:
-                          idx === activeSentenceIndex && widx === activeWordIndex
-                            ? "#fff"
-                            : "#000",
-                        borderRadius: "4px",
-                        padding: "0.1rem 0.3rem",
-                        cursor: "pointer",
-                        transition: "background 0.2s"
-                      }}
-                    >
-                      {w.word}
-                    </span>
-                  ))
-                  .reduce((acc, el, i, arr) => {
-                    acc.push(el);
-                    if (i < arr.length - 1)
-                      acc.push(
-                        <span key={`space-${i}`} style={{ margin: "0 0.15rem" }}>
-                          {" "}
-                        </span>
-                      );
-                    return acc;
-                  }, [])}
+              <div style={{ wordSpacing: "0.2em", lineHeight: "1.6" }}>
+                {s.words.map((w, wIdx) => (
+                  <span
+                    key={wIdx}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      playAt(w.start);
+                    }}
+                    style={{
+                      cursor: "pointer",
+                      padding: "0 2px",
+                      background:
+                        idx === activeSentenceIndex &&
+                        wIdx === activeWordIndex
+                          ? "#ffecb3"
+                          : "transparent",
+                      borderRadius: "3px",
+                    }}
+                  >
+                    {w.word}
+                    {wIdx < s.words.length - 1 ? " " : ""}
+                  </span>
+                ))}
               </div>
               <small style={{ fontSize: "0.8rem", color: "#666" }}>
                 {s.start.toFixed(2)}s - {s.end.toFixed(2)}s
@@ -170,7 +185,14 @@ export default function App() {
       </div>
 
       {/* Audio controls */}
-      <div style={{ padding: "1rem", borderTop: "1px solid #ccc", background: "#fff" }}>
+      <div
+        style={{
+          padding: "1rem",
+          borderTop: "1px solid #ccc",
+          background: "#fff",
+          flexShrink: 0,
+        }}
+      >
         <audio
           ref={audioRef}
           controls
