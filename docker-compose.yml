@@ -18,10 +18,12 @@ services:
   frontend:
     build:
       context: ./frontend
+      #context: ./react-router-sample
     ports:
       - "5173:5173"
     volumes:
       - ./frontend:/app
+      #- ./react-router-sample:/app
       - /app/node_modules
     environment:
       - NODE_ENV=development

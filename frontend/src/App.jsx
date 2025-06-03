@@ -1,8 +1,18 @@
+import { Routes, Route, Link } from 'react-router-dom';
 import { useState } from "react";
 import List from "./List";
 import Transcript from "./Transcript";
 
-export default function App() {
+function App(){
+  return (
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+    </Routes>
+  )
+}
+
+function Home() {
   const [selectedTitle, setSelectedTitle] = useState(null);
 
   return (
@@ -23,3 +33,8 @@ export default function App() {
     </div>
   );
 }
+function About(){
+  return (<div>About</div>)
+}
+
+export default App;
