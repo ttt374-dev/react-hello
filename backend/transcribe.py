@@ -6,7 +6,7 @@ from segmenter import segment_words_into_sentences
 def transcribe_title(id):
     #folder = os.path.join("./data", title)
     audio_path = os.path.join("data", "audio", f"{id}.mp3")
-    output_json = os.path.join("data", "transcripts" f"{id}.json")
+    output_json = os.path.join("data", "transcripts", f"{id}.json")
 
     transcribe(audio_path, output_json)
 

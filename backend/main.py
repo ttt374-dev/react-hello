@@ -76,10 +76,19 @@ async def get_transcript(id: str):
 
     return JSONResponse(content=data)
 
+
+def clean_filename(filename: str) -> str:
+    # .mp3 を除去して、英数字とアンダースコアのみ許可
+    base = os.path.splitext(filename)[0]
+    return re.sub(r'[^a-zA-Z0-9_]+', '_', base)
+
+
 @app.post("/api/upload")
-async def upload_audio(title: str = Form(...), audio: UploadFile = File(...), bg: BackgroundTasks = BackgroundTasks()):
+async def upload_audio(audio: UploadFile = File(...), bg: BackgroundTasks = BackgroundTasks()):
     transcript_id = str(uuid.uuid4())
     path = f"data/audio/{transcript_id}.mp3"
+    title = clean_filename(audio.filename)
+
     #os.makedirs(f"data/{title}", exist_ok=True)
     with open(path, "wb") as f:
         f.write(await audio.read())

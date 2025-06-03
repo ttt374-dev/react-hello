@@ -24,4 +24,7 @@ dist-ssr
 *.sw?
 **/venv/
 **/__pycache__/
-
+*.mp3
+backend/data/audio/*.mp3
+backend/data/transcripts/*.json
+backend/transcripts.db

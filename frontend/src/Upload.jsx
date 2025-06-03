@@ -8,14 +8,9 @@ export default function Upload({ onUploaded }) {
   const [status, setStatus] = useState(null);
 
   const handleUpload = () => {
-    if (!file || !title) {
-      alert("Please select a file and enter a title.");
-      return;
-    }
-
     const formData = new FormData();
     formData.append("audio", file);
-    formData.append("title", title);
+    //formData.append("title", title);
 
     fetch("http://127.0.0.1:8000/api/upload", {
       method: "POST",
@@ -65,13 +60,7 @@ export default function Upload({ onUploaded }) {
 
   return (
     <div style={{ padding: "1rem", borderBottom: "1px solid #ccc" }}>
-      <h3>Upload Audio</h3>
-      <input
-        type="text"
-        placeholder="Enter title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+      <h3>Upload Audio</h3>      
       <input
         type="file"
         accept="audio/mp3"
