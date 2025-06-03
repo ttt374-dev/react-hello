@@ -14,6 +14,7 @@ import os, re, json, subprocess
 import redis
 import uuid, os, sys, shutil
 from datetime import datetime
+from uuid import UUID
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -48,6 +49,19 @@ def list_transcripts(db: Session = Depends(get_db)):
         }
         for t in transcripts
     ]
+
+@app.get("/api/details/{id}")
+def get_transcript_detail(id: UUID, db: Session = Depends(get_db)):
+    transcript = db.query(Transcript).filter(Transcript.id == str(id)).first()
+    if not transcript:
+        raise HTTPException(status_code=404, detail="Transcript not found")
+
+    return {
+        "id": transcript.id,
+        "title": transcript.title,
+        "created_at": transcript.created_at,
+    }
+
 @app.get("/api/audio/{id}")
 async def get_audio(id: str):
     if not valid_title(id):

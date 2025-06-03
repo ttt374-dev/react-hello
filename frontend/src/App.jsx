@@ -24,7 +24,7 @@ function Home() {
       <List selected={title} onSelect={setSelectedTitle} />
       
       { title ? (
-        <Transcript title={title} />
+        <Transcript transcriptId={title} />
       ): (<div>select title</div>)}
 
       {/* Right pane with transcript or placeholder */}

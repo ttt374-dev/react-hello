@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 
-// MAX_WORDS constant for splitting long sentences
 const MAX_WORDS = 50;
 
 // Utility to split long sentences by nearest comma
@@ -19,17 +18,15 @@ function splitLongSentences(sentences) {
     while (startIdx < words.length) {
       let endIdx = Math.min(startIdx + MAX_WORDS, words.length);
 
-      // find nearest comma before endIdx to split
       for (let i = endIdx - 1; i > startIdx; i--) {
         const w = words[i].word || words[i].text;
         if (w === "," || w.endsWith(",")) {
-          endIdx = i + 1; // split after this comma
+          endIdx = i + 1;
           break;
         }
       }
 
       const chunkWords = words.slice(startIdx, endIdx);
-
       const chunkText = chunkWords.map((w) => w.word || w.text).join(" ");
 
       result.push({
@@ -42,24 +39,26 @@ function splitLongSentences(sentences) {
       startIdx = endIdx;
     }
   }
+
   return result;
 }
 
-export default function Transcript({ title }) {
+export default function Transcript({ transcriptId }) {
   const [sentences, setSentences] = useState([]);
   const [activeSentenceIndex, setActiveSentenceIndex] = useState(null);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
+  const [title, setTitle] = useState(null);
   const audioRef = useRef(null);
   const sentenceRefs = useRef([]);
   const wordRefs = useRef([]);
 
-  // Derive audio and transcript URLs from title prop
-  const audioSrc = `http://localhost:8000/api/audio/${encodeURIComponent(title)}`;
-  const transcriptSrc = `http://localhost:8000/api/transcripts/${encodeURIComponent(title)}`;
+  const audioSrc = `http://localhost:8000/api/audio/${encodeURIComponent(transcriptId)}`;
+  const transcriptSrc = `http://localhost:8000/api/transcripts/${encodeURIComponent(transcriptId)}`;
+  const detailsSrc = `http://localhost:8000/api/details/${encodeURIComponent(transcriptId)}`;
 
-  // Load transcript JSON and split long sentences
+  // Load transcript
   useEffect(() => {
-    if (!title) {
+    if (!transcriptId) {
       setSentences([]);
       return;
     }
@@ -69,11 +68,6 @@ export default function Transcript({ title }) {
         return res.json();
       })
       .then((data) => {
-        if (!Array.isArray(data)) {
-          console.error("Transcript JSON is not an array", data);
-          setSentences([]);
-          return;
-        }
         const split = splitLongSentences(data);
         setSentences(split);
       })
@@ -81,9 +75,21 @@ export default function Transcript({ title }) {
         console.error("Failed to load transcript:", err);
         setSentences([]);
       });
-  }, [transcriptSrc, title]);
+  }, [transcriptSrc, transcriptId]);
 
-  // Handle audio time update for highlighting sentence and word
+  // Load metadata (title)
+  useEffect(() => {
+    if (!transcriptId) return;
+    fetch(detailsSrc)
+      .then((res) => res.json())
+      .then((data) => {
+        setTitle(data.title || transcriptId);
+      })
+      .catch(() => {
+        setTitle(transcriptId);
+      });
+  }, [detailsSrc, transcriptId]);
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -111,7 +117,6 @@ export default function Transcript({ title }) {
     return () => audio.removeEventListener("timeupdate", onTimeUpdate);
   }, [sentences]);
 
-  // Scroll active sentence into view smoothly
   useEffect(() => {
     if (
       activeSentenceIndex !== null &&
@@ -123,59 +128,52 @@ export default function Transcript({ title }) {
       });
     }
   }, [activeSentenceIndex]);
+
   useEffect(() => {
-  function handleKeyDown(e) {
-    if (!sentences.length) return;
+    function handleKeyDown(e) {
+      if (!sentences.length) return;
 
-    // Prevent default behavior for controlled keys
-    if (
-      ["ArrowUp", "ArrowDown", "ArrowLeft", " "].includes(e.key)
-    ) {
-      e.preventDefault();
-    }
-
-    // Previous sentence
-    if (e.key === "ArrowUp") {
-      if (activeSentenceIndex > 0) {
-        const prev = activeSentenceIndex - 1;
-        setActiveSentenceIndex(prev);
-        playAt(sentences[prev].start);
+      if (["ArrowUp", "ArrowDown", "ArrowLeft", " "].includes(e.key)) {
+        e.preventDefault();
       }
-    }
 
-    // Next sentence
-    if (e.key === "ArrowDown") {
-      if (activeSentenceIndex < sentences.length - 1) {
-        const next = activeSentenceIndex + 1;
-        setActiveSentenceIndex(next);
-        playAt(sentences[next].start);
+      if (e.key === "ArrowUp") {
+        if (activeSentenceIndex > 0) {
+          const prev = activeSentenceIndex - 1;
+          setActiveSentenceIndex(prev);
+          playAt(sentences[prev].start);
+        }
       }
-    }
 
-    // Restart current sentence
-    if (e.key === "ArrowLeft") {
-      if (activeSentenceIndex !== null) {
-        playAt(sentences[activeSentenceIndex].start);
+      if (e.key === "ArrowDown") {
+        if (activeSentenceIndex < sentences.length - 1) {
+          const next = activeSentenceIndex + 1;
+          setActiveSentenceIndex(next);
+          playAt(sentences[next].start);
+        }
       }
-    }
 
-    // Spacebar → Toggle play/pause
-    if (e.key === " ") {
-      const audio = audioRef.current;
-      if (audio) {
-        if (audio.paused) {
-          audio.play();
-        } else {
-          audio.pause();
+      if (e.key === "ArrowLeft") {
+        if (activeSentenceIndex !== null) {
+          playAt(sentences[activeSentenceIndex].start);
+        }
+      }
+
+      if (e.key === " ") {
+        const audio = audioRef.current;
+        if (audio) {
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
         }
       }
     }
-  }
 
-  window.addEventListener("keydown", handleKeyDown);
-  return () => window.removeEventListener("keydown", handleKeyDown);
-}, [sentences, activeSentenceIndex]);
-
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [sentences, activeSentenceIndex]);
 
   const playAt = (time) => {
     if (audioRef.current) {
@@ -201,7 +199,7 @@ export default function Transcript({ title }) {
         fontFamily: "sans-serif",
       }}
     >
-      {/* Title */}
+      {/* Header */}
       <div
         style={{
           padding: "1rem",
@@ -212,10 +210,10 @@ export default function Transcript({ title }) {
           flexShrink: 0,
         }}
       >
-        🎧 Audio: <span style={{ color: "#0ff" }}>{title || "No title"}</span>
+        🎧 Audio: <span style={{ color: "#0ff" }}>{title || transcriptId}</span>
       </div>
 
-      {/* Scrollable transcript */}
+      {/* Transcript */}
       <div
         style={{
           flex: 1,
@@ -236,8 +234,7 @@ export default function Transcript({ title }) {
                 marginBottom: "0.75rem",
                 padding: "0.75rem",
                 borderRadius: "6px",
-                background:
-                  sIdx === activeSentenceIndex ? "#d1f1ff" : "#fff",
+                background: sIdx === activeSentenceIndex ? "#d1f1ff" : "#fff",
                 fontWeight: sIdx === activeSentenceIndex ? "bold" : "normal",
                 cursor: "pointer",
                 transition: "background 0.3s",
@@ -266,7 +263,9 @@ export default function Transcript({ title }) {
                     style={{
                       cursor: "pointer",
                       paddingRight: "2px",
-                      backgroundColor: isActiveWord ? "#80d8ff" : "transparent",
+                      backgroundColor: isActiveWord
+                        ? "#80d8ff"
+                        : "transparent",
                       fontWeight: isActiveWord ? "bold" : "normal",
                       userSelect: "none",
                     }}
@@ -275,13 +274,12 @@ export default function Transcript({ title }) {
                   </span>
                 );
               })}
-              
             </div>
           ))
         )}
       </div>
 
-      {/* Audio controls fixed at bottom */}
+      {/* Audio player */}
       <div
         style={{
           padding: "1rem",
