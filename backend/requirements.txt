@@ -17,5 +17,5 @@ rq
 redis
 openai-whisper
 ffmpeg-python
-
+sqlalchemy
 
