@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Upload from './Upload'
 
-export default function List({ onSelect, selected }) {
+export default function List({ selected }) {
   const [titles, setTitles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // ← 追加
 
   useEffect(() => {
     fetch("http://localhost:8000/api/list")
@@ -36,7 +38,7 @@ export default function List({ onSelect, selected }) {
         background: "#fafafa",
       }}
     >
-        <Upload />
+      <Upload />
       <h2 style={{ padding: "1rem", margin: 0, borderBottom: "1px solid #ddd" }}>
         Available Transcripts
       </h2>
@@ -44,7 +46,7 @@ export default function List({ onSelect, selected }) {
         {titles.map((title) => (
           <li
             key={title}
-            onClick={() => onSelect(title)}
+            onClick={() => navigate(`/u/${title}`)} // ← ここ変更
             style={{
               padding: "0.75rem 1rem",
               cursor: "pointer",
