@@ -1,11 +1,18 @@
 FROM python:3.11-slim
 
+# 必要パッケージを早めにインストール（torch前にffmpegも）
+RUN apt-get update && apt-get install -y ffmpeg build-essential
+# 先に CPU 版の torch をインストール
+RUN pip install torch==2.7.0+cpu --index-url https://download.pytorch.org/whl/cpu
+
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
-RUN apt-get update && apt-get install -y ffmpeg
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+# whisper を最後に明示的にインストール（torch依存解決済みなので再DLされない）
+RUN pip install openai-whisper
 
 COPY . .
 

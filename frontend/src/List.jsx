@@ -43,20 +43,20 @@ export default function List({ selected }) {
         Available Transcripts
       </h2>
       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-        {titles.map((title) => (
+        {titles.map((t) => (
           <li
-            key={title}
-            onClick={() => navigate(`/u/${title}`)} // ← ここ変更
+            key={t.id}
+            onClick={() => navigate(`/u/${t.id}`)} // ← ここ変更
             style={{
               padding: "0.75rem 1rem",
               cursor: "pointer",
-              background: selected === title ? "#d1f1ff" : "transparent",
-              borderLeft: selected === title ? "4px solid #00cfff" : "4px solid transparent",
+              background: selected === t.id ? "#d1f1ff" : "transparent",
+              borderLeft: selected === t.id ? "4px solid #00cfff" : "4px solid transparent",
               userSelect: "none",
               transition: "background 0.2s",
             }}
           >
-            {title}
+            {t.title}
           </li>
         ))}
       </ul>
