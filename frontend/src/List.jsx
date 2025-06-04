@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Upload from './Upload'
+import Upload from './Upload';
 
 export default function List({ selected }) {
   const [titles, setTitles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // ← 追加
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const fetchTitles = () => {
+    setLoading(true);
     fetch("http://localhost:8000/api/list")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch list");
@@ -22,11 +23,14 @@ export default function List({ selected }) {
         setError(err.message);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchTitles();
   }, []);
 
   if (loading) return <div style={{ padding: "1rem" }}>Loading...</div>;
   if (error) return <div style={{ padding: "1rem", color: "red" }}>{error}</div>;
-  { /* if (titles.length === 0) return <div style={{ padding: "1rem" }}>No data found.</div>; */ }
 
   return (
     <div
@@ -38,11 +42,11 @@ export default function List({ selected }) {
         background: "#fafafa",
       }}
     >
-      <Upload />
+      <Upload onUploadSuccess={fetchTitles} /> {/* ← Pass refresh function */}
       <h2 style={{ padding: "1rem", margin: 0, borderBottom: "1px solid #ddd" }}>
         Available Transcripts
       </h2>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>        
+      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         {titles.length === 0 ? (
           <li
             style={{
@@ -72,7 +76,6 @@ export default function List({ selected }) {
             </li>
           ))
         )}
-
       </ul>
     </div>
   );

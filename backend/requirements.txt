@@ -24,3 +24,6 @@ redis
 # Audio and Transcription
 #openai-whisper
 ffmpeg-python
+pydub
+requests
+workers

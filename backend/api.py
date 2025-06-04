@@ -17,6 +17,8 @@ from uuid import UUID
 from utils.process_audio_file import process_audio_file
 from utils.database import init_db
 from config import clean_filename
+from pydub import AudioSegment
+from config import AUDIO_DIR, TMP_DIR
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -95,16 +97,13 @@ async def get_transcript(id: str):
 
 @app.post("/api/upload")
 async def upload_audio(audio: UploadFile = File(...)):
-    transcript_id = str(uuid.uuid4())
-    filename = f"{transcript_id}.mp3"
-    title = clean_filename(audio.filename)
-    file_path = DATA_DIR / "audio" / filename
+    transcript_id = str(uuid.uuid4())    
+    file_path = DATA_DIR / "audio" / f"{transcript_id}.mp3"
 
     with open(file_path, "wb") as f:
         f.write(await audio.read())
 
-
-    result = process_audio_file(file_path, title)
+    result = process_audio_file(file_path, clean_filename(audio.filename))
     return JSONResponse({"message": "Upload success. Transcription started.", "job_id": result["job_id"]})
 
 @app.get("/api/job_status/{job_id}")

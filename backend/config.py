@@ -6,6 +6,11 @@ DATA_DIR = BASE_DIR / "data"
 
 AUDIO_DIR = DATA_DIR / "audio"
 TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
+TMP_DIR = DATA_DIR / "tmp"
+
+os.makedirs(AUDIO_DIR, exist_ok=True)
+os.makedirs(TRANSCRIPTS_DIR, exist_ok=True)
+os.makedirs(TMP_DIR, exist_ok=True)
 
 # --- Clean title helper ---
 def clean_filename(filename: str) -> str:
