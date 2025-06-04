@@ -1,24 +1,24 @@
+import os, re, json, uuid
+
 from fastapi import FastAPI, HTTPException, File, UploadFile, BackgroundTasks, WebSocket, Form, APIRouter, Depends, status
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from pathlib import Path 
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import OperationalError
 from utils.database import get_db, SessionLocal
 from sqlalchemy import desc
 from utils.models import Transcript
 from pathlib import Path
-from rq import Queue
 from rq.job import Job
-import os, re, json
-import redis
-import uuid, os
-from datetime import datetime
+from pydantic import BaseModel
 from uuid import UUID
+
 from utils.process_audio_file import process_audio_file
 from utils.database import init_db
 from config import clean_filename
-from pydub import AudioSegment
 from config import AUDIO_DIR, TMP_DIR
+
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -119,6 +119,22 @@ def get_job_status(job_id):
         return {"error": str(e)}
 
 
+class TitleUpdate(BaseModel):
+    title: str
+
+@app.patch("/api/transcripts/{transcript_id}")
+def update_transcript_title(
+    transcript_id: str,
+    update: TitleUpdate = ...,
+    db: Session = Depends(get_db)
+):
+    transcript = db.query(Transcript).filter(Transcript.id == transcript_id).first()
+    if not transcript:
+        raise HTTPException(status_code=404, detail="Transcript not found")
+
+    transcript.title = update.title
+    db.commit()
+    return { "message": "Title updated", "id": transcript_id, "title": update.title }
 
 @app.delete("/api/delete/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_transcript(id: UUID, db: Session = Depends(get_db)):
