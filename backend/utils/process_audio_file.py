@@ -6,28 +6,19 @@ from datetime import datetime
 from pathlib import Path
 import re
 import shutil
-from database import SessionLocal
-from models import Transcript
+from utils.database import SessionLocal
+from utils.models import Transcript
 from rq import Queue
 import redis
-from backend.utils.transcribe import transcribe
-
-# --- Setup paths ---
-DATA_DIR = Path("data")
-AUDIO_DIR = DATA_DIR / "audio"
-AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
-TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
+from utils.transcribe import transcribe
+from config import AUDIO_DIR, TRANSCRIPTS_DIR
+from config import clean_filename
 
 # --- Setup Redis ---
 redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
 redis_conn = redis.from_url(redis_url)
 q = Queue(connection=redis_conn, default_timeout=1800)
 
-# --- Clean title helper ---
-def clean_filename(filename: str) -> str:
-    base = os.path.splitext(filename)[0]
-    return re.sub(r'[^a-zA-Z0-9_]+', '_', base)
 
 # --- Shared procedure ---
 def process_audio_file(original_path: Path) -> dict:

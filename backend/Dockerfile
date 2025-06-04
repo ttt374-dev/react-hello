@@ -10,7 +10,7 @@ WORKDIR /app
 COPY requirements.txt .
 #RUN pip install -r requirements.txt
 
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 # whisper を最後に明示的にインストール（torch依存解決済みなので再DLされない）
 RUN pip install openai-whisper
 
@@ -19,5 +19,5 @@ COPY . .
 EXPOSE 8000
 
 #CMD ["uvicorn", "database:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 

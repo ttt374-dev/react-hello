@@ -1,15 +1,7 @@
 import whisper
 import json
 import sys, os
-from backend.utils.segmenter import segment_words_into_sentences
-
-def transcribe_title(id):
-    #folder = os.path.join("./data", title)
-    audio_path = os.path.join("data", "audio", f"{id}.mp3")
-    output_json = os.path.join("data", "transcripts", f"{id}.json")
-
-    transcribe(audio_path, output_json)
-
+from utils.segmenter import segment_words_into_sentences
 
 def transcribe(input_audiofile, output_transcriptfile):
     if not os.path.exists(input_audiofile):
@@ -44,12 +36,13 @@ def transcribe(input_audiofile, output_transcriptfile):
     print("Done.")
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python transcribe.py <title>")
+    if len(sys.argv) < 3:
+        print("Usage: python transcribe.py <audio_file> <transcripts_file>")
         sys.exit(1)
 
-    title = sys.argv[1]
-    transcribe_title(title)
+    audio_file = sys.argv[1]
+    transcripts_file = sys.argv[2]
+    transcribe(audio_file, transcripts_file)
 
 if __name__ == "__main__":
     main()

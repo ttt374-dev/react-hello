@@ -9,7 +9,7 @@ from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from models import Base, Transcript
+from backend.utils.models import Base, Transcript
 from backend.utils.transcribe import transcribe
 
 # Constants

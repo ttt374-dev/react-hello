@@ -3,19 +3,19 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import OperationalError
-from database import get_db, SessionLocal
+from utils.database import get_db, SessionLocal
 from sqlalchemy import desc
-from models import Transcript
+from utils.models import Transcript
 from pathlib import Path
 from rq import Queue
 from rq.job import Job
-from backend.utils.transcribe import transcribe_title
 import os, re, json
 import redis
 import uuid, os
 from datetime import datetime
 from uuid import UUID
 from utils.process_audio_file import process_audio_file
+from utils.database import init_db
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -30,6 +30,10 @@ app.add_middleware(
 # Helper: validate title param to avoid path traversal
 def valid_title(title: str) -> bool:
     return re.fullmatch(r"[a-zA-Z0-9-_]+", title) is not None
+
+@app.on_event("startup")
+def startup_event():
+    init_db()
 
 @app.get("/api/list")
 def list_transcripts(db: Session = Depends(get_db)):
@@ -87,11 +91,6 @@ async def get_transcript(id: str):
 
     return JSONResponse(content=data)
 
-
-def clean_filename(filename: str) -> str:
-    # .mp3 を除去して、英数字とアンダースコアのみ許可
-    base = os.path.splitext(filename)[0]
-    return re.sub(r'[^a-zA-Z0-9_]+', '_', base)
 
 @app.post("/api/upload")
 async def upload_audio(audio: UploadFile = File(...)):
