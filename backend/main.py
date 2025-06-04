@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, File, UploadFile, BackgroundTasks, WebSocket, Form, APIRouter, Depends
+from fastapi import FastAPI, HTTPException, File, UploadFile, BackgroundTasks, WebSocket, Form, APIRouter, Depends, status
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
@@ -9,11 +9,12 @@ from pathlib import Path
 from rq import Queue
 from rq.job import Job
 from transcribe import transcribe_title
-import os, re, json, subprocess
+import os, re, json
 import redis
-import uuid, os, sys, shutil
+import uuid, os
 from datetime import datetime
 from uuid import UUID
+
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -132,3 +133,26 @@ def get_job_status(job_id):
         }
     except Exception as e:
         return {"error": str(e)}
+
+
+
+@app.delete("/api/delete/{id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_transcript(id: UUID, db: Session = Depends(get_db)):
+    transcript = db.query(Transcript).filter(Transcript.id == str(id)).first()
+    if not transcript:
+        raise HTTPException(status_code=404, detail="Transcript not found")
+
+    # Delete files
+    audio_path = DATA_DIR / "audio" / f"{transcript.id}.mp3"
+    transcript_path = DATA_DIR / "transcripts" / f"{transcript.id}.json"
+
+    if audio_path.exists():
+        audio_path.unlink()
+    if transcript_path.exists():
+        transcript_path.unlink()
+
+    # Delete DB record
+    db.delete(transcript)
+    db.commit()
+
+    return  # 204 No Content
