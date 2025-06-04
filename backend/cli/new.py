@@ -15,7 +15,7 @@ from config import AUDIO_DIR, TRANSCRIPTS_DIR
 # --- CLI Logic ---
 
 
-def create_transcript(audio_path: str):
+def create_transcript(audio_path: str, title: str):
     if not os.path.exists(audio_path):
         print(f"Audio file not found: {audio_path}")
         sys.exit(1)
@@ -33,7 +33,7 @@ def create_transcript(audio_path: str):
     # ファイルをコピー
     shutil.copyfile(audio_path, dest_audio_path)
 
-    title = clean_filename(audio_path)
+    #title = clean_filename(audio_path)
     # DB に登録
     db = SessionLocal()
     transcript = Transcript(
@@ -55,4 +55,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     audio_path_arg = sys.argv[1]
-    create_transcript(audio_path_arg)
+    title = clean_filename(audio_path_arg)
+    create_transcript(audio_path_arg, title)

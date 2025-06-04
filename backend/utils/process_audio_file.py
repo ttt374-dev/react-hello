@@ -21,12 +21,11 @@ q = Queue(connection=redis_conn, default_timeout=1800)
 
 
 # --- Shared procedure ---
-def process_audio_file(original_path: Path) -> dict:
+def process_audio_file(original_path: Path, title: str) -> dict:
     if not original_path.exists():
         raise FileNotFoundError(f"File not found: {original_path}")
 
-    transcript_id = str(uuid.uuid4())
-    title = clean_filename(original_path.name)
+    transcript_id = str(uuid.uuid4())    
     dest_path = AUDIO_DIR / f"{transcript_id}.mp3"
     transcripts_path = TRANSCRIPTS_DIR / f"{transcript_id}.json"
 
