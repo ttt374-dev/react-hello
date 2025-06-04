@@ -48,36 +48,46 @@ export default function TranscriptViewer({ sentences, audioRef }) {
     }
   };
 
-  // ✅ Keybinds: up/down/left
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
 
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        const next = activeSentenceIndex !== null ? activeSentenceIndex + 1 : 0;
-        if (next < sentences.length) {
-          setActiveSentenceIndex(next);
-          playAt(sentences[next].start);
-        }
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        const prev = activeSentenceIndex !== null ? activeSentenceIndex - 1 : 0;
-        if (prev >= 0) {
-          setActiveSentenceIndex(prev);
-          playAt(sentences[prev].start);
-        }
-      } else if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        if (activeSentenceIndex !== null) {
-          playAt(sentences[activeSentenceIndex].start);
+    const audio = audioRef.current;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      const next = activeSentenceIndex !== null ? activeSentenceIndex + 1 : 0;
+      if (next < sentences.length) {
+        setActiveSentenceIndex(next);
+        playAt(sentences[next].start);
+      }
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      const prev = activeSentenceIndex !== null ? activeSentenceIndex - 1 : 0;
+      if (prev >= 0) {
+        setActiveSentenceIndex(prev);
+        playAt(sentences[prev].start);
+      }
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      if (activeSentenceIndex !== null) {
+        playAt(sentences[activeSentenceIndex].start);
+      }
+    } else if (e.code === "Space") {
+      e.preventDefault();
+      if (audio) {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
         }
       }
-    };
+    }
+  };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeSentenceIndex, sentences]);
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, [activeSentenceIndex, sentences]);
 
   return (
     <div
