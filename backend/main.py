@@ -8,7 +8,6 @@ from models import Transcript
 from pathlib import Path
 from rq import Queue
 from rq.job import Job
-from jobs import say_hello
 from transcribe import transcribe_title
 import os, re, json, subprocess
 import redis
