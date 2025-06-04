@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from models import Base, Transcript
-from transcribe import transcribe
+from backend.utils.transcribe import transcribe
 
 # Constants
 AUDIO_DIR = Path("data/audio")

@@ -2,19 +2,20 @@ from fastapi import FastAPI, HTTPException, File, UploadFile, BackgroundTasks, W
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import OperationalError
 from database import get_db, SessionLocal
 from sqlalchemy import desc
 from models import Transcript
 from pathlib import Path
 from rq import Queue
 from rq.job import Job
-from transcribe import transcribe_title
+from backend.utils.transcribe import transcribe_title
 import os, re, json
 import redis
 import uuid, os
 from datetime import datetime
 from uuid import UUID
-
+from utils.process_audio_file import process_audio_file
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -26,21 +27,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-#redis_conn = redis.from_url("redis://127.0.0.1:6379")
-#redis_conn = redis.from_url("redis://host.docker.internal:6379")
-redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
-redis_conn = redis.from_url(redis_url)
-q = Queue(connection=redis_conn, default_timeout=1800)
-
-
 # Helper: validate title param to avoid path traversal
 def valid_title(title: str) -> bool:
     return re.fullmatch(r"[a-zA-Z0-9-_]+", title) is not None
 
 @app.get("/api/list")
 def list_transcripts(db: Session = Depends(get_db)):
-    transcripts = db.query(Transcript).order_by(desc(Transcript.created_at)).all()
+    try:
+        transcripts = db.query(Transcript).order_by(desc(Transcript.created_at)).all()
+    except OperationalError:
+        # Could not query because DB or table might not exist yet
+        return []
     return [
         {
             "id": t.id,
@@ -96,31 +93,17 @@ def clean_filename(filename: str) -> str:
     base = os.path.splitext(filename)[0]
     return re.sub(r'[^a-zA-Z0-9_]+', '_', base)
 
-
 @app.post("/api/upload")
-async def upload_audio(audio: UploadFile = File(...), bg: BackgroundTasks = BackgroundTasks()):
+async def upload_audio(audio: UploadFile = File(...)):
     transcript_id = str(uuid.uuid4())
-    path = f"data/audio/{transcript_id}.mp3"
-    title = clean_filename(audio.filename)
+    filename = f"{transcript_id}.mp3"
+    file_path = DATA_DIR / "audio" / filename
 
-    #os.makedirs(f"data/{title}", exist_ok=True)
-    with open(path, "wb") as f:
+    with open(file_path, "wb") as f:
         f.write(await audio.read())
 
-    # Launch subprocess for transcription
-    #subprocess.Popen(["python", "transcribe.py", str(title)])
-    job = q.enqueue(transcribe_title, transcript_id)    
-        # DB に登録
-    db = SessionLocal()
-    transcript = Transcript(
-        id=transcript_id,
-        title=title,
-        created_at=datetime.utcnow()
-    )
-    db.add(transcript)
-    db.commit()
-    db.close()
-    return JSONResponse({"message": "Upload success. Transcription started.", "job_id": job.id})
+    result = process_audio_file(file_path)
+    return JSONResponse({"message": "Upload success. Transcription started.", "job_id": result["job_id"]})
 
 @app.get("/api/job_status/{job_id}")
 def get_job_status(job_id):

@@ -1,7 +1,7 @@
 import whisper
 import json
 import sys, os
-from segmenter import segment_words_into_sentences
+from backend.utils.segmenter import segment_words_into_sentences
 
 def transcribe_title(id):
     #folder = os.path.join("./data", title)
