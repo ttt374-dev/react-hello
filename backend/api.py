@@ -13,6 +13,8 @@ from pathlib import Path
 from rq.job import Job
 from pydantic import BaseModel
 from uuid import UUID
+from pydub import AudioSegment
+
 
 from utils.process_audio_file import process_audio_file
 from utils.database import init_db
@@ -95,15 +97,30 @@ async def get_transcript(id: str):
     return JSONResponse(content=data)
 
 
+def convert_to_mp3(input_path: str, output_path: str) -> None:
+    sound = AudioSegment.from_file(input_path)
+    sound.export(output_path, format="mp3")
+
 @app.post("/api/upload")
 async def upload_audio(audio: UploadFile = File(...)):
-    transcript_id = str(uuid.uuid4())    
-    file_path = DATA_DIR / "audio" / f"{transcript_id}.mp3"
+    file_id = uuid.uuid4().hex
+    ext = os.path.splitext(audio.filename)[1].lower()
+    input_path = AUDIO_DIR /  f"{file_id}{ext}"
+    output_path = AUDIO_DIR / f"{file_id}.mp3"
 
-    with open(file_path, "wb") as f:
+    # Save uploaded file
+    with open(input_path, "wb") as f:
         f.write(await audio.read())
 
-    result = process_audio_file(file_path, clean_filename(audio.filename))
+    # Convert to MP3 if needed
+    if ext != ".mp3":
+        convert_to_mp3(input_path, output_path)
+        os.remove(input_path)
+        final_path = output_path
+    else:
+        final_path = input_path
+
+    result = process_audio_file(final_path, clean_filename(audio.filename))
     return JSONResponse({"message": "Upload success. Transcription started.", "job_id": result["job_id"]})
 
 @app.get("/api/job_status/{job_id}")
@@ -119,22 +136,20 @@ def get_job_status(job_id):
         return {"error": str(e)}
 
 
-class TitleUpdate(BaseModel):
+class UpdateRequest(BaseModel):
+    id: str
     title: str
 
-@app.patch("/api/transcripts/{transcript_id}")
-def update_transcript_title(
-    transcript_id: str,
-    update: TitleUpdate = ...,
-    db: Session = Depends(get_db)
-):
-    transcript = db.query(Transcript).filter(Transcript.id == transcript_id).first()
+@app.patch("/api/update")
+def update_title(req: UpdateRequest, db: Session = Depends(get_db)):
+    transcript = db.query(Transcript).filter_by(id=req.id).first()
     if not transcript:
         raise HTTPException(status_code=404, detail="Transcript not found")
 
-    transcript.title = update.title
+    transcript.title = req.title
     db.commit()
-    return { "message": "Title updated", "id": transcript_id, "title": update.title }
+    return {"message": "Title updated successfully"}
+
 
 @app.delete("/api/delete/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_transcript(id: UUID, db: Session = Depends(get_db)):

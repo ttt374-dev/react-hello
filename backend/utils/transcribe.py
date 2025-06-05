@@ -12,7 +12,7 @@ def transcribe(input_audiofile, output_transcriptfile):
     model = whisper.load_model("medium", device="cpu")
 
     print(f"Transcribing {input_audiofile} ...")
-    result = model.transcribe(input_audiofile, word_timestamps=True)
+    result = model.transcribe(str(input_audiofile), word_timestamps=True)
 
     print("Processing transcript and splitting into sentences...")
     words = []
