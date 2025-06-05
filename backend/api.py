@@ -121,7 +121,7 @@ async def upload_audio(audio: UploadFile = File(...)):
         final_path = input_path
 
     result = process_audio_file(final_path, clean_filename(audio.filename))
-    return JSONResponse({"message": "Upload success. Transcription started.", "job_id": result["job_id"]})
+    return JSONResponse({"message": "Upload success. Transcription started.", "transcript_id": result["id"], "job_id": result["job_id"]})
 
 @app.get("/api/job_status/{job_id}")
 def get_job_status(job_id):

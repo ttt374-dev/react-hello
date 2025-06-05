@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import { getFormattedFilename, uploadAudioBlob } from "./utils/recording";
+import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
 
 export default function Recorder() {
   const [recording, setRecording] = useState(false);
@@ -7,20 +9,7 @@ export default function Recorder() {
 
   const mediaRecorderRef = useRef(null);
   const audioChunks = useRef([]);
-  const animationFrameRef = useRef(null);
-  const audioContextRef = useRef(null);
-  const analyserRef = useRef(null);
-  const sourceRef = useRef(null);
 
-  const getFormattedFilename = (ext) => {
-    const now = new Date();
-    const yyyy = now.getFullYear();
-    const mm = String(now.getMonth() + 1).padStart(2, '0');
-    const dd = String(now.getDate()).padStart(2, '0');
-    const hh = String(now.getHours()).padStart(2, '0');
-    const min = String(now.getMinutes()).padStart(2, '0');
-    return `recording-${yyyy}-${mm}-${dd}-${hh}:${min}.${ext}`;
-  };
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
@@ -37,45 +26,11 @@ export default function Recorder() {
       const url = URL.createObjectURL(blob);
       setAudioURL(url);
 
-      // Upload
-      const formData = new FormData();
-      const file = new File([blob], getFormattedFilename("webm"), { type: "audio/webm" });
-      formData.append("audio", file);
-
-      fetch("http://localhost:8000/api/upload", {
-        method: "POST",
-        body: formData,
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error("Upload failed");
-          return res.json();
-        })
-        .then((data) => {
-          alert("Upload success: " + data.message);
-        })
-        .catch((err) => {
-          alert("Upload error: " + err.message);
-        });
+      uploadAudioBlob(blob, getFormattedFilename("webm"))
     };
 
-    // Setup volume monitoring
-    audioContextRef.current = new AudioContext();
-    analyserRef.current = audioContextRef.current.createAnalyser();
-    sourceRef.current = audioContextRef.current.createMediaStreamSource(stream);
-    sourceRef.current.connect(analyserRef.current);
+    startVolumeMonitor(stream, setVolume)
 
-    analyserRef.current.fftSize = 256;
-    const bufferLength = analyserRef.current.frequencyBinCount;
-    const dataArray = new Uint8Array(bufferLength);
-
-    const updateVolume = () => {
-      analyserRef.current.getByteFrequencyData(dataArray);
-      const average = dataArray.reduce((a, b) => a + b, 0) / bufferLength;
-      setVolume(average);
-      animationFrameRef.current = requestAnimationFrame(updateVolume);
-    };
-
-    updateVolume();
 
     mediaRecorderRef.current.start();
     setRecording(true);
@@ -84,12 +39,7 @@ export default function Recorder() {
   const stopRecording = () => {
     mediaRecorderRef.current.stop();
     setRecording(false);
-
-    // Stop volume monitoring
-    cancelAnimationFrame(animationFrameRef.current);
-    sourceRef.current?.disconnect();
-    analyserRef.current?.disconnect();
-    audioContextRef.current?.close();
+    stopVolumeMonitor()
   };
 
   return (
@@ -103,17 +53,9 @@ export default function Recorder() {
       )}
 
       {/* Volume Meter */}
+      
       {recording && (
-        <div style={{ marginTop: "1rem", height: "10px", background: "#ccc" }}>
-          <div
-            style={{
-              height: "100%",
-              width: `${Math.min(100, volume)}%`,
-              background: "limegreen",
-              transition: "width 0.1s",
-            }}
-          />
-        </div>
+        <VolumeMeter volume={volume} />
       )}
 
       {/* Playback */}
@@ -125,3 +67,17 @@ export default function Recorder() {
     </div>
   );
 }
+const VolumeMeter = ({ volume }) => {
+  return (
+    <div style={{ marginTop: "1rem", height: "10px", background: "#ccc" }}>
+      <div
+        style={{
+          height: "100%",
+          width: `${Math.min(100, volume)}%`,
+          background: "limegreen",
+          transition: "width 0.1s",
+        }}
+      />
+    </div>
+  );
+};

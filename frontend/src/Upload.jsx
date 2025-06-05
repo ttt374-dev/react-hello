@@ -1,11 +1,24 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+//import { sharedButtonStyle } from "./utils/sharedButtonStyle"
+
+export const sharedButtonStyle = {
+  padding: "0.5rem 1rem",
+  fontSize: "1rem",
+  border: "1px solid #ccc",
+  borderRadius: "0.5rem",
+  background: "#007bff",
+  color: "#fff",
+  cursor: "pointer",
+  marginRight: "0.5rem",
+};
 
 export default function FileUploader() {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
-  
+
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
     if (!file) return;
@@ -34,16 +47,24 @@ export default function FileUploader() {
       setUploading(false);
     }
   };
-
+  const fileInputRef = useRef();
+  
   return (
     <div style={{ padding: "1rem" }}>
+      <input type="file" accept="audio/*" onChange={handleFileChange}
+        disabled={uploading} style={{ display: 'none' }} ref={fileInputRef} />
+      <button onClick={() => fileInputRef.current.click()}>Import</button>
+
+
+      { /*
       <input
         type="file"
         accept="audio/*"
         onChange={handleFileChange}
         disabled={uploading}
-      />
-      <div style={{ marginTop: "1rem" }}>{message}</div>
+        //style={{ ...sharedButtonStyle }}
+      /> */}
+      { /* <div style={{ marginTop: "1rem" }}>{message}</div>*/}
     </div>
   );
 }

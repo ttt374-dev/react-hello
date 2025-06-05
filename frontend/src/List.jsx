@@ -56,10 +56,13 @@ export default function List({ selected }) {
         background: "#fafafa",
       }}
     >     
-      <Recorder />
+      
+      { /* <Recorder /> */ }
+      <button onClick={() => navigate(`/recording`)}>Recoding</button>
+      
       <Upload onUploadSuccess={fetchTitles} /> {/* ← Pass refresh function */}
       <h2 style={{ padding: "1rem", margin: 0, borderBottom: "1px solid #ddd" }}>
-        Available Transcripts
+        Transcripts
       </h2>
       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         {titles.length === 0 ? (

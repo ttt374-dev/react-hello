@@ -3,7 +3,7 @@ import { useTranscriptData } from "./hooks/useTranscriptData";
 import TranscriptViewer from "./components/TranscriptViewer";
 
 export default function Transcript({ transcriptId }) {
-  const { sentences, title } = useTranscriptData(transcriptId);
+  const { sentences, title, createdAt } = useTranscriptData(transcriptId);
   const audioRef = useRef();
 
   const [editTitle, setEditTitle] = useState(title);
@@ -94,7 +94,9 @@ export default function Transcript({ transcriptId }) {
           Delete
         </button>
       </div>
-      
+      <div style={{ fontSize: "0.9rem", color: "#aaa", margin: "0.25rem" }}>
+        created at: {new Date(createdAt).toLocaleString()}
+      </div>
       {(!sentences || sentences.length === 0) ? (
         <p style={{ width: "100%" }}>Loading transcript....</p>
       ) : (

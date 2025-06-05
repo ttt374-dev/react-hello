@@ -3,7 +3,8 @@ import { splitLongSentences } from "../utils/splitLongSentences";
 
 export function useTranscriptData(transcriptId) {
   const [sentences, setSentences] = useState([]);
-  const [title, setTitle] = useState(null);
+  //const [title, setTitle] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     if (!transcriptId) return;
@@ -15,9 +16,15 @@ export function useTranscriptData(transcriptId) {
 
     fetch(`http://localhost:8000/api/details/${transcriptId}`)
       .then((res) => res.json())
-      .then((data) => setTitle(data.title || transcriptId))
+      .then(setData)
+      //.then((data) => setTitle(data.title || transcriptId))
       .catch(() => setTitle(transcriptId));
   }, [transcriptId]);
 
-  return { sentences, title };
+  //return { sentences, title };
+  return {
+    sentences: sentences,
+    title: data?.title || null,
+    createdAt: data?.created_at || null,
+  }
 }
