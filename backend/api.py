@@ -103,10 +103,10 @@ def convert_to_mp3(input_path: str, output_path: str) -> None:
 
 @app.post("/api/upload")
 async def upload_audio(audio: UploadFile = File(...)):
-    file_id = uuid.uuid4().hex
-    ext = os.path.splitext(audio.filename)[1].lower()
-    input_path = AUDIO_DIR /  f"{file_id}{ext}"
-    output_path = AUDIO_DIR / f"{file_id}.mp3"
+    base, ext = os.path.splitext(audio.filename)
+
+    input_path = AUDIO_DIR / audio.filename
+    output_path = AUDIO_DIR / f"{base}.mp3"
 
     # Save uploaded file
     with open(input_path, "wb") as f:

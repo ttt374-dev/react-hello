@@ -49,7 +49,7 @@ export default function Transcript({ transcriptId }) {
       });
 
       if (res.ok) {
-        alert("Transcript deleted.");
+        //alert("Transcript deleted.");
         window.location.href = "/"; // navigate to home or list page
       } else {
         const msg = await res.text();

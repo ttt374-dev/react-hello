@@ -1,78 +1,49 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Upload({ onUploaded }) {
-  const [file, setFile] = useState(null);
-  const [jobId, setJobId] = useState(null);
-  const [status, setStatus] = useState(null);
+export default function FileUploader() {
+  const [uploading, setUploading] = useState(false);
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleFileChange = async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
 
-  const handleUpload = () => {
-    if (!file) {
-      alert("Please select a file first.");
-      return;
-    }
+    setUploading(true);
+    setMessage("Uploading...");
 
     const formData = new FormData();
     formData.append("audio", file);
+    formData.append("extension", file.name.split(".").pop()); // e.g., "webm"
 
-    fetch("http://127.0.0.1:8000/api/upload", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("Upload failed.");
-        return res.json();
-      })
-      .then((data) => {
-        alert("Upload started. Transcription is processing.");
-        setJobId(data.job_id);
-        pollJobStatus(
-          data.job_id,
-          () => {
-            setStatus("done");
-            if (onUploaded) onUploaded(); // ✅ refresh list
-          },
-          (err) => {
-            setStatus("error: " + err);
-          }
-        );
-      })
-      .catch((err) => {
-        alert("Error: " + err.message);
+    try {
+      const res = await fetch("http://localhost:8000/api/upload", {
+        method: "POST",
+        body: formData,
       });
+
+      if (!res.ok) throw new Error("Upload failed");
+
+      const data = await res.json();
+      setMessage("Upload success: " + data.message);
+      navigate(`/u/${data.transcript_id}`); // ⬅️ Go to the transcript page
+    } catch (err) {
+      setMessage("Upload error: " + err.message);
+    } finally {
+      setUploading(false);
+    }
   };
 
-  function pollJobStatus(jobId, onSuccess, onError) {
-    const interval = setInterval(() => {
-      fetch(`http://localhost:8000/api/job_status?job_id=${jobId}`)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log("Job status:", data.status);
-          if (data.status === "finished") {
-            clearInterval(interval);
-            onSuccess(data.result);
-          } else if (data.status === "failed") {
-            clearInterval(interval);
-            onError(data.error);
-          }
-        })
-        .catch((err) => {
-          clearInterval(interval);
-          onError("Failed to check job status: " + err.message);
-        });
-    }, 3000);
-  }
-
   return (
-    <div style={{ padding: "1rem", borderBottom: "1px solid #ccc" }}>
-      <h3>Upload Audio</h3>
+    <div style={{ padding: "1rem" }}>
       <input
         type="file"
-        accept="audio/mp3"
-        onChange={(e) => setFile(e.target.files[0])}
+        accept="audio/*"
+        onChange={handleFileChange}
+        disabled={uploading}
       />
-      <button onClick={handleUpload} style={{ marginLeft: "0.5rem" }}>
-        Upload
-      </button>
+      <div style={{ marginTop: "1rem" }}>{message}</div>
     </div>
   );
 }

@@ -1,6 +1,20 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Upload from './Upload';
+import { Link } from "react-router-dom";
+import Recorder from "./Recorder"
+
+function RecordingLink(){
+  return (
+      <div style={{ marginBottom: "1rem" }}>
+        <Link to="/recording">
+          <button style={{ padding: "0.5rem 1rem", fontSize: "1rem" }}>
+            🎤 New Recording
+          </button>
+        </Link>
+      </div>
+  );
+}
 
 export default function List({ selected }) {
   const [titles, setTitles] = useState([]);
@@ -41,7 +55,8 @@ export default function List({ selected }) {
         height: "100vh",
         background: "#fafafa",
       }}
-    >
+    >     
+      <Recorder />
       <Upload onUploadSuccess={fetchTitles} /> {/* ← Pass refresh function */}
       <h2 style={{ padding: "1rem", margin: 0, borderBottom: "1px solid #ddd" }}>
         Available Transcripts
