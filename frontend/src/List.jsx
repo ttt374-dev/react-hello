@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Upload from './Upload';
 import { Link } from "react-router-dom";
-import Recorder from "./Recorder"
 
 function RecordingLink(){
   return (
@@ -48,23 +47,23 @@ export default function List({ selected }) {
 
   return (
     <div
-      style={{
-        width: "220px",
-        borderRight: "1px solid #ccc",
-        overflowY: "auto",
+      style={{        
+        borderRight: "1px solid #ccc",        
         height: "100vh",
         background: "#fafafa",
       }}
     >     
       
       { /* <Recorder /> */ }
-      <button onClick={() => navigate(`/recording`)}>Recoding</button>
-      
-      <Upload onUploadSuccess={fetchTitles} /> {/* ← Pass refresh function */}
-      <h2 style={{ padding: "1rem", margin: 0, borderBottom: "1px solid #ddd" }}>
+      <div style={{ flexShrink: 0}}>
+        <button onClick={() => navigate(`/recording`)}>Recoding</button>      
+        <Upload onUploadSuccess={fetchTitles} /> {/* ← Pass refresh function */}
+      </div>
+
+      <h2 style={{ padding: "1rem", margin: 0, flexShrink: 0, borderBottom: "1px solid #ddd" }}>
         Transcripts
       </h2>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, overflowY: "auto", flex: 1 }}>
         {titles.length === 0 ? (
           <li
             style={{
