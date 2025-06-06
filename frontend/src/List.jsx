@@ -3,18 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Upload from './Upload';
 import { Link } from "react-router-dom";
 
-function RecordingLink(){
-  return (
-      <div style={{ marginBottom: "1rem" }}>
-        <Link to="/recording">
-          <button style={{ padding: "0.5rem 1rem", fontSize: "1rem" }}>
-            🎤 New Recording
-          </button>
-        </Link>
-      </div>
-  );
-}
-
 export default function List({ selected }) {
   const [titles, setTitles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,58 +30,78 @@ export default function List({ selected }) {
     fetchTitles();
   }, []);
 
-  if (loading) return <div style={{ padding: "1rem" }}>Loading...</div>;
-  if (error) return <div style={{ padding: "1rem", color: "red" }}>{error}</div>;
-
   return (
     <div
-      style={{        
-        borderRight: "1px solid #ccc",        
+      style={{
         height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        borderRight: "1px solid #ccc",
         background: "#fafafa",
       }}
-    >     
-      
-      { /* <Recorder /> */ }
-      <div style={{ flexShrink: 0}}>
-        <button onClick={() => navigate(`/recording`)}>Recoding</button>      
-        <Upload onUploadSuccess={fetchTitles} /> {/* ← Pass refresh function */}
+    >
+      {/* Top Fixed Section */}
+      <div style={{ padding: "1rem", borderBottom: "1px solid #ddd", flexShrink: 0 }}>
+        <button
+          onClick={() => navigate(`/recording`)}
+          style={{ marginBottom: "0.5rem", padding: "0.5rem 1rem", fontSize: "1rem" }}
+        >
+          🎤 New Recording
+        </button>
+        <Upload onUploadSuccess={fetchTitles} />
       </div>
+      
 
-      <h2 style={{ padding: "1rem", margin: 0, flexShrink: 0, borderBottom: "1px solid #ddd" }}>
-        Transcripts
-      </h2>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, overflowY: "auto", flex: 1 }}>
-        {titles.length === 0 ? (
-          <li
-            style={{
-              padding: "0.75rem 1rem",
-              color: "#666",
-              fontStyle: "italic",
-              userSelect: "none",
-            }}
-          >
-            No Data Found
-          </li>
+      {/* Scrollable List */}
+      <div style={{ overflowY: "auto", flex: 1 }}>
+        {/* Title Heading */}
+        <h2 style={{
+          padding: "1rem",
+          margin: 0,
+          borderBottom: "1px solid #ddd",
+          flexShrink: 0,
+        }}>
+          Transcripts
+        </h2>
+        
+        {loading ? (
+          <div style={{ padding: "1rem" }}>Loading...</div>
+        ) : error ? (
+          <div style={{ padding: "1rem", color: "red" }}>{error}</div>
         ) : (
-          titles.map((t) => (
-            <li
-              key={t.id}
-              onClick={() => navigate(`/u/${t.id}`)}
-              style={{
-                padding: "0.75rem 1rem",
-                cursor: "pointer",
-                background: selected === t.id ? "#d1f1ff" : "transparent",
-                borderLeft: selected === t.id ? "4px solid #00cfff" : "4px solid transparent",
-                userSelect: "none",
-                transition: "background 0.2s",
-              }}
-            >
-              {t.title}
-            </li>
-          ))
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {titles.length === 0 ? (
+              <li
+                style={{
+                  padding: "0.75rem 1rem",
+                  color: "#666",
+                  fontStyle: "italic",
+                  userSelect: "none",
+                }}
+              >
+                No Data Found
+              </li>
+            ) : (
+              titles.map((t) => (
+                <li
+                  key={t.id}
+                  onClick={() => navigate(`/u/${t.id}`)}
+                  style={{
+                    padding: "0.75rem 1rem",
+                    cursor: "pointer",
+                    background: selected === t.id ? "#d1f1ff" : "transparent",
+                    borderLeft: selected === t.id ? "4px solid #00cfff" : "4px solid transparent",
+                    userSelect: "none",
+                    transition: "background 0.2s",
+                  }}
+                >
+                  {t.title}
+                </li>
+              ))
+            )}
+          </ul>
         )}
-      </ul>
+      </div>
     </div>
   );
 }
