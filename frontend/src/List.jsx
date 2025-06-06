@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Upload from './Upload';
 import { Link } from "react-router-dom";
 
-export default function List({ selected }) {
+
+function List({ selected }) {
   const [titles, setTitles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,6 +31,15 @@ export default function List({ selected }) {
     fetchTitles();
   }, []);
 
+  const NavigateToRecording = ({  }) => {
+    return (
+      <button
+        onClick={() => navigate(`/recording`)}
+        style={{ marginBottom: "0.5rem", padding: "0.5rem 1rem", fontSize: "1rem" }}>
+        🎤 New Recording
+      </button>
+    )
+  }
   return (
     <div
       style={{
@@ -42,12 +52,7 @@ export default function List({ selected }) {
     >
       {/* Top Fixed Section */}
       <div style={{ padding: "1rem", borderBottom: "1px solid #ddd", flexShrink: 0 }}>
-        <button
-          onClick={() => navigate(`/recording`)}
-          style={{ marginBottom: "0.5rem", padding: "0.5rem 1rem", fontSize: "1rem" }}
-        >
-          🎤 New Recording
-        </button>
+        <NavigateToRecording />
         <Upload onUploadSuccess={fetchTitles} />
       </div>
       
@@ -105,3 +110,4 @@ export default function List({ selected }) {
     </div>
   );
 }
+export default List;

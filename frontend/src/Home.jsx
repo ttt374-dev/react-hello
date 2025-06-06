@@ -19,15 +19,6 @@ function Home(){
 }
 
 
-function Home2(){
-  return (
-    <div style="width: 100%; display: flex">
-      <div style="width: 30%; background-color: lightblue; ">Left</div>
-      <div style="flex: 1; background-color: lightyellow">Right</div>
-    </div>
-  )
-}
-
 function HomeOrig() {  
   const { title } = useParams();
 

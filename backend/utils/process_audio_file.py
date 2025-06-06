@@ -4,7 +4,6 @@ import os
 import uuid
 from datetime import datetime
 from pathlib import Path
-import re
 import shutil
 from utils.database import SessionLocal
 from utils.models import Transcript

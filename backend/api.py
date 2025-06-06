@@ -14,13 +14,16 @@ from rq.job import Job
 from pydantic import BaseModel
 from uuid import UUID
 from pydub import AudioSegment
-
+import redis
 
 from utils.process_audio_file import process_audio_file
 from utils.database import init_db
 from config import clean_filename
 from config import AUDIO_DIR, TMP_DIR
 
+# Connect to Redis (adjust host/port if needed)
+redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
+redis_conn = redis.from_url(redis_url)
 
 DATA_DIR = Path("data")
 app = FastAPI()
