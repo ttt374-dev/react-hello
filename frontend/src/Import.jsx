@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import List from "./List"
+import List from "./components/List"
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import JobStatus from "./components/JobStatus";
 import Layout from "./Layout";

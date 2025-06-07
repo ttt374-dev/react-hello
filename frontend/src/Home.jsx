@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import List from "./List";
+import List from "./components/List";
 import Transcript from "./Transcript";
 import Layout
  from './Layout';

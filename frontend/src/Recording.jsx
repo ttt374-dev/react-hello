@@ -3,7 +3,7 @@ import { uploadAudioFile } from "./utils/uploadAudio";
 import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import List from "./List"
+import List from "./components/List"
 import usePolling from './hooks/usePolling'
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import VolumeMonitor from "./components/VolumeMonitor";

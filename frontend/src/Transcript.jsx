@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useTranscriptData } from "./hooks/useTranscriptData";
 import TranscriptViewer from "./components/TranscriptViewer";
-import List from "./List"
+import List from "./components/List"
 import Layout from "./Layout";
 
 

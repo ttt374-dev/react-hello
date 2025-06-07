@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Layout from "./Layout";
 
 export default function JobList() {
   const [jobs, setJobs] = useState([]);
@@ -15,7 +16,7 @@ export default function JobList() {
   }, []);
 
   return (
-    <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
+    <Layout>
       <h3>📋 Job List</h3>
       {error && <p style={{ color: "red" }}>{error}</p>}
 
@@ -36,6 +37,6 @@ export default function JobList() {
           ))}
         </ul>
       )}
-    </div>
+    </Layout>
   );
 }
