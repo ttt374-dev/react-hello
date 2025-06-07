@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import Recording from "./Recording";
-import Import from "./Import";
+import Recording from "./RecordingPage";
+import Import from "./ImportPage";
 import JobStatus from "./components/TranscriptJobStatus";
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 

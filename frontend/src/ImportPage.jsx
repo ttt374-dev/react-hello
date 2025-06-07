@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import List from "./components/List"
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import TranscriptJobStatus from "./components/TranscriptJobStatus";
-import Layout from "./Layout";
+import Layout from "./components/Layout";
 
-export default function Import() {  
+export default function ImportPage() {  
   const fileInputRef = useRef();
   const {
     jobId,

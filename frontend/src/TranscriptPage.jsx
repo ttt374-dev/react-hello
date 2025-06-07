@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import { useTranscriptData } from "./hooks/useTranscriptData";
 import TranscriptViewer from "./components/TranscriptViewer";
 import List from "./components/List"
-import Layout from "./Layout";
+import Layout from "./components/Layout";
 
 
 
-export default function Transcript( { transcriptId: propId } ) {
+export default function TranscriptPage( { transcriptId: propId } ) {
   const { transcriptId: paramId } = useParams();
   const transcriptId = propId || paramId;
   const { sentences, title, createdAt } = useTranscriptData(transcriptId);

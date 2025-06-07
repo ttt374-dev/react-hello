@@ -8,11 +8,11 @@ import usePolling from './hooks/usePolling'
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import VolumeMonitor from "./components/VolumeMonitor";
 import TranscriptJobStatus from "./components/TranscriptJobStatus";
-import Layout from "./Layout";
+import Layout from "./components/Layout";
 
 const MAX_RECORDING_MINUTES = 30
 
-export default function Recording() {
+export default function RecordingPage() {
   const [recording, setRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(null);
   const [volume, setVolume] = useState(0);

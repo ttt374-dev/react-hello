@@ -1,16 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home'
-import Recording from './Recording';
-import Import from './Import'
-import Transcript from './Transcript';
+import HomePage from './HomePage'
+import RecordingPage from './RecordingPage';
+import ImportPage from './ImportPage'
+import TranscriptPage from './TranscriptPage';
 
 function App(){
   return (
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/u/:transcriptId" element={<Transcript />}/>
-      <Route path="/recording" element={<Recording />} />      
-      <Route path="/import" element={<Import />} />     
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/u/:transcriptId" element={<TranscriptPage />}/>
+      <Route path="/recording" element={<RecordingPage />} />      
+      <Route path="/import" element={<ImportPage />} />     
     </Routes>
   )
 }

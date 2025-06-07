@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import List from "./components/List";
-import Transcript from "./Transcript";
-import Layout
- from './Layout';
-function Home(){
+import TranscriptPage from "./TranscriptPage";
+import Layout from './components/Layout';
+
+export default function HomePage(){
   const navigate = useNavigate();
   const [latestTranscriptId, setLatestTranscriptId] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -39,7 +38,7 @@ function Home(){
       {loading && <p>Loading...</p>}
       {!loading && !latestTranscriptId && <p>No transcript available.</p>}
       {latestTranscriptId && (
-        <Transcript transcriptId={latestTranscriptId} />
+        <TranscriptPage transcriptId={latestTranscriptId} />
       )}
     </div>
     
@@ -47,4 +46,3 @@ function Home(){
 }
 
 
-export default Home;
