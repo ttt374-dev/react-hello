@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import { uploadAudioFile } from "./utils/uploadAudio";
-import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
+import { uploadAudioFile } from "../utils/uploadAudio";
+import { startVolumeMonitor, stopVolumeMonitor } from "../utils/volumeMonitor";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import List from "./components/List"
-import usePolling from './hooks/usePolling'
-import useTranscriptionJob from "./hooks/useTranscriptionJob";
-import VolumeMonitor from "./components/VolumeMonitor";
-import TranscriptJobStatus from "./components/TranscriptJobStatus";
-import Layout from "./components/Layout";
+import List from "../components/List"
+import usePolling from '../hooks/usePolling'
+import useTranscriptionJob from "../hooks/useTranscriptionJob";
+import VolumeMonitor from "../components/VolumeMonitor";
+import TranscriptJobStatus from "../components/TranscriptJobStatus";
+import Layout from "../components/Layout";
 
 const MAX_RECORDING_MINUTES = 30
 
@@ -126,17 +126,16 @@ export default function RecordingPage() {
         {recording && (
           <VolumeMonitor volume={volume} />
         )}
-        
-        {/* Job status */}                
-        <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
-          
         {/* Playback */} 
         {audioURL && (
           <div style={{ marginTop: "1rem" }}>
             <audio src={audioURL} controls />
           </div>
         )}
-      
+                
+        {/* Job status */}                
+        <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
+        
       </div>
     
     </Layout>  

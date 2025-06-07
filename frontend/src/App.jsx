@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage'
-import RecordingPage from './RecordingPage';
-import ImportPage from './ImportPage'
-import TranscriptPage from './TranscriptPage';
+import HomePage from './pages/HomePage'
+import RecordingPage from './pages/RecordingPage';
+import ImportPage from './pages/ImportPage'
+import TranscriptPage from './pages/TranscriptPage';
 
 function App(){
   return (

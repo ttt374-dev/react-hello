@@ -1,9 +1,9 @@
 import { useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import List from "./components/List"
-import useTranscriptionJob from "./hooks/useTranscriptionJob";
-import TranscriptJobStatus from "./components/TranscriptJobStatus";
-import Layout from "./components/Layout";
+import List from "../components/List"
+import useTranscriptionJob from "../hooks/useTranscriptionJob";
+import TranscriptJobStatus from "../components/TranscriptJobStatus";
+import Layout from "../components/Layout";
 
 export default function ImportPage() {  
   const fileInputRef = useRef();

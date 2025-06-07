@@ -26,7 +26,7 @@ export default function TranscriptJobStatus({ status, jobId, transcriptId, elaps
 
       {status === "finished" && (
         <p>
-          visit new entry:
+          visit new entry: 
           <Link to={`/u/${transcriptId}`}>{transcriptId}</Link>
         </p>
       )}

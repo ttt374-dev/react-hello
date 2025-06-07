@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { useTranscriptData } from "./hooks/useTranscriptData";
-import TranscriptViewer from "./components/TranscriptViewer";
-import List from "./components/List"
-import Layout from "./components/Layout";
+import { useTranscriptData } from "../hooks/useTranscriptData";
+import TranscriptViewer from "../components/TranscriptViewer";
+import List from "../components/List"
+import Layout from "../components/Layout";
 
 
 
@@ -59,7 +59,7 @@ export default function TranscriptPage( { transcriptId: propId } ) {
   };
 
   return (
-    <Layout>
+    <Layout transcriptId={transcriptId}>
       {/* Header */}
       <TranscriptHeaderTitle
         title={editTitle}
