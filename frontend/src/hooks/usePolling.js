@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function usePolling(jobId) {
+export default function usePolling(jobId) {
   const [status, setStatus] = useState("pending");
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
@@ -12,7 +12,7 @@ function usePolling(jobId) {
 
     const poll = async () => {
       try {
-        const res = await fetch(`/api/job_status/${jobId}`);
+        const res = await fetch(`http://localhost:8000/api/job_status/${jobId}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 

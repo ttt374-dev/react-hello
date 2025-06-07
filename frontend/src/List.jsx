@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Upload from './Upload';
-import { Link } from "react-router-dom";
 
 
 function List({ selected }) {

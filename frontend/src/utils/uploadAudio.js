@@ -1,20 +1,13 @@
 import { useState, useEffect } from "react";
+import usePolling from "../hooks/usePolling";
 
-export function getFormattedFilename(ext = "webm") {
-  const now = new Date();
-  const yyyy = now.getFullYear();
-  const mm = String(now.getMonth() + 1).padStart(2, '0');
-  const dd = String(now.getDate()).padStart(2, '0');
-  const hh = String(now.getHours()).padStart(2, '0');
-  const min = String(now.getMinutes()).padStart(2, '0');
-  return `recording-${yyyy}-${mm}-${dd}-${hh}:${min}.${ext}`;
-}
-
-export async function uploadAudioBlob(blob, filename) {
+{/* 
+export async function uploadAudioBlob(blob) {
+  const filename = getFormattedFilename("webm")
   const file = new File([blob], filename, { type: "audio/webm" });
   return uploadAudioFile(file)  
 }
-
+*/}
 export async function uploadAudioFile(file) {
   const formData = new FormData();
   //const file = new File([blob], filename, { type: "audio/webm" });

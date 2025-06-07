@@ -1,9 +1,8 @@
-import { useState, useRef, useEffect } from "react";
-import { getFormattedFilename, uploadAudioFile, uploadAudioBlob, pollTranscriptionStatus, usePolling } from "./utils/uploadAudio";
-import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
-import { useNavigate } from "react-router-dom";
+import { useState, useRef, } from "react";
+import { uploadAudioFile } from "./utils/uploadAudio";
 import { Link } from 'react-router-dom';
 import List from "./List"
+import usePolling from "./hooks/usePolling";
 
 export default function Import() {
   const [uploading, setUploading] = useState(false);

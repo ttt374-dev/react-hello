@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from "react";
-import { getFormattedFilename, uploadAudioBlob } from "./utils/uploadAudio";
+import { useState, useRef } from "react";
+import { uploadAudioFile } from "./utils/uploadAudio";
 import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
@@ -35,15 +35,13 @@ export default function Recording() {
 
       const confirmUpload = window.confirm("Do you want to upload the recording?");
       if (confirmUpload) {
-        uploadAudioBlob(blob, getFormattedFilename("webm"))
+        const filename = getFormattedFilename("webm")
+        const file = new File([blob], filename, { type: "audio/webm" });
+        uploadAudioFile(file)
         .then((data) => {
           console.log(`onstop: ${data.job_id}`)
-          //navigate("/"); // Go to home page after upload finishes
-          
-          //const jobId = data.job_id;
           setJobId(data.job_id)
           setTranscriptId(data.transcript_id)
-          //pollTranscriptionStatus(jobId); // Start polling
         })
         .catch((err) => {
           console.error("Upload failed:", err);
@@ -53,8 +51,6 @@ export default function Recording() {
     };
 
     startVolumeMonitor(stream, setVolume)
-
-
     mediaRecorderRef.current.start();
     setRecording(true);
   };
@@ -128,6 +124,15 @@ export default function Recording() {
   );
 }
 
+export function getFormattedFilename(ext = "webm") {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  return `recording-${yyyy}-${mm}-${dd}-${hh}:${min}.${ext}`;
+}
 {/* Playback 
       {audioURL && (
         <div style={{ marginTop: "1rem" }}>
