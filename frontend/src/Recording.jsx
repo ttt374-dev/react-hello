@@ -9,6 +9,8 @@ import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import VolumeMonitor from "./components/VolumeMonitor";
 import JobStatus from "./components/JobStatus";
 
+const MAX_RECORDING_MINUTES = 0.1
+
 export default function Recording() {
   const [recording, setRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(null);
@@ -29,8 +31,11 @@ export default function Recording() {
     elapsed,
     startUpload,
   } = useTranscriptionJob();
+  const alertShownRef = useRef(false);
+
 
   // Start recording automatically when component mounts
+  { /*
   useEffect(() => {
     startRecording();
 
@@ -41,7 +46,7 @@ export default function Recording() {
       }
     };
   }, []); // empty deps = run once on mount
-
+*/ }
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -64,17 +69,28 @@ export default function Recording() {
         const filename = getFormattedFilename("webm")
         const file = new File([blob], filename, { type: "audio/webm" });
         startUpload(file);
-
       }      
     };
 
     startVolumeMonitor(stream, setVolume)
     mediaRecorderRef.current.start();
     setRecording(true);
+    alertShownRef.current = false;
 
     setRecordingElapsed(0); // reset
     recordingTimerRef.current = setInterval(() => {
-      setRecordingElapsed((prev) => prev + 1);
+      setRecordingElapsed((prev) => {
+        if (prev + 1 >= MAX_RECORDING_MINUTES * 60) {          
+          stopRecording();  // auto-stop  
+          if (!alertShownRef.current) {
+            alertShownRef.current = true;        
+            alert(`Recording stopped automatically at ${MAX_RECORDING_MINUTES} minutes max length`);
+          }
+          return prev;       // stop incrementing after max reached
+        }
+        return prev + 1
+      }
+      );
     }, 1000);
 
   };
@@ -103,7 +119,9 @@ export default function Recording() {
           ) : (
             <button onClick={startRecording}>Start Recording</button>
           )}
-          
+          <p>
+            max recording minutes: { MAX_RECORDING_MINUTES} min
+          </p>
           {recording && (
             <p>Recording time: {formatSeconds(recordingElapsed)}</p>
           )}
@@ -116,6 +134,13 @@ export default function Recording() {
           {/* Job status */}                
           <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
             
+          {/* Playback */} 
+          {audioURL && (
+            <div style={{ marginTop: "1rem" }}>
+              <audio src={audioURL} controls />
+            </div>
+          )}
+        
         </div>
       </div>
     </div>
@@ -139,10 +164,3 @@ function getFormattedFilename(ext = "webm") {
   const min = String(now.getMinutes()).padStart(2, '0');
   return `recording-${yyyy}-${mm}-${dd}-${hh}:${min}.${ext}`;
 }
-{/* Playback 
-      {audioURL && (
-        <div style={{ marginTop: "1rem" }}>
-          <audio src={audioURL} controls />
-        </div>
-      )}
-        */}

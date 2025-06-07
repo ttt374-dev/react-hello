@@ -27,11 +27,11 @@ export default function Import() {
     startUpload(file)
   }
   // 自動でファイル選択ダイアログを開く
-  useEffect(() => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
-  }, []);
+  //useEffect(() => {
+  //  if (fileInputRef.current) {
+  //    fileInputRef.current.click();
+  //  }
+  //}, []);
   //const { status, result, error, elapsed } = usePolling(jobId);
 
 	return (

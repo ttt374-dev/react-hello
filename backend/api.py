@@ -17,10 +17,12 @@ from uuid import UUID
 from pydub import AudioSegment
 import redis
 
-from utils.process_audio_file import process_audio_file
+from utils.process_audio_file import process_audio_file, audio_duration
 from utils.database import init_db
 from config import clean_filename
 from config import AUDIO_DIR, TMP_DIR
+
+MAX_AUDIO_DURATION_MINUTES = 30 
 
 # Connect to Redis (adjust host/port if needed)
 redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
@@ -37,6 +39,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+class CancelRequest(BaseModel):
+    id: str
+
 # Helper: validate title param to avoid path traversal
 def valid_title(title: str) -> bool:
     return re.fullmatch(r"[a-zA-Z0-9-_]+", title) is not None
@@ -101,7 +107,6 @@ async def get_transcript(id: str):
 
     return JSONResponse(content=data)
 
-
 def convert_to_mp3(input_path: str, output_path: str) -> None:
     sound = AudioSegment.from_file(input_path)
     sound.export(output_path, format="mp3")
@@ -117,6 +122,13 @@ async def upload_audio(audio: UploadFile = File(...)):
     with open(input_path, "wb") as f:
         f.write(await audio.read())
 
+    # check duration
+    
+    duration = audio_duration(input_path)
+    if duration > MAX_AUDIO_DURATION_MINUTES:
+        raise HTTPException(status_code=400, detail=f"Audio too long: {duration}")
+        #raise AudioTooLongError(f"Audio duration {duration_minutes:.2f} minutes exceeds max allowed {max_minutes} minutes.")
+
     # Convert to MP3 if needed
     if ext != ".mp3":
         convert_to_mp3(input_path, output_path)
@@ -126,7 +138,12 @@ async def upload_audio(audio: UploadFile = File(...)):
         final_path = input_path
 
     result = process_audio_file(final_path, clean_filename(audio.filename))
-    return JSONResponse({"message": "Upload success. Transcription started.", "transcript_id": result["id"], "job_id": result["job_id"]})
+
+    return JSONResponse({
+        "message": "Upload success. Transcription started.",
+        "transcript_id": result["id"],
+        "job_id": result["job_id"]
+    })
 
 @app.get("/api/job_status/{job_id}")
 def get_job_status(job_id):
@@ -161,11 +178,17 @@ def list_jobs():
                 "started_at": str(job.started_at) if job.started_at else None,
             })
 
-        return {"jobs": jobs}
+        return jobs
 
     except Exception as e:
         return {"error": str(e)}
-    
+
+@app.post("/api/cancel_job")
+def cancel_job(req: CancelRequest):
+    redis.set(f"cancel:{req.id}", "1")
+    return {"success": True, "message": f"Cancellation requested for job {req.id}"}
+
+
 class UpdateRequest(BaseModel):
     id: str
     title: str

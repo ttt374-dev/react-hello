@@ -18,13 +18,14 @@ export async function uploadAudioFile(file) {
       method: "POST",
       body: formData,
     });
-
+    const data = await res.json();  // read the response body either way
     if (!res.ok) {
-      throw new Error("Upload failed");
+      console.log("upload error", data.detail)
+      throw new Error(data.detail || "Upload failed");
     }
 
     //alert("✅ Upload successful!");
-    const data = await res.json(); // e.g., { message, job_id }
+    //const data = await res.json(); // e.g., { message, job_id }
     console.log(`job id: ${data.job_id}`)
     console.log(`transcript id: ${data.transcript_id}`)
     return data;
