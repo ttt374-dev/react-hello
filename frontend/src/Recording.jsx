@@ -8,6 +8,7 @@ import usePolling from './hooks/usePolling'
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import VolumeMonitor from "./components/VolumeMonitor";
 import JobStatus from "./components/JobStatus";
+import Layout from "./Layout";
 
 const MAX_RECORDING_MINUTES = 30
 
@@ -106,45 +107,41 @@ export default function Recording() {
   };
 
   return (    
-    <div style={{ width: "100%", display: "flex", height: "100vh"}}>
-      <div style={{ width: "20%"}}>
-        <List/>
-      </div>      
-      <div style={{ width: "80%"}}>
-        <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
-          <h3>🎤 Recorder</h3>
+    <Layout>
+      
+      <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
+        <h3>🎤 Recorder</h3>
 
-          {recording ? (
-            <button onClick={stopRecording}>Stop Recording</button>
-          ) : (
-            <button onClick={startRecording}>Start Recording</button>
-          )}
-          <p>
-            max recording minutes: { MAX_RECORDING_MINUTES} min
-          </p>
-          {recording && (
-            <p>Recording time: {formatSeconds(recordingElapsed)}</p>
-          )}
-          
-          {/* Volume Meter */}      
-          {recording && (
-            <VolumeMonitor volume={volume} />
-          )}
-          
-          {/* Job status */}                
-          <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
-            
-          {/* Playback */} 
-          {audioURL && (
-            <div style={{ marginTop: "1rem" }}>
-              <audio src={audioURL} controls />
-            </div>
-          )}
+        {recording ? (
+          <button onClick={stopRecording}>Stop Recording</button>
+        ) : (
+          <button onClick={startRecording}>Start Recording</button>
+        )}
+        <p>
+          max recording minutes: { MAX_RECORDING_MINUTES} min
+        </p>
+        {recording && (
+          <p>Recording time: {formatSeconds(recordingElapsed)}</p>
+        )}
         
-        </div>
+        {/* Volume Meter */}      
+        {recording && (
+          <VolumeMonitor volume={volume} />
+        )}
+        
+        {/* Job status */}                
+        <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
+          
+        {/* Playback */} 
+        {audioURL && (
+          <div style={{ marginTop: "1rem" }}>
+            <audio src={audioURL} controls />
+          </div>
+        )}
+      
       </div>
-    </div>
     
+    </Layout>  
     
     
   );

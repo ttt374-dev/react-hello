@@ -3,23 +3,12 @@ import { useParams } from 'react-router-dom';
 import { useTranscriptData } from "./hooks/useTranscriptData";
 import TranscriptViewer from "./components/TranscriptViewer";
 import List from "./List"
+import Layout from "./Layout";
 
-function Transcript(){
-  const { transcriptId } = useParams();
-  return (
-    <div style={{ width: "100%", display: "flex", height: "100vh"}}>
-      <div style={{ width: "20%"}}>
-        <List selected={transcriptId}/>
-      </div>      
-      <div style={{ width: "80%"}}>
-        <TranscriptPane transcriptId={transcriptId}/>
-      </div>
-    </div>
-  )
-}
-export default Transcript
 
-function TranscriptPane({ transcriptId }) {
+
+export default function Transcript() {
+  const { transcriptId } = useParams()
   const { sentences, title, createdAt } = useTranscriptData(transcriptId);
   const audioRef = useRef();
 
@@ -69,12 +58,7 @@ function TranscriptPane({ transcriptId }) {
   };
 
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      height: "100vh",
-      fontFamily: "sans-serif",
-    }}>
+    <Layout>
       {/* Header */}
       <TranscriptHeaderTitle
         title={editTitle}
@@ -111,7 +95,7 @@ function TranscriptPane({ transcriptId }) {
       {/* Footer (Audio Player) */}
 
       <TranscriptAudioPlayer audioRef={audioRef} transcriptId={transcriptId} />
-    </div>
+    </Layout>
   );
 }
 // components/TranscriptHeaderTitle.js

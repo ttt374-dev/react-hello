@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import List from "./List"
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import JobStatus from "./components/JobStatus";
+import Layout from "./Layout";
 
 export default function Import() {  
   const fileInputRef = useRef();
@@ -35,11 +36,8 @@ export default function Import() {
   //const { status, result, error, elapsed } = usePolling(jobId);
 
 	return (
-		<div style={{ width: "100%", display: "flex", height: "100vh"}}>
-			<div style={{ width: "20%"}}>
-				<List/>
-			</div>      
-			<div style={{ width: "80%"}}>
+		
+			<Layout>
         <div  style={{ padding: "1rem" }}>
           <input type="file" accept="audio/*" onChange={importAudioFile}
           disabled={uploading} style={{ display: 'none' }} ref={fileInputRef} />
@@ -51,8 +49,8 @@ export default function Import() {
         {/* Job status */}                
         <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />
             
-      </div>
-		</div>
+      </Layout>
+		
 	)
 }
 
