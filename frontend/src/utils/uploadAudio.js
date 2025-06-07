@@ -11,8 +11,13 @@ export function getFormattedFilename(ext = "webm") {
 }
 
 export async function uploadAudioBlob(blob, filename) {
-  const formData = new FormData();
   const file = new File([blob], filename, { type: "audio/webm" });
+  uploadAudioFile(file)  
+}
+
+export async function uploadAudioFile(file, file) {
+  const formData = new FormData();
+  //const file = new File([blob], filename, { type: "audio/webm" });
   formData.append("audio", file);
 
   try {
@@ -37,6 +42,8 @@ export async function uploadAudioBlob(blob, filename) {
     return null;
   }
 }
+
+
 
 export const pollTranscriptionStatus = (jobId) => {
   return new Promise((resolve, reject) => {

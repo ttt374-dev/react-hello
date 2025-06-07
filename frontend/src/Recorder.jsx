@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { getFormattedFilename, uploadAudioBlob, pollTranscriptionStatus, usePolling } from "./utils/recording";
+import { getFormattedFilename, uploadAudioBlob, pollTranscriptionStatus, usePolling } from "./utils/uploadAudio";
 import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';

@@ -28,7 +28,7 @@ export default function FileUploader() {
 
     const formData = new FormData();
     formData.append("audio", file);
-    formData.append("extension", file.name.split(".").pop()); // e.g., "webm"
+    //formData.append("extension", file.name.split(".").pop()); // e.g., "webm"
 
     try {
       const res = await fetch("http://localhost:8000/api/upload", {
