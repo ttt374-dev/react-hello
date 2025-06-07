@@ -1,13 +1,32 @@
 import List from './components/List';
 
-export default function Layout({ children }) {
+export default function Layout({ title, children }) {
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%' }}>
-      <div style={{ width: '20%', borderRight: '1px solid #ccc' }}>
+      {/* Left Pane */}
+      <div style={{ width: '30%', borderRight: '1px solid #ccc' }}>
         <List />
       </div>
-      <div style={{ width: '80%', padding: '1rem' }}>
-        {children}
+
+      {/* Right Pane */}
+      <div style={{ width: '70%', display: 'flex', flexDirection: 'column' }}>
+        {/* Title Bar */}
+        {title && (
+          <div style={{
+            padding: '1rem',
+            backgroundColor: '#f0f0f0',
+            borderBottom: '1px solid #ccc',
+            fontWeight: 'bold',
+            fontSize: '1.2rem'
+          }}>
+            {title}
+          </div>
+        )}
+
+        {/* Main Content */}
+        <div style={{ padding: '1rem', flex: 1, overflowY: 'auto' }}>
+          {children}
+        </div>
       </div>
     </div>
   );

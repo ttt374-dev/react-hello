@@ -14,7 +14,7 @@ export default function usePolling(jobId) {
 
     const poll = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/job_status/${jobId}`);
+        const res = await fetch(`http://localhost:8000/api/job-status/${jobId}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 

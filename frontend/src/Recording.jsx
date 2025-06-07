@@ -107,10 +107,8 @@ export default function Recording() {
   };
 
   return (    
-    <Layout>
-      
-      <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
-        <h3>🎤 Recorder</h3>
+    <Layout title="🎤 Recorder">      
+      <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>       
 
         {recording ? (
           <button onClick={stopRecording}>Stop Recording</button>

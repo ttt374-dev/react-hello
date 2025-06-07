@@ -6,7 +6,7 @@ export default function JobList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/job_status")
+    fetch("http://localhost:8000/api/job-status")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch job list");
         return res.json();
@@ -16,8 +16,7 @@ export default function JobList() {
   }, []);
 
   return (
-    <Layout>
-      <h3>📋 Job List</h3>
+    <Layout title="📋 Job List">
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       {jobs.length === 0 ? (

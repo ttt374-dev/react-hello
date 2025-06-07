@@ -145,7 +145,7 @@ async def upload_audio(audio: UploadFile = File(...)):
         "job_id": result["job_id"]
     })
 
-@app.get("/api/job_status/{job_id}")
+@app.get("/api/job-status/{job_id}")
 def get_job_status(job_id):
     try:
         job = Job.fetch(job_id, connection=redis_conn)
@@ -158,7 +158,7 @@ def get_job_status(job_id):
         return {"error": str(e)}
 
 
-@app.get("/api/job_status")
+@app.get("/api/job-status")
 def list_jobs():
     try:
         jobs = []

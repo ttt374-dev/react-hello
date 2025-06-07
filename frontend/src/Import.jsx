@@ -35,9 +35,8 @@ export default function Import() {
   //}, []);
   //const { status, result, error, elapsed } = usePolling(jobId);
 
-	return (
-		
-			<Layout>
+	return (		
+			<Layout title="Import">
         <div  style={{ padding: "1rem" }}>
           <input type="file" accept="audio/*" onChange={importAudioFile}
           disabled={uploading} style={{ display: 'none' }} ref={fileInputRef} />
