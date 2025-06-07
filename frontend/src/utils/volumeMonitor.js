@@ -14,10 +14,13 @@ export function startVolumeMonitor(stream, setVolume) {
   const dataArray = new Uint8Array(bufferLength);
 
   const updateVolume = () => {
-    analyser.getByteFrequencyData(dataArray);
+    
+    analyser.getByteFrequencyData(dataArray); 
     const average = dataArray.reduce((a, b) => a + b, 0) / bufferLength;
-    setVolume(average);
+    setVolume(average)
     animationFrameRef = requestAnimationFrame(updateVolume);
+  
+    
   };
 
   updateVolume();

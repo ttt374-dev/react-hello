@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { uploadAudioFile } from "./utils/uploadAudio";
 import { startVolumeMonitor, stopVolumeMonitor } from "./utils/volumeMonitor";
 import { useNavigate } from "react-router-dom";
@@ -6,11 +6,16 @@ import { Link } from 'react-router-dom';
 import List from "./List"
 import usePolling from './hooks/usePolling'
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
+import VolumeMonitor from "./components/VolumeMonitor";
+import JobStatus from "./components/JobStatus";
 
 export default function Recording() {
   const [recording, setRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(null);
   const [volume, setVolume] = useState(0);
+  const [recordingElapsed, setRecordingElapsed] = useState(0);
+  const recordingTimerRef = useRef(null);
+
   //const [jobId, setJobId] = useState("");
   //const [transcriptId, setTranscriptId] = useState("");
 
@@ -20,11 +25,22 @@ export default function Recording() {
     jobId,
     transcriptId,
     status,
-    result,
     error,
     elapsed,
     startUpload,
   } = useTranscriptionJob();
+
+  // Start recording automatically when component mounts
+  useEffect(() => {
+    startRecording();
+
+    // Cleanup on unmount: stop recording & volume monitoring if recording
+    return () => {
+      if (recording) {
+        stopRecording();
+      }
+    };
+  }, []); // empty deps = run once on mount
 
 
   const startRecording = async () => {
@@ -48,18 +64,6 @@ export default function Recording() {
         const filename = getFormattedFilename("webm")
         const file = new File([blob], filename, { type: "audio/webm" });
         startUpload(file);
-        { /* 
-                  uploadAudioFile(file)
-        .then((data) => {
-          console.log(`onstop: ${data.job_id}`)
-          setJobId(data.job_id)
-          setTranscriptId(data.transcript_id)
-        })
-        .catch((err) => {
-          console.error("Upload failed:", err);
-          alert("Upload failed. Please try again.");
-        });
-        */}
 
       }      
     };
@@ -67,29 +71,23 @@ export default function Recording() {
     startVolumeMonitor(stream, setVolume)
     mediaRecorderRef.current.start();
     setRecording(true);
+
+    setRecordingElapsed(0); // reset
+    recordingTimerRef.current = setInterval(() => {
+      setRecordingElapsed((prev) => prev + 1);
+    }, 1000);
+
   };
 
   const stopRecording = () => {
     mediaRecorderRef.current.stop();
     setRecording(false);
     stopVolumeMonitor()
+    if (recordingTimerRef.current) {
+      clearInterval(recordingTimerRef.current);
+      recordingTimerRef.current = null;
+    }
   };
-  const VolumeMeter = ({ volume }) => {
-    return (
-      <div style={{ marginTop: "1rem", height: "10px", background: "#ccc" }}>
-        <div
-          style={{
-            height: "100%",
-            width: `${Math.min(100, volume)}%`,
-            background: "limegreen",
-            transition: "width 0.1s",
-          }}
-        />
-      </div>
-    );
-  };
-
-  //const { status, result, error, elapsed } = usePolling(jobId);
 
   return (    
     <div style={{ width: "100%", display: "flex", height: "100vh"}}>
@@ -105,29 +103,18 @@ export default function Recording() {
           ) : (
             <button onClick={startRecording}>Start Recording</button>
           )}
-
+          
+          {recording && (
+            <p>Recording time: {formatSeconds(recordingElapsed)}</p>
+          )}
+          
           {/* Volume Meter */}      
           {recording && (
-            <VolumeMeter volume={volume} />
+            <VolumeMonitor volume={volume} />
           )}
           
           {/* Job status */}                
-  
-          { status === "started" && (
-            <div>
-              <div>  { `job id: '${jobId}'.`}</div>
-              <div>  { `transcript id: '${transcriptId}'`}</div>
-              <div> elasped time: {elapsed} sec</div>
-            </div>)}
-          
-          {
-            status === "finished" && ( <Link to={`/u/${transcriptId}`}>New Entry {transcriptId}</Link>)
-          }
-          <div>
-            <p>Status: {status}</p>
-            {error && <p style={{ color: "red" }}>{error}</p>}
-            {result && <div>Result: {JSON.stringify(result)}</div>}
-          </div>
+          <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
             
         </div>
       </div>
@@ -137,8 +124,13 @@ export default function Recording() {
     
   );
 }
+function formatSeconds(seconds) {
+  const m = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const s = String(seconds % 60).padStart(2, "0");
+  return `${m}:${s}`;
+}
 
-export function getFormattedFilename(ext = "webm") {
+function getFormattedFilename(ext = "webm") {
   const now = new Date();
   const yyyy = now.getFullYear();
   const mm = String(now.getMonth() + 1).padStart(2, '0');
