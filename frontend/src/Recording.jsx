@@ -9,7 +9,7 @@ import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import VolumeMonitor from "./components/VolumeMonitor";
 import JobStatus from "./components/JobStatus";
 
-const MAX_RECORDING_MINUTES = 0.1
+const MAX_RECORDING_MINUTES = 30
 
 export default function Recording() {
   const [recording, setRecording] = useState(false);

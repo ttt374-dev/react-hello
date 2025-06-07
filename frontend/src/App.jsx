@@ -12,7 +12,7 @@ function App(){
       <Route path="/u/:transcriptId" element={<Transcript />}/>
       <Route path="/recording" element={<Recording />} />      
       <Route path="/import" element={<Import />} />     
-      <Route path="/jobList" element={<JobList />} /> 
+      <Route path="/job-list" element={<JobList />} /> 
     </Routes>
   )
 }
