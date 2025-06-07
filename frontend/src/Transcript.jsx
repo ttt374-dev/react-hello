@@ -7,8 +7,9 @@ import Layout from "./Layout";
 
 
 
-export default function Transcript() {
-  const { transcriptId } = useParams()
+export default function Transcript( { transcriptId: propId } ) {
+  const { transcriptId: paramId } = useParams();
+  const transcriptId = propId || paramId;
   const { sentences, title, createdAt } = useTranscriptData(transcriptId);
   const audioRef = useRef();
 

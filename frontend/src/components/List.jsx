@@ -51,8 +51,9 @@ function List({ selected }) {
       {/* Top Fixed Section */}
       <div style={{ padding: "1rem", borderBottom: "1px solid #ddd", flexShrink: 0 }}>
         <button onClick={() => navigate("/")}>Home</button>
-      </div>
-      
+        <button onClick={() => navigate("/recording")}>Recording</button>
+        <button onClick={() => navigate("/import")}>Import</button>
+      </div>      
 
       {/* Scrollable List */}
       <div style={{ overflowY: "auto", flex: 1 }}>

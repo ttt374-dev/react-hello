@@ -22,7 +22,7 @@ rq
 redis
 
 # Audio and Transcription
-#openai-whisper
+openai-whisper
 ffmpeg-python
 pydub
 requests

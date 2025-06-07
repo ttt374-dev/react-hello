@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import JobList from './JobList';
 
 
 export default function TranscriptJobStatus({ status, jobId, transcriptId, elapsed, error }) {
@@ -15,7 +16,9 @@ export default function TranscriptJobStatus({ status, jobId, transcriptId, elaps
           <div>transcript id: {transcriptId}</div>          
         </div>
       )}
-      
+      { status === "queued" && (
+        <JobList />
+      )}
       { status === "started" && (
         <div>elapsed time: {elapsed} sec</div>
         

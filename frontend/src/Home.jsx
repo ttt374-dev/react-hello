@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import List from "./components/List";
 import Transcript from "./Transcript";
@@ -6,14 +6,42 @@ import Layout
  from './Layout';
 function Home(){
   const navigate = useNavigate();
+  const [latestTranscriptId, setLatestTranscriptId] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLatestTranscript = async () => {
+      try {
+        const res = await fetch("http://localhost:8000/api/list");
+        const list = await res.json();
+
+        if (list.length === 0) {
+          setLatestTranscriptId(null);
+          return;
+        }
+
+        const latest = list[0]; // assuming newest comes first
+        console.log("latest id", latest.id)
+        setLatestTranscriptId(latest.id);
+      } catch (err) {
+        console.error("Failed to load latest transcript", err);
+        setLatestTranscriptId(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLatestTranscript();
+  }, []);
 
   return (
-      <Layout>
-        <div style={{ margin: "3em"}}>
-          <button style={{ margin: "1em"}} onClick={() => navigate("/recording")}>Recording</button>
-          <button style={{ margin: "1em"}} onClick={() => navigate("/import")}>Import</button>
-        </div>
-      </Layout>
+    <div>
+      {loading && <p>Loading...</p>}
+      {!loading && !latestTranscriptId && <p>No transcript available.</p>}
+      {latestTranscriptId && (
+        <Transcript transcriptId={latestTranscriptId} />
+      )}
+    </div>
     
   )
 }

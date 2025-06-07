@@ -128,7 +128,7 @@ export default function Recording() {
         )}
         
         {/* Job status */}                
-        <TranscriptJobStatusJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
+        <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
           
         {/* Playback */} 
         {audioURL && (
