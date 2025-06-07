@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import List from "./components/List"
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
-import JobStatus from "./components/JobStatus";
+import TranscriptJobStatus from "./components/TranscriptJobStatus";
 import Layout from "./Layout";
 
 export default function Import() {  
@@ -46,7 +46,7 @@ export default function Import() {
         </div>
 
         {/* Job status */}                
-        <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />
+        <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />
             
       </Layout>
 		

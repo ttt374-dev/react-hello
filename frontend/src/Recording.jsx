@@ -7,7 +7,7 @@ import List from "./components/List"
 import usePolling from './hooks/usePolling'
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 import VolumeMonitor from "./components/VolumeMonitor";
-import JobStatus from "./components/JobStatus";
+import TranscriptJobStatus from "./components/TranscriptJobStatus";
 import Layout from "./Layout";
 
 const MAX_RECORDING_MINUTES = 30
@@ -128,7 +128,7 @@ export default function Recording() {
         )}
         
         {/* Job status */}                
-        <JobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
+        <TranscriptJobStatusJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
           
         {/* Playback */} 
         {audioURL && (

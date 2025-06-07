@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 
-export default function JobStatus({ status, jobId, transcriptId, elapsed, error }) {
+export default function TranscriptJobStatus({ status, jobId, transcriptId, elapsed, error }) {
   return (
     <div>
       <p>Status: {status}</p>

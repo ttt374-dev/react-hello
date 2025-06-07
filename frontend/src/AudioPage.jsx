@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import Recording from "./Recording";
 import Import from "./Import";
-import JobStatus from "./components/JobStatus";
+import JobStatus from "./components/TranscriptJobStatus";
 import useTranscriptionJob from "./hooks/useTranscriptionJob";
 
 export default function AudioPage() {
