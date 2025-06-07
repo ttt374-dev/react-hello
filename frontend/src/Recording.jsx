@@ -5,17 +5,27 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import List from "./List"
 import usePolling from './hooks/usePolling'
+import useTranscriptionJob from "./hooks/useTranscriptionJob";
 
 export default function Recording() {
   const [recording, setRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(null);
   const [volume, setVolume] = useState(0);
-  const [jobId, setJobId] = useState("");
-  const [transcriptId, setTranscriptId] = useState("");
+  //const [jobId, setJobId] = useState("");
+  //const [transcriptId, setTranscriptId] = useState("");
 
   const mediaRecorderRef = useRef(null);
   const audioChunks = useRef([]);
-  const navigate = useNavigate();
+  const {
+    jobId,
+    transcriptId,
+    status,
+    result,
+    error,
+    elapsed,
+    startUpload,
+  } = useTranscriptionJob();
+
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -37,7 +47,9 @@ export default function Recording() {
       if (confirmUpload) {
         const filename = getFormattedFilename("webm")
         const file = new File([blob], filename, { type: "audio/webm" });
-        uploadAudioFile(file)
+        startUpload(file);
+        { /* 
+                  uploadAudioFile(file)
         .then((data) => {
           console.log(`onstop: ${data.job_id}`)
           setJobId(data.job_id)
@@ -47,6 +59,8 @@ export default function Recording() {
           console.error("Upload failed:", err);
           alert("Upload failed. Please try again.");
         });
+        */}
+
       }      
     };
 
@@ -75,7 +89,7 @@ export default function Recording() {
     );
   };
 
-  const { status, result, error, elapsed } = usePolling(jobId);
+  //const { status, result, error, elapsed } = usePolling(jobId);
 
   return (    
     <div style={{ width: "100%", display: "flex", height: "100vh"}}>

@@ -1,7 +1,7 @@
 // useTranscriptionJob.js
 import { useState } from "react";
 //import { uploadAudioFile } from "./utils/recording";
-import usePolling from "./hooks/usePolling"; // Your existing polling hook
+import usePolling from "./usePolling"; // Your existing polling hook
 
 export default function useTranscriptionJob() {
   const [jobId, setJobId] = useState("");

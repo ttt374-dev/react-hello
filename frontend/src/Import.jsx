@@ -3,19 +3,34 @@ import { uploadAudioFile } from "./utils/uploadAudio";
 import { Link } from 'react-router-dom';
 import List from "./List"
 import usePolling from "./hooks/usePolling";
+import useTranscriptionJob from "./hooks/useTranscriptionJob";
 
 export default function Import() {
-  const [uploading, setUploading] = useState(false);
-  const [jobId, setJobId] = useState("")
-  const [transcriptId, setTranscriptId] = useState("")
+  //const [uploading, setUploading] = useState(false);
+  //const [jobId, setJobId] = useState("")
+  //const [transcriptId, setTranscriptId] = useState("")
+
+  const {
+    jobId,
+    transcriptId,
+    uploading,
+    status,
+    result,
+    error,
+    elapsed,
+    startUpload,
+  } = useTranscriptionJob();
 
   const importAudioFile = async (event) => {
-    setUploading(true)
+    //setUploading(true)
 
     const file = event.target.files[0];
     if (!file) return;
     const formData = new FormData();
     formData.append("audio", file);
+    startUpload(file)
+    
+    {/* 
     uploadAudioFile(file)
     .then((data) => {
       console.log(`onstop: ${data.job_id}`)
@@ -29,10 +44,11 @@ export default function Import() {
     .finally(() => {
       setUploading(false);
     })
+      */}
   }
 
   const fileInputRef = useRef();
-  const { status, result, error, elapsed } = usePolling(jobId);
+  //const { status, result, error, elapsed } = usePolling(jobId);
 
 	return (
 		<div style={{ width: "100%", display: "flex", height: "100vh"}}>

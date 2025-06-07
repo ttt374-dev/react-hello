@@ -4,11 +4,13 @@ export default function usePolling(jobId) {
   const [status, setStatus] = useState("pending");
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+  const [elapsed, setElapsed] = useState(0); 
 
   useEffect(() => {
     if (!jobId) return;
 
     let interval = null;
+    let startTime = Date.now();
 
     const poll = async () => {
       try {
@@ -32,11 +34,15 @@ export default function usePolling(jobId) {
     };
 
     poll();
-    interval = setInterval(poll, 3000);
+    //interval = setInterval(poll, 3000);
+    interval = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - startTime) / 1000));
+      poll();
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [jobId]);
 
-  return { status, result, error };
+  return { status, result, error, elapsed };
 }
 
