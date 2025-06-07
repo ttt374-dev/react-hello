@@ -9,6 +9,7 @@ import useTranscriptionJob from "../hooks/useTranscriptionJob";
 import VolumeMonitor from "../components/VolumeMonitor";
 import TranscriptJobStatus from "../components/TranscriptJobStatus";
 import Layout from "../components/Layout";
+import formatSeconds from "../utils/formatSeconds";
 
 const MAX_RECORDING_MINUTES = 30
 
@@ -115,11 +116,9 @@ export default function RecordingPage() {
         ) : (
           <button onClick={startRecording}>Start Recording</button>
         )}
-        <p>
-          max recording minutes: { MAX_RECORDING_MINUTES} min
-        </p>
+        
         {recording && (
-          <p>Recording time: {formatSeconds(recordingElapsed)}</p>
+          <p>Recording time: {formatSeconds(recordingElapsed)} / {MAX_RECORDING_MINUTES} min</p>
         )}
         
         {/* Volume Meter */}      
@@ -134,7 +133,9 @@ export default function RecordingPage() {
         )}
                 
         {/* Job status */}                
-        <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
+        { status !== "pending" &&
+          <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
+        }
         
       </div>
     
@@ -142,11 +143,6 @@ export default function RecordingPage() {
     
     
   );
-}
-function formatSeconds(seconds) {
-  const m = String(Math.floor(seconds / 60)).padStart(2, "0");
-  const s = String(seconds % 60).padStart(2, "0");
-  return `${m}:${s}`;
 }
 
 function getFormattedFilename(ext = "webm") {

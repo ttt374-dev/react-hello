@@ -1,7 +1,7 @@
 import re
 
 MAX_WORDS = 50
-MIN_WORDS = 5
+MIN_WORDS = 10
 
 def segment_words_into_sentences(words):
     sentences = []

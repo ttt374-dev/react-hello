@@ -12,17 +12,20 @@ export default function TranscriptViewer({ sentences, audioRef }) {
 
     const onTimeUpdate = () => {
       const currentTime = audio.currentTime;
-      const sIdx = sentences.findIndex(
+      const foundIndex = sentences.findIndex(
         (s) => currentTime >= s.start && currentTime <= s.end
       );
-      setActiveSentenceIndex(sIdx);
-      setActiveWordIndex(
-        sIdx !== -1
-          ? sentences[sIdx].words.findIndex(
-              (w) => currentTime >= w.start && currentTime <= w.end
-            )
-          : null
-      );
+      if (foundIndex !== -1) {
+        setActiveSentenceIndex(foundIndex);
+        setActiveWordIndex(
+          sentences[foundIndex].words.findIndex(
+            (w) => currentTime >= w.start && currentTime <= w.end
+          )
+        );
+      } else {
+        setActiveWordIndex(null); // wordは無効に
+        // setActiveSentenceIndexは変更しない → 現在の文の表示を維持
+      }
     };
 
     audio.addEventListener("timeupdate", onTimeUpdate);
