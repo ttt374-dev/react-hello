@@ -1,8 +1,25 @@
 import { useRef, useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import { useTranscriptData } from "./hooks/useTranscriptData";
 import TranscriptViewer from "./components/TranscriptViewer";
+import List from "./List"
 
-export default function Transcript({ transcriptId }) {
+function Transcript(){
+  const { transcriptId } = useParams();
+  return (
+    <div style={{ width: "100%", display: "flex", height: "100vh"}}>
+      <div style={{ width: "20%"}}>
+        <List selected={transcriptId}/>
+      </div>      
+      <div style={{ width: "80%"}}>
+        <TranscriptPane transcriptId={transcriptId}/>
+      </div>
+    </div>
+  )
+}
+export default Transcript
+
+function TranscriptPane({ transcriptId }) {
   const { sentences, title, createdAt } = useTranscriptData(transcriptId);
   const audioRef = useRef();
 

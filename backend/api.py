@@ -10,6 +10,7 @@ from utils.database import get_db, SessionLocal
 from sqlalchemy import desc
 from utils.models import Transcript
 from pathlib import Path
+from rq import Queue
 from rq.job import Job
 from pydantic import BaseModel
 from uuid import UUID
@@ -24,6 +25,7 @@ from config import AUDIO_DIR, TMP_DIR
 # Connect to Redis (adjust host/port if needed)
 redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
 redis_conn = redis.from_url(redis_url)
+queue = Queue("default", connection=redis_conn)
 
 DATA_DIR = Path("data")
 app = FastAPI()
@@ -139,6 +141,31 @@ def get_job_status(job_id):
         return {"error": str(e)}
 
 
+@app.get("/api/job_status")
+def list_jobs():
+    try:
+        jobs = []
+
+        # Get all job IDs in the queue (pending)
+        pending_job_ids = queue.job_ids
+
+        # Get started jobs (workers in progress)
+        started_job_ids = queue.started_job_registry.get_job_ids()
+
+        for job_id in pending_job_ids + started_job_ids:
+            job = Job.fetch(job_id, connection=redis_conn)
+            jobs.append({
+                "id": job.id,
+                "status": job.get_status(),
+                "enqueued_at": str(job.enqueued_at),
+                "started_at": str(job.started_at) if job.started_at else None,
+            })
+
+        return {"jobs": jobs}
+
+    except Exception as e:
+        return {"error": str(e)}
+    
 class UpdateRequest(BaseModel):
     id: str
     title: str

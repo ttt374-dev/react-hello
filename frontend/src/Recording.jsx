@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import List from "./List"
 
-export default function Recorder() {
+export default function Recording() {
   const [recording, setRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(null);
   const [volume, setVolume] = useState(0);

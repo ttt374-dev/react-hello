@@ -52,8 +52,7 @@ function List({ selected }) {
     >
       {/* Top Fixed Section */}
       <div style={{ padding: "1rem", borderBottom: "1px solid #ddd", flexShrink: 0 }}>
-        <NavigateToRecording />
-        <Upload onUploadSuccess={fetchTitles} />
+        <button onClick={() => navigate("/")}>Home</button>
       </div>
       
 

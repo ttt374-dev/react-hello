@@ -12,10 +12,10 @@ export function getFormattedFilename(ext = "webm") {
 
 export async function uploadAudioBlob(blob, filename) {
   const file = new File([blob], filename, { type: "audio/webm" });
-  uploadAudioFile(file)  
+  return uploadAudioFile(file)  
 }
 
-export async function uploadAudioFile(file, file) {
+export async function uploadAudioFile(file) {
   const formData = new FormData();
   //const file = new File([blob], filename, { type: "audio/webm" });
   formData.append("audio", file);
@@ -30,7 +30,7 @@ export async function uploadAudioFile(file, file) {
       throw new Error("Upload failed");
     }
 
-    alert("✅ Upload successful!");
+    //alert("✅ Upload successful!");
     const data = await res.json(); // e.g., { message, job_id }
     console.log(`job id: ${data.job_id}`)
     console.log(`transcript id: ${data.transcript_id}`)
