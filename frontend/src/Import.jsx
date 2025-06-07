@@ -9,7 +9,6 @@ export default function Import() {
   const [uploading, setUploading] = useState(false);
   const [jobId, setJobId] = useState("")
   const [transcriptId, setTranscriptId] = useState("")
-  const navigate = useNavigate();
 
   const importAudioFile = async (event) => {
     setUploading(true)

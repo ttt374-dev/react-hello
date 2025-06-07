@@ -43,7 +43,7 @@ export async function uploadAudioFile(file) {
   }
 }
 
-
+{/* 
 
 export const pollTranscriptionStatus = (jobId) => {
   return new Promise((resolve, reject) => {
@@ -71,48 +71,4 @@ export const pollTranscriptionStatus = (jobId) => {
   });
 };
 
-export function usePolling(jobId) {
-  const [status, setStatus] = useState("pending");
-  const [result, setResult] = useState(null);
-  const [error, setError] = useState(null);
-  const [elapsed, setElapsed] = useState(0); // elapsed seconds
-
-  useEffect(() => {
-    if (!jobId) return;
-
-    let intervalId;
-    let startTime = Date.now();
-
-    const poll = async () => {
-      try {
-        const res = await fetch(`http://localhost:8000/api/job_status/${jobId}`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-
-        setStatus(data.status);
-
-        if (data.status === "finished") {
-          setResult(data.result);
-          clearInterval(intervalId);
-        } else if (data.status === "failed") {
-          setError(data.error || "Transcription failed");
-          clearInterval(intervalId);
-        }
-      } catch (e) {
-        setError(e.message);
-        clearInterval(intervalId);
-      }
-    };
-
-    poll();
-
-    intervalId = setInterval(() => {
-      setElapsed(Math.floor((Date.now() - startTime) / 1000));
-      poll();
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [jobId]);
-
-  return { status, result, error, elapsed };
-}
+*/}
