@@ -44,12 +44,18 @@ function List({ selected }) {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
+        overflowX: "auto", // 横スクロールを有効にする
+        whiteSpace: "nowrap", // 子要素を折り返さない
         borderRight: "1px solid #ccc",
         background: "#fafafa",
       }}
     >
       {/* Top Fixed Section */}
-      <div style={{ padding: "1rem", borderBottom: "1px solid #ddd", flexShrink: 0 }}>
+      <div style={{ 
+        padding: "1rem", borderBottom: "1px solid #ddd", flexShrink: 0,
+        overflowX: "auto", // 横スクロールを有効にする
+        whiteSpace: "nowrap", // 子要素を折り返さない   
+      }}>
         <button onClick={() => navigate("/")}>Home</button>
         <button onClick={() => navigate("/recording")}>Recording</button>
         <button onClick={() => navigate("/import")}>Import</button>

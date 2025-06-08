@@ -19,6 +19,8 @@ export default function RecordingPage() {
   const [volume, setVolume] = useState(0);
   const [recordingElapsed, setRecordingElapsed] = useState(0);
   const recordingTimerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
 
   //const [jobId, setJobId] = useState("");
   //const [transcriptId, setTranscriptId] = useState("");
@@ -106,16 +108,50 @@ export default function RecordingPage() {
       recordingTimerRef.current = null;
     }
   };
+  const pauseRecording = () => {
+    mediaRecorderRef.current.pause();
+    setIsPaused(true);
+    if (recordingTimerRef.current) {
+      clearInterval(recordingTimerRef.current);
+      recordingTimerRef.current = null;
+    }
+  };
+
+  const resumeRecording = () => {
+    mediaRecorderRef.current.resume();
+    setIsPaused(false);
+    recordingTimerRef.current = setInterval(() => {
+      setRecordingElapsed((prev) => {
+        if (prev + 1 >= MAX_RECORDING_MINUTES * 60) {
+          stopRecording();
+          if (!alertShownRef.current) {
+            alertShownRef.current = true;
+            alert(`Recording stopped automatically at ${MAX_RECORDING_MINUTES} minutes max length`);
+          }
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 1000);
+  };
+
 
   return (    
     <Layout title="🎤 Recorder">      
       <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>       
 
         {recording ? (
-          <button onClick={stopRecording}>Stop Recording</button>
+          isPaused ? (
+            <button onClick={resumeRecording}>▶ Resume</button>
+          ) : (
+            <button onClick={pauseRecording}>⏸ Pause</button>
+          )
         ) : (
-          <button onClick={startRecording}>Start Recording</button>
+          <button onClick={startRecording}>🔴 Start Recording</button>
         )}
+
+        {recording && <button onClick={stopRecording}>⏹ Stop</button>}
+
         
         {recording && (
           <p>Recording time: {formatSeconds(recordingElapsed)} / {MAX_RECORDING_MINUTES} min</p>
@@ -125,13 +161,13 @@ export default function RecordingPage() {
         {recording && (
           <VolumeMonitor volume={volume} />
         )}
-        {/* Playback */} 
+        {/* Playback 
         {audioURL && (
           <div style={{ marginTop: "1rem" }}>
             <audio src={audioURL} controls />
           </div>
         )}
-                
+                */} 
         {/* Job status */}                
         { status !== "pending" &&
           <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />          
