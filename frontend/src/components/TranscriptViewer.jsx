@@ -12,21 +12,36 @@ export default function TranscriptViewer({ sentences, audioRef }) {
 
     const onTimeUpdate = () => {
       const currentTime = audio.currentTime;
-      const foundIndex = sentences.findIndex(
-        (s) => currentTime >= s.start && currentTime <= s.end
-      );
-      if (foundIndex !== -1) {
-        setActiveSentenceIndex(foundIndex);
+
+      // 最後にマッチしたインデックスを見つける
+      let matchedIndex = -1;
+      for (let i = 0; i < sentences.length; i++) {
+        if (currentTime >= sentences[i].start && currentTime <= sentences[i].end) {
+          matchedIndex = i;
+          break;
+        }
+      }
+
+      if (matchedIndex !== -1) {
+        setActiveSentenceIndex(matchedIndex);
         setActiveWordIndex(
-          sentences[foundIndex].words.findIndex(
+          sentences[matchedIndex].words.findIndex(
             (w) => currentTime >= w.start && currentTime <= w.end
           )
         );
       } else {
-        setActiveWordIndex(null); // wordは無効に
-        // setActiveSentenceIndexは変更しない → 現在の文の表示を維持
+        // 次の文がまだ始まっていない場合、現在の文を維持（空白にしない）
+        const nextIndex = sentences.findIndex(s => currentTime < s.start);
+        if (nextIndex > 0) {
+          setActiveSentenceIndex(nextIndex - 1);
+        } else if (nextIndex === -1) {
+          // すべて終わった場合は最後の文
+          setActiveSentenceIndex(sentences.length - 1);
+        }
+        setActiveWordIndex(null); // word ハイライトだけ外す
       }
     };
+
 
     audio.addEventListener("timeupdate", onTimeUpdate);
     return () => audio.removeEventListener("timeupdate", onTimeUpdate);
