@@ -67,43 +67,41 @@ export default function TranscriptPage( { transcriptId: propId } ) {
 
   return (
     <Layout transcriptId={transcriptId} listRefreshKey={listRefreshKey}>
-      {/* Header */}
-      <TranscriptHeaderTitle
-        title={editTitle}
-        setTitle={setEditTitle}
-        status={status}
-        onSave={handleTitleSave}
-        onDelete={handleDelete}
-      />
+      <div style={{ display: "flex", height: "100vh", display: "flex", flexDirection: 'column' }}>
+        <div style={{ flexShrink: 0}}>
+          {/* Title Bar */}
+          <TranscriptHeaderTitle
+            title={editTitle}
+            setTitle={setEditTitle}
+            status={status}
+            onSave={handleTitleSave}
+            onDelete={handleDelete}
+          />
 
-      {/* Timestamp */}
-      <div style={{
-        fontSize: "0.9rem",
-        color: "#aaa",
-        margin: "0.25rem 1rem",
-        flexShrink: 0,
-      }}>
-        created at: {new Date(createdAt).toLocaleString()}
+          {/* Timestamp */}
+          <div style={{
+            fontSize: "0.9rem",
+            color: "#aaa",
+            margin: "0.25rem 1rem",
+            flexShrink: 0,
+          }}>
+            created at: {new Date(createdAt).toLocaleString()}
+          </div>
+
+        </div>
+        <div style={{ flex: 1, overflowY: "auto"}}>
+          {(!sentences || sentences.length === 0) ? (
+              <p>Loading transcript....</p>
+            ) : (
+              <TranscriptViewer sentences={sentences} audioRef={audioRef} />
+            )}        
+        </div>
+
+        <div>
+          <TranscriptAudioPlayer audioRef={audioRef} transcriptId={transcriptId} />
+        </div>
       </div>
-
-      {/* Scrollable Transcript */}
-      <div style={{
-        flex: 1,
-        overflowY: "auto",
-        padding: "1rem",
-        background: "#f4f4f4",
-      }}>
-        {(!sentences || sentences.length === 0) ? (
-          <p>Loading transcript....</p>
-        ) : (
-          <TranscriptViewer sentences={sentences} audioRef={audioRef} />
-        )}
-      </div>
-
-      {/* Footer (Audio Player) */}
-
-      <TranscriptAudioPlayer audioRef={audioRef} transcriptId={transcriptId} />
-    </Layout>
+    </Layout>   
   );
 }
 // components/TranscriptHeaderTitle.js

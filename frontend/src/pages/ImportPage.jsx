@@ -72,8 +72,9 @@ export default function ImportPage() {
             )}
           </div>
         )}
+        
         {/* Job status */}                
-        <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />
+          <TranscriptJobStatus status={status} jobId={jobId} transcriptId={transcriptId} elapsed={elapsed} error={error} />
             
       </Layout>
 		

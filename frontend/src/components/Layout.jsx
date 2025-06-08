@@ -1,6 +1,14 @@
 import List from './List';
 
-export default function Layout({ title, transcriptId, children, listRefreshKey }) {
+function LayoutTest( { transcriptId, children }){
+  return (
+    <div style={{ height: '100vh'}}>
+      {children}
+    </div>
+  )
+}
+
+function Layout({ title, transcriptId, children, listRefreshKey }) {
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%' }}>
       {/* Left Pane */}
@@ -24,10 +32,11 @@ export default function Layout({ title, transcriptId, children, listRefreshKey }
         )}
 
         {/* Main Content */}
-        <div style={{ padding: '1rem', flex: 1, overflowY: 'auto' }}>
+        <div>
           {children}
         </div>
       </div>
     </div>
   );
 }
+export default Layout
