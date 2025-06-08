@@ -2,21 +2,16 @@ import { useRef, useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useTranscriptData } from "../hooks/useTranscriptData";
 import TranscriptViewer from "../components/TranscriptViewer";
-import List from "../components/List"
 import Layout from "../components/Layout";
-
-
 
 export default function TranscriptPage( { transcriptId: propId } ) {
   const { transcriptId: paramId } = useParams();
   const transcriptId = propId || paramId;
   const { sentences, title, createdAt } = useTranscriptData(transcriptId);
   const audioRef = useRef();
-
   const [editTitle, setEditTitle] = useState(title);
   const [status, setStatus] = useState("idle");
   const [listRefreshKey, setListRefreshKey] = useState(0);
-
   const triggerListRefresh = () => {
     setListRefreshKey((prev) => prev + 1);
   };

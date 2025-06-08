@@ -1,13 +1,5 @@
 import List from './List';
 
-function LayoutTest( { transcriptId, children }){
-  return (
-    <div style={{ height: '100vh'}}>
-      {children}
-    </div>
-  )
-}
-
 function Layout({ title, transcriptId, children, listRefreshKey }) {
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%' }}>
