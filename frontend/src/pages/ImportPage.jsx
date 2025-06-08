@@ -11,6 +11,12 @@ export default function ImportPage() {
   const [fileName, setFileName] = useState("");
   const [duration, setDuration] = useState(null);
   const audioRef = useRef(null);
+  const [listRefreshKey, setListRefreshKey] = useState(0);
+
+  const triggerListRefresh = () => {
+    setListRefreshKey((prev) => prev + 1);
+  };
+
 
   const {
     jobId,
@@ -39,6 +45,7 @@ export default function ImportPage() {
     formData.append("audio", file);
     startUpload(file)
   }
+  useEffect(() => { if (status === 'finished') triggerListRefresh(); }, [status]); 
   // 自動でファイル選択ダイアログを開く
   //useEffect(() => {
   //  if (fileInputRef.current) {
@@ -48,7 +55,7 @@ export default function ImportPage() {
   //const { status, result, error, elapsed } = usePolling(jobId);
 
 	return (		
-			<Layout title="Import">
+			<Layout title="Import" listRefreshKey={listRefreshKey}>
         <div  style={{ padding: "1rem" }}>
           <input type="file" accept="audio/*" onChange={importAudioFile}
           disabled={uploading} style={{ display: 'none' }} ref={fileInputRef} />

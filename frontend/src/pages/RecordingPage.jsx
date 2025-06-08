@@ -20,11 +20,6 @@ export default function RecordingPage() {
   const [recordingElapsed, setRecordingElapsed] = useState(0);
   const recordingTimerRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
-
-
-  //const [jobId, setJobId] = useState("");
-  //const [transcriptId, setTranscriptId] = useState("");
-
   const mediaRecorderRef = useRef(null);
   const audioChunks = useRef([]);
   const {
@@ -36,8 +31,12 @@ export default function RecordingPage() {
     startUpload,
   } = useTranscriptionJob();
   const alertShownRef = useRef(false);
+  const [listRefreshKey, setListRefreshKey] = useState(0);
 
-
+  const triggerListRefresh = () => {
+    setListRefreshKey((prev) => prev + 1);
+  };
+  useEffect(() => { if (status === 'finished') triggerListRefresh(); }, [status]); 
   // Start recording automatically when component mounts
   { /*
   useEffect(() => {
@@ -75,7 +74,7 @@ export default function RecordingPage() {
         startUpload(file);
       }      
     };
-
+    
     startVolumeMonitor(stream, setVolume)
     mediaRecorderRef.current.start();
     setRecording(true);
@@ -98,7 +97,6 @@ export default function RecordingPage() {
     }, 1000);
 
   };
-
   const stopRecording = () => {
     mediaRecorderRef.current.stop();
     setRecording(false);
@@ -135,11 +133,9 @@ export default function RecordingPage() {
     }, 1000);
   };
 
-
   return (    
-    <Layout title="🎤 Recorder">      
+    <Layout title="🎤 Recorder" listRefreshKey={listRefreshKey}>      
       <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>       
-
         {recording ? (
           isPaused ? (
             <button onClick={resumeRecording}>▶ Resume</button>

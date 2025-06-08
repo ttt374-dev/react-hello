@@ -15,6 +15,12 @@ export default function TranscriptPage( { transcriptId: propId } ) {
 
   const [editTitle, setEditTitle] = useState(title);
   const [status, setStatus] = useState("idle");
+  const [listRefreshKey, setListRefreshKey] = useState(0);
+
+  const triggerListRefresh = () => {
+    setListRefreshKey((prev) => prev + 1);
+  };
+
 
   useEffect(() => {
     setEditTitle(title);
@@ -32,6 +38,7 @@ export default function TranscriptPage( { transcriptId: propId } ) {
       .then((res) => {
         if (!res.ok) throw new Error("Failed to update");
         setStatus("saved");
+        triggerListRefresh();
         setTimeout(() => setStatus("idle"), 1000);
       })
       .catch((err) => {
@@ -59,7 +66,7 @@ export default function TranscriptPage( { transcriptId: propId } ) {
   };
 
   return (
-    <Layout transcriptId={transcriptId}>
+    <Layout transcriptId={transcriptId} listRefreshKey={listRefreshKey}>
       {/* Header */}
       <TranscriptHeaderTitle
         title={editTitle}

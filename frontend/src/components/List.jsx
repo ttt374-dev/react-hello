@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function List({ selected }) {
+function List({ selected, listRefreshKey }) {
   const [titles, setTitles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,7 +27,7 @@ function List({ selected }) {
 
   useEffect(() => {
     fetchTitles();
-  }, []);
+  }, [listRefreshKey]);
 
   const NavigateToRecording = ({  }) => {
     return (

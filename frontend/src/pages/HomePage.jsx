@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TranscriptPage from "./TranscriptPage";
-import Layout from '../components/Layout';
 
 export default function HomePage(){
   const navigate = useNavigate();

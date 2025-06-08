@@ -1,11 +1,11 @@
 import List from './List';
 
-export default function Layout({ title, transcriptId, children }) {
+export default function Layout({ title, transcriptId, children, listRefreshKey }) {
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%' }}>
       {/* Left Pane */}
       <div style={{ width: '30%', borderRight: '1px solid #ccc' }}>
-        <List selected={transcriptId} />
+        <List selected={transcriptId} listRefreshKey={listRefreshKey}/>
       </div>
 
       {/* Right Pane */}
